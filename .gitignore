@@ -37,3 +37,5 @@ yarn-error.log*
 
 # Storybook
 storybook-static/*
+
+src/components/**/__snapshots__/*

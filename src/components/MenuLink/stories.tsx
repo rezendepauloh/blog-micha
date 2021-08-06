@@ -23,11 +23,14 @@ export const Template: Story<MenuLinkProps> = (args) => {
   return (
     <div
       style={{
-        maxWidth: '320px',
         background: theme.colors.primary,
-        padding: theme.spacings.large,
+        display: 'flex',
       }}
     >
+      <MenuLink {...args} />
+      <MenuLink {...args} />
+      <MenuLink {...args} />
+      <MenuLink {...args} />
       <MenuLink {...args} />
       <MenuLink {...args} />
       <MenuLink {...args} />

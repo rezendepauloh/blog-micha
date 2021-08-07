@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
 import { LogoFooter } from '.';
 
-describe('<LogoLink />', () => {
+describe('<LogoFooter />', () => {
   it('should render text logo', () => {
     renderTheme(<LogoFooter text="Olá mundo" />);
     expect(

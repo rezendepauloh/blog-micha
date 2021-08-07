@@ -39,10 +39,6 @@ export const SocialIcon = styled.i`
     font-size: ${theme.font.sizes.small};
     text-decoration: none;
 
-    &::before {
-      content: ${`\f16d`};
-    }
-
     > span {
       margin-right: ${theme.spacings.small};
       color: ${theme.colors.white};

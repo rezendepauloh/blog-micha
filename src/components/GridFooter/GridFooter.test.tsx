@@ -8,11 +8,4 @@ describe('<GridFooter />', () => {
     const { container } = renderTheme(<GridFooter {...mock} />);
     expect(container).toMatchSnapshot();
   });
-
-  it('should render without background', () => {
-    const { container } = renderTheme(
-      <GridFooter {...mock} background={undefined} />,
-    );
-    expect(container).toMatchSnapshot();
-  });
 });

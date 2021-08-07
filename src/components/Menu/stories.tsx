@@ -9,7 +9,7 @@ export default {
   args: {
     links: linksMock,
     logoData: {
-      text: 'Michelly Segovia',
+      text: 'Michely Segóvia',
       link: '#target',
       srcImg: '',
     },

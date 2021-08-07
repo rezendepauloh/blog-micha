@@ -8,8 +8,8 @@ export default {
 
 export const Template: Story<CloneMeProps> = (args) => {
   return (
-    <div>
+    <>
       <CloneMe {...args} />
-    </div>
+    </>
   );
 };

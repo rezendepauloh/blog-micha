@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { LogoFooter, LogoFooterProps } from '.';
+import { theme } from '../../styles/theme';
 
 export default {
   title: 'LogoFooter',
@@ -12,7 +13,11 @@ export default {
 
 export const ImageOnly: Story<LogoFooterProps> = (args) => {
   return (
-    <div>
+    <div
+      style={{
+        background: theme.colors.primary,
+      }}
+    >
       <LogoFooter {...args} />
     </div>
   );
@@ -20,7 +25,11 @@ export const ImageOnly: Story<LogoFooterProps> = (args) => {
 
 export const TextOnly: Story<LogoFooterProps> = (args) => {
   return (
-    <div>
+    <div
+      style={{
+        background: theme.colors.primary,
+      }}
+    >
       <LogoFooter {...args} />
     </div>
   );

@@ -6,7 +6,7 @@ export default {
   component: LogoLink,
   args: {
     text: 'Michely Segóvia',
-    srcImg: 'assets/images/logo.svg',
+    srcImg: 'assets/images/logo-h.svg',
     link: 'http://localhost',
   },
 } as Meta;

@@ -11,6 +11,7 @@ export const Container = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
+    color: ${theme.colors.white};
   `}
 `;
 
@@ -26,30 +27,6 @@ export const LinkSocial = styled.a`
       color: ${theme.colors.white};
       transition: all 300ms ease-in-out;
     }
-  `}
-`;
-
-export const Paragraph = styled.p`
-  ${({ theme }) => css`
-    width: 100%;
-    margin: ${theme.spacings.xsmall} 0;
-    color: ${theme.colors.white};
-  `}
-`;
-
-export const SocialIcon = styled.i`
-  ${({ theme }) => css`
-    margin-right: ${theme.spacings.small};
-    color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.small};
-    text-decoration: none;
-
-    > span {
-      margin-right: ${theme.spacings.small};
-      color: ${theme.colors.white};
-      font-size: ${theme.font.sizes.small};
-      font-style: normal;
-    }
 
     > svg {
       width: 2.5rem;
@@ -58,12 +35,26 @@ export const SocialIcon = styled.i`
   `}
 `;
 
-export const LineBreaker = styled.hr`
+export const LinkMaps = styled.a`
   ${({ theme }) => css`
+    padding: ${theme.spacings.small} ${theme.spacings.xsmall};
     width: 100%;
-    background-color: ${theme.colors.white};
-    height: 1px;
-    border: none;
-    margin: ${theme.spacings.small} 0;
+    background-color: ${theme.colors.secondary};
+    color: ${theme.colors.white};
+    text-align: center;
+    margin-top: ${theme.spacings.small};
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: ${theme.colors.secondary};
+      background-color: ${theme.colors.white};
+      transition: all 300ms ease-in-out;
+    }
+
+    > svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   `}
 `;

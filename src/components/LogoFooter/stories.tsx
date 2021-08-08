@@ -7,7 +7,7 @@ export default {
   component: LogoFooter,
   args: {
     text: 'Michely Segóvia',
-    srcImg: 'assets/images/logo.svg',
+    srcImg: 'assets/images/logo-h.svg',
   },
 } as Meta;
 

@@ -1,6 +1,10 @@
 import * as Styled from './styles';
-import { Heading } from '../Heading';
-import { TextComponent } from '../TextComponent';
+import {
+  SocialMediaFooter,
+  SocialMediaFooterProps,
+} from '../SocialMediaFooter';
+import { LogoFooter, LogoFooterProps } from '../LogoFooter';
+import { ContactFooter, ContactFooterProps } from '../ContactFooter';
 
 export type GridTextElementProps = {
   title: string;
@@ -8,28 +12,29 @@ export type GridTextElementProps = {
 };
 
 export type GridFooterProps = {
-  title: string;
-  description: string;
-  grid: GridTextElementProps[];
+  logoFooter: LogoFooterProps;
+  socialMediaFotter: SocialMediaFooterProps;
+  contactFooter: ContactFooterProps;
   component?: string;
 };
 
-export const GridFooter = ({ title, description, grid }: GridFooterProps) => {
+export const GridFooter = ({
+  logoFooter,
+  socialMediaFotter,
+  contactFooter,
+}: GridFooterProps) => {
   return (
     <Styled.Container>
-      <Heading size="huge" uppercase as="h2">
-        {title}
-      </Heading>
-      <TextComponent>{description}</TextComponent>
       <Styled.Grid>
-        {grid.map((el) => (
-          <Styled.GridElement key={el.title}>
-            <Heading size="medium" as="h3">
-              {el.title}
-            </Heading>
-            <TextComponent>{el.description}</TextComponent>
-          </Styled.GridElement>
-        ))}
+        <Styled.GridElement>
+          <LogoFooter {...logoFooter} />
+        </Styled.GridElement>
+        <Styled.GridElement>
+          <SocialMediaFooter {...socialMediaFotter} />
+        </Styled.GridElement>
+        <Styled.GridElement>
+          <ContactFooter {...contactFooter} />
+        </Styled.GridElement>
       </Styled.Grid>
     </Styled.Container>
   );

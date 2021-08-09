@@ -1,14 +1,12 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { LogoLink, LogoLinkProps } from '.';
 
+import mock from './mock';
+
 export default {
   title: 'LogoLink',
   component: LogoLink,
-  args: {
-    text: 'Michely Segóvia',
-    srcImg: 'assets/images/logo-h.svg',
-    link: 'http://localhost',
-  },
+  args: mock,
 } as Meta;
 
 export const ImageOnly: Story<LogoLinkProps> = (args) => {

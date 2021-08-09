@@ -2,13 +2,12 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { LogoFooter, LogoFooterProps } from '.';
 import { theme } from '../../styles/theme';
 
+import mock from './mock';
+
 export default {
   title: 'LogoFooter',
   component: LogoFooter,
-  args: {
-    text: 'Michely Segóvia',
-    srcImg: 'assets/images/logo-h.svg',
-  },
+  args: mock,
 } as Meta;
 
 export const ImageOnly: Story<LogoFooterProps> = (args) => {

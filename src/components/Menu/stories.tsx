@@ -2,18 +2,12 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { Menu, MenuProps } from '.';
 
 import linksMock from '../NavLinks/mock';
+import mock from './mock';
 
 export default {
   title: 'Menu',
   component: Menu,
-  args: {
-    links: linksMock,
-    logoData: {
-      text: 'Michely Segóvia',
-      link: '#target',
-      srcImg: 'assets/images/logo.svg',
-    },
-  },
+  args: mock,
 } as Meta;
 
 export const TemplateWithImage: Story<MenuProps> = (args) => {

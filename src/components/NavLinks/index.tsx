@@ -10,7 +10,6 @@ export const NavLinks = ({ links = [] }: NavLinksProps) => {
     <Styled.Container aria-label="Main menu">
       {links.map((link, index) => {
         const key = `${link.link}-${index}`;
-
         return <MenuLink key={key} {...link} />;
       })}
     </Styled.Container>

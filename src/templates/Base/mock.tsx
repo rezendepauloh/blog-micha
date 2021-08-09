@@ -1,5 +1,6 @@
-import linksMock from '../../components/NavLinks/mock';
-import logoLinkMock from '../../components/LogoLink/mock';
+//import linksMock from '../../components/NavLinks/mock';
+//import logoLinkMock from '../../components/LogoLink/mock';
+import menuMock from '../../components/Menu/mock';
 import gridFooterMock from '../../components/GridFooter/mock';
 import { BaseProps } from '.';
 
@@ -10,10 +11,6 @@ export const mockBase = {
       <p>Ainda sem os componentes que virão aqui</p>
     </>
   ),
-  links: linksMock,
-  logoData: logoLinkMock,
-  //logoFooter: gridFooterMock.logoFooter,
-  //socialMediaFotter: gridFooterMock.socialMediaFotter,
-  //contactFooter: gridFooterMock.contactFooter,
+  menu: menuMock,
   footer: gridFooterMock,
 } as BaseProps;

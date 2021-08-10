@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -35,6 +36,11 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     color: ${({ theme }) => theme.colors.secondary};
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 
   .table {

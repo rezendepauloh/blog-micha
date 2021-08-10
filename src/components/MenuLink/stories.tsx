@@ -3,7 +3,7 @@ import { MenuLink, MenuLinkProps } from '.';
 import { theme } from '../../styles/theme';
 
 export default {
-  title: 'MenuLink',
+  title: 'Header/MenuLink',
   component: MenuLink,
   args: {
     children: 'MenuLink',

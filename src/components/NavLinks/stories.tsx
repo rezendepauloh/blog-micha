@@ -3,7 +3,7 @@ import { NavLinks, NavLinksProps } from '.';
 import links from './mock';
 
 export default {
-  title: 'NavLinks',
+  title: 'Header/NavLinks',
   component: NavLinks,
   args: {
     links: links,

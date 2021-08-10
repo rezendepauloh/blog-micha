@@ -5,6 +5,8 @@ import {
 } from '../SocialMediaFooter';
 import { LogoFooter, LogoFooterProps } from '../LogoFooter';
 import { ContactFooter, ContactFooterProps } from '../ContactFooter';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export type GridTextElementProps = {
   title: string;
@@ -24,18 +26,18 @@ export const GridFooter = ({
   contactFooter,
 }: GridFooterProps) => {
   return (
-    <Styled.Container>
-      <Styled.Grid>
-        <Styled.GridElement>
+    <Styled.Container fluid>
+      <Row>
+        <Col md="auto">
           <LogoFooter {...logoFooter} />
-        </Styled.GridElement>
-        <Styled.GridElement>
+        </Col>
+        <Col md="auto">
           <SocialMediaFooter {...socialMediaFotter} />
-        </Styled.GridElement>
-        <Styled.GridElement>
+        </Col>
+        <Col md="auto">
           <ContactFooter {...contactFooter} />
-        </Styled.GridElement>
-      </Styled.Grid>
+        </Col>
+      </Row>
     </Styled.Container>
   );
 };

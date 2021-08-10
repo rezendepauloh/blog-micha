@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Container as SectionContainer } from '../SectionContainer/styles';
 import { Title as Heading } from '../Heading/styles';
+import { Container as ContainerBootstrap } from 'react-bootstrap';
 
 type MenuVisible = {
   visible?: boolean;
@@ -11,7 +12,7 @@ const menuVisible = () => css`
   opacity: 1;
 `;
 
-export const Container = styled.div<MenuVisible>`
+export const Container = styled(ContainerBootstrap)<MenuVisible>`
   ${({ theme, visible }) => css`
     position: fixed;
     z-index: 5;

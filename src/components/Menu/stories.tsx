@@ -5,7 +5,7 @@ import linksMock from '../NavLinks/mock';
 import mock from './mock';
 
 export default {
-  title: 'Menu',
+  title: 'Header/Menu',
   component: Menu,
   args: mock,
 } as Meta;

@@ -28,7 +28,11 @@ export const Menu = ({ links = [], logoData }: MenuProps) => {
           <MenuIcon aria-label="Open menu" />
         )}
       </Styled.Button>
-      <Styled.Container visible={visible} onClick={() => setVisible(false)}>
+      <Styled.Container
+        fluid
+        visible={visible}
+        onClick={() => setVisible(false)}
+      >
         <SectionContainer>
           <Styled.MenuContainer>
             <LogoLink {...logoData} />

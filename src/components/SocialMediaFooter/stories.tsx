@@ -5,7 +5,7 @@ import { theme } from '../../styles/theme';
 import mock from './mock';
 
 export default {
-  title: 'SocialMediaFooter',
+  title: 'Footer/SocialMediaFooter',
   component: SocialMediaFooter,
   args: mock,
 } as Meta;

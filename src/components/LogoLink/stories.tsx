@@ -4,7 +4,7 @@ import { LogoLink, LogoLinkProps } from '.';
 import mock from './mock';
 
 export default {
-  title: 'LogoLink',
+  title: 'Header/LogoLink',
   component: LogoLink,
   args: mock,
 } as Meta;

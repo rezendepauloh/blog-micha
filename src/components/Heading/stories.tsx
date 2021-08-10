@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { Heading, HeadingProps } from '.';
 
 export default {
-  title: 'Heading',
+  title: 'Any/Heading',
   component: Heading,
   args: {
     children: 'O texto está escuro',

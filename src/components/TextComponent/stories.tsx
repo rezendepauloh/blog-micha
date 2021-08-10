@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { TextComponent, TextComponentProps } from '.';
 
 export default {
-  title: 'TextComponent',
+  title: 'Any/TextComponent',
   component: TextComponent,
   args: {
     children: `

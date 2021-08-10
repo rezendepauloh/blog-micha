@@ -8,7 +8,7 @@ export const Container = styled.div`
     width: 100%;
 
     > img {
-      //height: ${theme.spacings.huge};
+      height: 16rem;
       width: 100%;
     }
   `}

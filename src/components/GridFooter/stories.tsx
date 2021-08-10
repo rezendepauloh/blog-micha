@@ -4,7 +4,7 @@ import { GridFooter, GridFooterProps } from '.';
 import mock from './mock';
 
 export default {
-  title: 'GridFooter',
+  title: 'Footer/GridFooter',
   component: GridFooter,
   args: mock,
 } as Meta;

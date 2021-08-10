@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { GoTop } from '.';
 
 export default {
-  title: 'GoTop',
+  title: 'Any/GoTop',
   component: GoTop,
   args: {
     children: 'GoTop',

@@ -8,11 +8,6 @@ import { ContactFooter, ContactFooterProps } from '../ContactFooter';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-export type GridTextElementProps = {
-  title: string;
-  description: string;
-};
-
 export type GridFooterProps = {
   logoFooter: LogoFooterProps;
   socialMediaFotter: SocialMediaFooterProps;

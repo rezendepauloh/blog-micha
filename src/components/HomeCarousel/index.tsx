@@ -1,12 +1,19 @@
 import { useState } from 'react';
 import * as Styled from './styles';
+import { Heading } from '../Heading';
 
-export type HomeCarouselProps = {
-  //title?: string;
+export type CarouselProps = {
+  imgSrc: string;
+  imgAlt: string;
+  heading: string;
+  paragraph: string;
 };
 
-//export function HomeCarousel({ title = 'Change-me' }: HomeCarouselProps) {
-export function HomeCarousel() {
+export type HomeCarouselProps = {
+  carousel: CarouselProps[];
+};
+
+export function HomeCarousel({ carousel }: HomeCarouselProps) {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex: number) => {
@@ -14,44 +21,23 @@ export function HomeCarousel() {
   };
 
   return (
-    <Styled.Carousel activeIndex={index} onSelect={handleSelect}>
-      <Styled.Item>
-        <img
-          className="d-block w-100"
-          src="assets/images/carousel01.jpg"
-          alt="First slide"
-        />
-        <Styled.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Styled.Caption>
-      </Styled.Item>
-      <Styled.Item>
-        <img
-          className="d-block w-100"
-          src="assets/images/carousel02.jpg"
-          alt="Second slide"
-        />
-
-        <Styled.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Styled.Caption>
-      </Styled.Item>
-      <Styled.Item>
-        <img
-          className="d-block w-100"
-          src="assets/images/carousel03.jpg"
-          alt="Third slide"
-        />
-
-        <Styled.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Styled.Caption>
-      </Styled.Item>
+    <Styled.Carousel fade activeIndex={index} onSelect={handleSelect}>
+      {carousel.map((c, index) => {
+        const key = `${index}-${c.imgAlt}`;
+        const imgsrc = `${c.imgSrc}`;
+        const imgalt = `${c.imgAlt}`;
+        return (
+          <Styled.Item key={key}>
+            <img className="d-block w-100" src={imgsrc} alt={imgalt} />
+            <Styled.Caption>
+              <Heading uppercase as="h3" size="huge" colorDark={false}>
+                {c.heading}
+              </Heading>
+              <p>{c.paragraph}</p>
+            </Styled.Caption>
+          </Styled.Item>
+        );
+      })}
     </Styled.Carousel>
   );
 }

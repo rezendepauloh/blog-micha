@@ -1,33 +1,39 @@
 import * as Styled from './styles';
 import { Heading } from '../Heading';
+import Link from 'next/link';
+
+export type SpecialtiesProps = {
+  specialty: string;
+  url: string;
+};
 
 export type HomeSpecialtiesProps = {
-  title?: string;
+  title: string;
+  content: string;
+  specialties: SpecialtiesProps[];
 };
 
 export function HomeSpecialties({
-  title = 'Fluid Jumbotron',
+  title,
+  content,
+  specialties,
 }: HomeSpecialtiesProps) {
   return (
     <Styled.Jumbotron fluid>
       <Heading uppercase as="h2" size="medium" colorDark={true}>
         {title}
       </Heading>
-      <p>
-        This is a modified jumbotron that occupies the entire horizontal space
-        of its parent.
-      </p>
+      <p>{content}</p>
 
       <p>
-        <Styled.Button href="www.google.com.br" size="lg">
-          Direito Tributário
-        </Styled.Button>
-        <Styled.Button href="www.google.com.br" size="lg">
-          Direito Empresarial
-        </Styled.Button>
-        <Styled.Button href="www.google.com.br" size="lg">
-          Direito Civil
-        </Styled.Button>
+        {specialties.map((s) => {
+          const key = `${s.specialty}`.replace(/\s/g, '');
+          return (
+            <Link key={key} href={s.url} passHref>
+              <Styled.Button size="lg">{s.specialty}</Styled.Button>
+            </Link>
+          );
+        })}
       </p>
     </Styled.Jumbotron>
   );

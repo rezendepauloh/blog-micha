@@ -1,16 +1,15 @@
-//import linksMock from '../../components/NavLinks/mock';
-//import logoLinkMock from '../../components/LogoLink/mock';
-import menuMock from '../../components/Menu/mock';
-import gridFooterMock from '../../components/GridFooter/mock';
+import headerGridMock from '../../components/HeaderGrid/mock';
+import gridFooterMock from '../../components/FooterGrid/mock';
+import { HomeContent } from '../../components/HomeContent';
+import homeContentMock from '../../components/HomeContent/mock';
 import { BaseProps } from '.';
 
 export const mockBase = {
   children: (
     <>
-      <h1>Teste 01</h1>
-      <p>Ainda sem os componentes que virão aqui</p>
+      <HomeContent {...homeContentMock} />
     </>
   ),
-  menu: menuMock,
+  menu: headerGridMock,
   footer: gridFooterMock,
 } as BaseProps;

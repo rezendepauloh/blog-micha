@@ -8,13 +8,11 @@ export const Jumbotron = styled(JumbotronBootstrap)`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 25px;
     width: 100%;
-    background-color: white;
-    z-index: 555;
+    text-align: center; */
     position: relative;
     bottom: 50px;
-    text-align: center; */
+    z-index: 555;
     box-shadow: 6px 6px 50px #2d2d2d;
     transition: box-shadow 0.2s ease-out 0s;
     text-align: center;

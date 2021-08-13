@@ -12,8 +12,8 @@ export const Jumbotron = styled(JumbotronBootstrap)`
     text-align: center; */
     position: relative;
     bottom: 50px;
-    z-index: 555;
-    box-shadow: 6px 6px 50px #2d2d2d;
+    z-index: 2;
+    box-shadow: 6px 6px 50px ${theme.colors.mediumGray};
     transition: box-shadow 0.2s ease-out 0s;
     text-align: center;
     justify-content: center;

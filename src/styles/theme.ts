@@ -2,7 +2,9 @@ export const theme = {
   colors: {
     primary: '#0A1128',
     secondary: '#dc143c',
+    secondaryTwo: '#f93213',
     white: '#f5f5f6',
+    whiteTwo: '#ffffff',
     mediumGray: '#2d2d2d',
   },
   font: {
@@ -22,7 +24,11 @@ export const theme = {
     },
   },
   media: {
+    xsmall: '(max-width: 575.98px)',
+    small: '(max-width: 767.98px)',
     lteMedium: '(max-width: 768px)',
+    medium: '(max-width: 991.98px)',
+    large: '(max-width: 1199.98px)',
   },
   spacings: {
     xsmall: '0.8rem',

@@ -1,15 +1,10 @@
 import styled, { css } from 'styled-components';
 import { Jumbotron as JumbotronBootstrap } from 'react-bootstrap';
 import { Button as ButtonBootstrap } from 'react-bootstrap';
+import { Title as HeadingContainer } from '../Heading/styles';
 
 export const Jumbotron = styled(JumbotronBootstrap)`
   ${({ theme }) => css`
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center; */
     position: relative;
     bottom: 50px;
     z-index: 2;
@@ -18,44 +13,40 @@ export const Jumbotron = styled(JumbotronBootstrap)`
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 0px 25px;
-    padding: 25px;
+    margin: 0 ${theme.spacings.medium};
+    padding: ${theme.spacings.medium};
     background-color: ${theme.colors.white};
 
-    /* .mydiv{
-box-shadow: 8px 15px 29px 0px #2D2D2D;
-transition: box-shadow 0.2s ease-out 0s;
-}
-.mydiv:hover{
-box-shadow: 9px 10px 15px 0px #ABABAB;
-transition: box-shadow 0.3s ease-in 0s;
-} */
+    @media ${theme.media.lteMedium} {
+      margin: 0 ${theme.spacings.small};
+      padding: ${theme.spacings.small};
+      bottom: 10px;
+      ${HeadingContainer} {
+        font-size: ${theme.font.sizes.medium};
+        margin: ${theme.spacings.xsmall} 0;
+      }
+    }
   `}
 `;
 
 export const Button = styled(ButtonBootstrap)`
   ${({ theme }) => css`
+    background-color: ${theme.colors.secondary};
     color: ${theme.colors.white};
+    text-align: center;
     font-size: ${theme.spacings.small};
-    padding: 16px;
-    border: none;
-    background-image: linear-gradient(
-      to bottom,
-      #f93213,
-      ${theme.colors.secondary}
-    );
-    cursor: pointer;
+    padding: ${theme.spacings.small};
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 5px;
     margin: 0px 9px;
 
     &:hover {
       color: ${theme.colors.secondary};
-      background-image: linear-gradient(
-        to bottom,
-        #ffffff,
-        ${theme.colors.white}
-      );
-      //border: 1px solid ${theme.colors.primary};
-      transition: all 500ms ease-in-out;
+      background-color: ${theme.colors.white};
+      transition: all 300ms ease-in-out;
+      border: 1px solid;
     }
   `}
 `;

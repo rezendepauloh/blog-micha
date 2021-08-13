@@ -45,11 +45,14 @@ export const LinkMaps = styled.a`
     margin-top: ${theme.spacings.small};
     text-decoration: none;
     font-weight: bold;
+    border: 1px solid ${theme.colors.secondary};
+    border-radius: 5px;
 
     &:hover {
       color: ${theme.colors.secondary};
       background-color: ${theme.colors.white};
       transition: all 300ms ease-in-out;
+      border: 1px solid;
     }
 
     > svg {

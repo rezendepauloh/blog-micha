@@ -1,6 +1,7 @@
 import * as Styled from './styles';
 import { Heading } from '../Heading';
 import Link from 'next/link';
+import { formatDate } from '../../utils/format-date';
 
 export type HomePostCardProps = {
   title: string;
@@ -31,7 +32,7 @@ export function HomePostCard({
             <Styled.TextCard>{content}</Styled.TextCard>
           </Styled.BodyCard>
           <Styled.FooterCard>
-            <small className="text-muted">{date}</small>
+            <small className="text-muted">{formatDate(date)}</small>
           </Styled.FooterCard>
         </a>
       </Link>

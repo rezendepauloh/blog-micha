@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
-import { HomePost } from '.';
+import { HomePostCard } from '.';
 import { renderTheme } from '../../styles/render-theme';
 
 import mock from './mock';
 
-describe('<HomePost />', () => {
+describe('<HomePostCard />', () => {
   it('should render', () => {
-    renderTheme(<HomePost {...mock} />);
+    renderTheme(<HomePostCard {...mock} />);
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 });

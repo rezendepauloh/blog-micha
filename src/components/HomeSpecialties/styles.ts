@@ -13,7 +13,7 @@ export const Jumbotron = styled(JumbotronBootstrap)`
     position: relative;
     bottom: 50px;
     z-index: 2;
-    box-shadow: 6px 6px 50px ${theme.colors.mediumGray};
+    box-shadow: 4px 13px 21px ${theme.colors.mediumGray}4d;
     transition: box-shadow 0.2s ease-out 0s;
     text-align: center;
     justify-content: center;

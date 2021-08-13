@@ -12,11 +12,10 @@ export const Card = styled(CardBootstrap)`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    cursor: pointer;
+    //cursor: pointer;
 
     &:hover {
-      //box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
-      box-shadow: 1px 1px 20px ${theme.colors.mediumGray};
+      box-shadow: 15px 15px 12px ${theme.colors.mediumGray}1a;
       transition: all 500ms ease-in-out;
     }
   `}
@@ -36,7 +35,10 @@ export const TitleCard = styled(CardBootstrap.Title)`
 `;
 
 export const TextCard = styled(CardBootstrap.Text)`
-  text-align: justify;
+  ${({ theme }) => css`
+    text-align: justify;
+    color: ${theme.colors.mediumGray};
+  `}
 `;
 
 export const FooterCard = styled(CardBootstrap.Footer)`

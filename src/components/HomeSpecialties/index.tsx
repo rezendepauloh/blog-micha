@@ -30,7 +30,9 @@ export function HomeSpecialties({
           const key = `${s.specialty}`.replace(/\s/g, '');
           return (
             <Link key={key} href={s.url} passHref>
-              <Styled.Button size="lg">{s.specialty}</Styled.Button>
+              <a>
+                <Styled.Button size="lg">{s.specialty}</Styled.Button>
+              </a>
             </Link>
           );
         })}

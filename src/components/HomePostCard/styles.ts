@@ -12,11 +12,15 @@ export const Card = styled(CardBootstrap)`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    //cursor: pointer;
 
     &:hover {
       box-shadow: 15px 15px 12px ${theme.colors.mediumGray}1a;
       transition: all 500ms ease-in-out;
+    }
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      margin: auto;
     }
   `}
 `;
@@ -46,5 +50,6 @@ export const FooterCard = styled(CardBootstrap.Footer)`
     color: ${theme.colors.mediumGray};
     background-color: inherit;
     border-top: 1px solid ${theme.colors.mediumGray};
+    text-align: center;
   `}
 `;

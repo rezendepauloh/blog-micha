@@ -6,7 +6,7 @@ import mock from './mock';
 export default {
   title: 'Home/HomeCarousel',
   component: HomeCarousel,
-  args: { carousel: mock },
+  args: mock,
 } as Meta;
 
 export const Template: Story<HomeCarouselProps> = (args) => {

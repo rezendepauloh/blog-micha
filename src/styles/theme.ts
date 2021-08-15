@@ -25,10 +25,11 @@ export const theme = {
   },
   media: {
     xsmall: '(max-width: 575.98px)',
-    small: '(max-width: 767.98px)',
+    small: '(min-width: 576px) and (max-width: 767.98px)',
     lteMedium: '(max-width: 768px)',
-    medium: '(max-width: 991.98px)',
-    large: '(max-width: 1199.98px)',
+    medium: '(min-width: 768px) and (max-width: 991.98px)',
+    large: '(min-width: 992px) and (max-width: 1199.98px)',
+    xlarge: '(min-width: 1200px)',
   },
   spacings: {
     xsmall: '0.8rem',

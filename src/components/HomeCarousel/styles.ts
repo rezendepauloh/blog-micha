@@ -26,14 +26,13 @@ export const Caption = styled(CarouselBootstrap.Caption)`
       padding-bottom: 8px;
     }
 
-    @media ${theme.media.small} {
+    @media ${theme.media.xsmall} {
       font-size: ${theme.font.sizes.small};
       margin: 0 ${theme.spacings.small};
       padding: ${theme.spacings.small};
       bottom: 10%;
       right: 9%;
       left: 7%;
-      font-size: ${theme.spacings.small};
 
       ${HeadingContainer} {
         font-size: ${theme.font.sizes.small};
@@ -46,16 +45,34 @@ export const Caption = styled(CarouselBootstrap.Caption)`
     }
 
     @media ${theme.media.medium} {
+      font-size: ${theme.font.sizes.small};
+      margin: 0 ${theme.spacings.small};
+      padding: ${theme.spacings.small};
+      bottom: 34%;
+      right: 9%;
+      left: 7%;
+
+      ${HeadingContainer} {
+        font-size: ${theme.font.sizes.xlarge};
+        margin: ${theme.spacings.xsmall} 0;
+      }
+
+      > p {
+        margin: ${theme.spacings.xsmall} 0;
+      }
+    }
+
+    @media ${theme.media.large} {
       font-size: ${theme.font.sizes.medium};
       margin: 0 ${theme.spacings.small};
       padding: ${theme.spacings.small};
-      bottom: 35%;
+      bottom: 34%;
       right: 9%;
       left: 7%;
       font-size: ${theme.spacings.small};
 
       ${HeadingContainer} {
-        font-size: ${theme.font.sizes.medium};
+        font-size: ${theme.font.sizes.xlarge};
         margin: ${theme.spacings.xsmall} 0;
       }
 

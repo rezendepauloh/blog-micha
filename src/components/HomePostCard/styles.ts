@@ -22,6 +22,10 @@ export const Card = styled(CardBootstrap)`
       width: 100%;
       margin: auto;
     }
+
+    @media ${theme.media.small} {
+      margin: ${theme.spacings.xsmall} 0;
+    }
   `}
 `;
 

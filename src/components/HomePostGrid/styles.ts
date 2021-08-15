@@ -21,6 +21,13 @@ export const Container = styled.div`
       width: 100%;
       margin: auto;
     }
+
+    @media ${theme.media.small} {
+      flex-flow: column wrap;
+      align-content: center;
+      width: 100%;
+      margin: ${theme.spacings.xsmall} 0;
+    }
   `}
 `;
 

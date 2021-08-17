@@ -5,14 +5,14 @@ import { GoTop } from '../../components/GoTop';
 
 export type BaseProps = {
   children: React.ReactNode;
-  menu: HeaderGridProps;
+  header: HeaderGridProps;
   footer: FooterGridProps;
 };
 
-export const Base = ({ menu, footer, children }: BaseProps) => {
+export const Base = ({ header, footer, children }: BaseProps) => {
   return (
     <>
-      <HeaderGrid {...menu} />
+      <HeaderGrid {...header} />
       <Styled.Container>{children}</Styled.Container>
       <FooterGrid {...footer} />
       <GoTop />

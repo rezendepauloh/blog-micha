@@ -5,15 +5,18 @@ import { Heading } from '../Heading';
 
 export type HomePostGridProps = {
   posts?: HomePostCardProps[];
+  title?: string;
 };
 
-export function HomePostGrid({ posts = [] }: HomePostGridProps) {
+export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
   return (
     <>
       <Styled.Container>
-        <Heading uppercase as="h2" size="medium" colorDark={true}>
-          Últimos artigos
-        </Heading>
+        {title ? (
+          <Heading uppercase as="h2" size="medium" colorDark={true}>
+            {title}
+          </Heading>
+        ) : null}
       </Styled.Container>
       <Styled.CardDeck>
         {posts.map((post, index) => {

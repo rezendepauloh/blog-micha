@@ -1,6 +1,6 @@
 import { HomePostGridProps } from './index';
 
-export default {
+export const mockWithoutTitle = {
   posts: [
     {
       title: 'O que é o contrato social?',

@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
-import { HomeContent } from '.';
+import { HomeTemplate } from '.';
 import { renderTheme } from '../../styles/render-theme';
 
 import mock from './mock';
 
-describe('<HomeContent />', () => {
+describe('<HomeTemplate />', () => {
   it('should render', () => {
-    renderTheme(<HomeContent {...mock} />);
+    renderTheme(<HomeTemplate {...mock} />);
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 });

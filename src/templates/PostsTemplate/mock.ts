@@ -1,5 +1,5 @@
 import { PostsTemplateProps } from '.';
-import { mockWithoutTitle } from '../../components/HomePostGrid/mock-without-title';
+import { mockWithoutTitle } from '../../components/HomePostGrid/mock';
 import headerGridMock from '../../components/HeaderGrid/mock';
 import gridFooterMock from '../../components/FooterGrid/mock';
 

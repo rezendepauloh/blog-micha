@@ -11,13 +11,13 @@ export type HomePostGridProps = {
 export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
   return (
     <>
-      <Styled.Container>
-        {title ? (
+      {title ? (
+        <Styled.Container>
           <Heading uppercase as="h2" size="medium" colorDark={true}>
             {title}
           </Heading>
-        ) : null}
-      </Styled.Container>
+        </Styled.Container>
+      ) : null}
       <Styled.CardDeck>
         {posts.map((post, index) => {
           const key = `${post.title}-${index}`;

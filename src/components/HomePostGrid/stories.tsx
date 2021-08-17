@@ -1,13 +1,11 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { HomePostGrid, HomePostGridProps } from '.';
 
-import { mockWithTitle } from './mock-with-title';
-import { mockWithoutTitle } from './mock-without-title';
+import { mockWithTitle, mockWithoutTitle } from './mock';
 
 export default {
   title: 'Home/HomePostGrid',
   component: HomePostGrid,
-  //args: mock,
 } as Meta;
 
 export const TemplateWithTitle: Story<HomePostGridProps> = (args) => {

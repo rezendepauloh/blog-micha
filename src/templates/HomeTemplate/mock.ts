@@ -1,7 +1,7 @@
 import { HomeTemplateProps } from '.';
 import HomeCarouselMock from '../../components/HomeCarousel/mock';
 import HomeSpecialtiesMock from '../../components/HomeSpecialties/mock';
-import { mockWithTitle } from '../../components/HomePostGrid/mock-with-title';
+import { mockWithTitle } from '../../components/HomePostGrid/mock';
 import headerGridMock from '../../components/HeaderGrid/mock';
 import gridFooterMock from '../../components/FooterGrid/mock';
 

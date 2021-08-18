@@ -1,6 +1,6 @@
 import { HeaderGridProps } from '.';
-import linksMock from '../HeaderMenu/mock';
-import logoLinkMock from '../HeaderLogo/mock';
+import linksMock from 'components/HeaderMenu/mock';
+import logoLinkMock from 'components/HeaderLogo/mock';
 
 export default {
   links: linksMock,

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Carousel as CarouselBootstrap } from 'react-bootstrap';
-import { Title as HeadingContainer } from '../Heading/styles';
+import { Title as HeadingContainer } from 'components/Heading/styles';
 
 export const Carousel = styled(CarouselBootstrap)`
   ${({ theme }) => css`

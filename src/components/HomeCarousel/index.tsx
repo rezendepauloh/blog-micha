@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as Styled from './styles';
-import { Heading } from '../Heading';
+import { Heading } from 'components/Heading';
 
 export type CarouselProps = {
   imgSrc: string;

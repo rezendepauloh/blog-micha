@@ -1,7 +1,7 @@
 import * as Styled from './styles';
-import { Heading } from '../Heading';
+import { Heading } from 'components/Heading';
 import Link from 'next/link';
-import { formatDate } from '../../utils/format-date';
+import { formatDate } from 'utils/format-date';
 
 export type HomePostCardProps = {
   title: string;

@@ -1,5 +1,5 @@
 import * as Styled from './styles';
-import { HeaderLinkMenu, HeaderLinkMenuProps } from '../HeaderLinkMenu';
+import { HeaderLinkMenu, HeaderLinkMenuProps } from 'components/HeaderLinkMenu';
 
 export type HeaderMenuProps = {
   links?: HeaderLinkMenuProps[];

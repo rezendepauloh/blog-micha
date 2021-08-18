@@ -1,4 +1,4 @@
-import { renderTheme } from '../../styles/render-theme';
+import { renderTheme } from 'styles/render-theme';
 import { FooterSocialMedia } from '.';
 
 import mock from './mock';

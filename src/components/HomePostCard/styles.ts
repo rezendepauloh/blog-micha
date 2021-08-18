@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Card as CardBootstrap } from 'react-bootstrap';
-import { Title as HeadingContainer } from '../Heading/styles';
+import { Title as HeadingContainer } from 'components/Heading/styles';
 
 export const Card = styled(CardBootstrap)`
   ${({ theme }) => css`

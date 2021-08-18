@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { HeaderLinkMenu, HeaderLinkMenuProps } from '.';
-import { theme } from '../../styles/theme';
+import { theme } from 'styles/theme';
 
 export default {
   title: 'Header/HeaderLinkMenu',

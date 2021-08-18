@@ -1,4 +1,4 @@
-import { HeaderLinkMenuProps } from '../HeaderLinkMenu';
+import { HeaderLinkMenuProps } from 'components/HeaderLinkMenu';
 
 export default [
   {

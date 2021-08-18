@@ -1,9 +1,9 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { renderTheme } from '../../styles/render-theme';
+import { renderTheme } from 'styles/render-theme';
 import { HeaderGrid } from '.';
 
-import linksMock from '../HeaderMenu/mock';
-import { theme } from '../../styles/theme';
+import linksMock from 'components/HeaderMenu/mock';
+import { theme } from 'styles/theme';
 const logoData = {
   text: 'Logo',
   link: '#target',

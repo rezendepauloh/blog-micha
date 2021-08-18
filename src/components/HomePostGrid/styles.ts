@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { CardDeck as CardDeckBootstrap } from 'react-bootstrap';
-import { Title as HeadingContainer } from '../Heading/styles';
+import { Title as HeadingContainer } from 'components/Heading/styles';
 import { Button as ButtonBootstrap } from 'react-bootstrap';
 
 export const Container = styled.div`

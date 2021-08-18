@@ -1,5 +1,5 @@
 import * as Styled from './styles';
-import { Heading } from '../Heading';
+import { Heading } from 'components/Heading';
 import Link from 'next/link';
 
 export type HeaderLogoProps = {

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Jumbotron as JumbotronBootstrap } from 'react-bootstrap';
 import { Button as ButtonBootstrap } from 'react-bootstrap';
-import { Title as HeadingContainer } from '../Heading/styles';
+import { Title as HeadingContainer } from 'components/Heading/styles';
 
 export const Jumbotron = styled(JumbotronBootstrap)`
   ${({ theme }) => css`

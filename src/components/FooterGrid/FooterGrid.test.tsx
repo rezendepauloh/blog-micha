@@ -1,4 +1,4 @@
-import { renderTheme } from '../../styles/render-theme';
+import { renderTheme } from 'styles/render-theme';
 import { FooterGrid } from '.';
 
 import mock from './mock';

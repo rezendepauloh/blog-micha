@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react';
 import { HomePostGrid } from '.';
-import { renderTheme } from '../../styles/render-theme';
+import { renderTheme } from 'styles/render-theme';
 
-import { mockWithTitle } from './mock-with-title';
+import { mockWithTitle } from './mock';
 
 describe('<HomePostGrid />', () => {
   it('should render', () => {

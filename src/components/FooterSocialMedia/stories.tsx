@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { FooterSocialMedia, FooterSocialMediaProps } from '.';
-import { theme } from '../../styles/theme';
+import { theme } from 'styles/theme';
 
 import mock from './mock';
 

@@ -1,7 +1,7 @@
 import * as Styled from './styles';
-import { HomePostCard, HomePostCardProps } from '../HomePostCard';
+import { HomePostCard, HomePostCardProps } from 'components/HomePostCard';
 import Link from 'next/link';
-import { Heading } from '../Heading';
+import { Heading } from 'components/Heading';
 
 export type HomePostGridProps = {
   posts?: HomePostCardProps[];

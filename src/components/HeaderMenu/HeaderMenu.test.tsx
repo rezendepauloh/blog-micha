@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react';
-import { renderTheme } from '../../styles/render-theme';
+import { renderTheme } from 'styles/render-theme';
 import { HeaderMenu } from '.';
 
 import mock from './mock';
-import { theme } from '../../styles/theme';
+import { theme } from 'styles/theme';
 
 describe('<HeaderMenu />', () => {
   it('should render links', () => {

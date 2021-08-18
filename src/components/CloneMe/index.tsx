@@ -1,8 +1,6 @@
 import * as Styled from './styles';
 
-export type CloneMeProps = {
-  title?: string;
-};
+import { CloneMeProps } from './type';
 
 export function CloneMe({ title = 'Change-me' }: CloneMeProps) {
   return (

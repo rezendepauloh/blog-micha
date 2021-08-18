@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { Base, BaseProps } from '.';
+import { Base } from '.';
+import { BaseProps } from './type';
 
 import { mockBaseWithImage, mockBaseWithoutImage } from './mock';
 

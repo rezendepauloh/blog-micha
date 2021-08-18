@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HeaderGrid, HeaderGridProps } from '.';
+import { HeaderGrid } from '.';
+import { HeaderGridProps } from './type';
 
 import linksMock from 'components/HeaderMenu/mock';
 import mock from './mock';

@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HomeCarousel, HomeCarouselProps } from '.';
+import { HomeCarousel } from '.';
+import { HomeCarouselProps } from './type';
 
 import mock from './mock';
 

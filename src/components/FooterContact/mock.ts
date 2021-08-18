@@ -1,4 +1,4 @@
-import { FooterContactProps } from '.';
+import { FooterContactProps } from './type';
 
 export default {
   phone: [

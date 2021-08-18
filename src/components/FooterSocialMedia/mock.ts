@@ -1,4 +1,4 @@
-import { FooterSocialMediaProps } from '.';
+import { FooterSocialMediaProps } from './type';
 
 export default {
   endereco:

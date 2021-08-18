@@ -3,13 +3,7 @@ import { Heading } from 'components/Heading';
 import Link from 'next/link';
 import { formatDate } from 'utils/format-date';
 
-export type HomePostCardProps = {
-  title: string;
-  url: string;
-  date: string;
-  imgSrc: string;
-  content: string;
-};
+import { HomePostCardProps } from './type';
 
 export function HomePostCard({
   title,

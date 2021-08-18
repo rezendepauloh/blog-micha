@@ -2,16 +2,7 @@ import * as Styled from './styles';
 import { Heading } from 'components/Heading';
 import Link from 'next/link';
 
-export type SpecialtiesProps = {
-  specialty: string;
-  url: string;
-};
-
-export type HomeSpecialtiesProps = {
-  title: string;
-  content: string;
-  specialties: SpecialtiesProps[];
-};
+import { HomeSpecialtiesProps } from './type';
 
 export function HomeSpecialties({
   title,

@@ -1,4 +1,4 @@
-import { PostsTemplateProps } from '.';
+import { PostsTemplateProps } from './type';
 import { mockWithoutTitle } from 'components/HomePostGrid/mock';
 import headerGridMock from 'components/HeaderGrid/mock';
 import {

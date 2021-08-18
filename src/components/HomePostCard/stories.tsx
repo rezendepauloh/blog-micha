@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HomePostCard, HomePostCardProps } from '.';
+import { HomePostCard } from '.';
+import { HomePostCardProps } from './type';
 
 import mock from './mock';
 

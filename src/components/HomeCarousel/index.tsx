@@ -2,16 +2,7 @@ import { useState } from 'react';
 import * as Styled from './styles';
 import { Heading } from 'components/Heading';
 
-export type CarouselProps = {
-  imgSrc: string;
-  imgAlt: string;
-  heading: string;
-  paragraph: string;
-};
-
-export type HomeCarouselProps = {
-  carousel: CarouselProps[];
-};
+import { HomeCarouselProps } from './type';
 
 export function HomeCarousel({ carousel }: HomeCarouselProps) {
   const [index, setIndex] = useState(0);

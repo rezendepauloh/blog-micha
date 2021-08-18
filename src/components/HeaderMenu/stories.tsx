@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HeaderMenu, HeaderMenuProps } from '.';
+import { HeaderMenu } from '.';
+import { HeaderMenuProps } from './type';
 import links from './mock';
 
 export default {

@@ -1,4 +1,4 @@
-import { HeaderLogoProps } from '.';
+import { HeaderLogoProps } from './type';
 
 export default {
   text: 'Michely Segóvia',

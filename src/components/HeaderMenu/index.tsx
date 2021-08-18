@@ -1,9 +1,7 @@
 import * as Styled from './styles';
-import { HeaderLinkMenu, HeaderLinkMenuProps } from 'components/HeaderLinkMenu';
+import { HeaderLinkMenu } from 'components/HeaderLinkMenu';
 
-export type HeaderMenuProps = {
-  links?: HeaderLinkMenuProps[];
-};
+import { HeaderMenuProps } from './type';
 
 export const HeaderMenu = ({ links = [] }: HeaderMenuProps) => {
   return (

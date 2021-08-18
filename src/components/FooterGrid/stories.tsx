@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { FooterGrid, FooterGridProps } from '.';
+import { FooterGrid } from '.';
+import { FooterGridProps } from './type';
 
 import { mockFooterWithImage, mockFooterWithoutImage } from './mock';
 

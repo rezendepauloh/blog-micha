@@ -1,8 +1,6 @@
 import * as Styled from './styles';
 
-export type SectionContainerProps = {
-  children: React.ReactNode;
-};
+import { SectionContainerProps } from './type';
 
 export const SectionContainer = ({ children }: SectionContainerProps) => {
   return <Styled.Container>{children}</Styled.Container>;

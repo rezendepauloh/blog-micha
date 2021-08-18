@@ -2,12 +2,7 @@ import * as Styled from './styles';
 import { Heading } from 'components/Heading';
 import Link from 'next/link';
 
-export type HeaderLogoProps = {
-  text: string;
-  srcImg?: string;
-  link: string;
-  newTab?: boolean;
-};
+import { HeaderLogoProps } from './type';
 
 export const HeaderLogo = ({
   text,

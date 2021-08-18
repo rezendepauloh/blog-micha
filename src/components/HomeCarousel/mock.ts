@@ -1,4 +1,4 @@
-import { HomeCarouselProps } from '.';
+import { HomeCarouselProps } from './type';
 
 export default {
   carousel: [

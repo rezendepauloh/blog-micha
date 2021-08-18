@@ -1,4 +1,4 @@
-import { HomeTemplateProps } from '.';
+import { HomeTemplateProps } from './type';
 import HomeCarouselMock from 'components/HomeCarousel/mock';
 import HomeSpecialtiesMock from 'components/HomeSpecialties/mock';
 import { mockWithTitle } from 'components/HomePostGrid/mock';

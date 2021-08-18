@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HomeTemplate, HomeTemplateProps } from '.';
+import { HomeTemplate } from '.';
+import { HomeTemplateProps } from './type';
 
 import {
   mockHomeTemplateWithFooterImage,

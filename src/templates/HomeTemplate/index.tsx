@@ -1,21 +1,10 @@
 import * as Styled from './styles';
-import { HomeCarousel, HomeCarouselProps } from 'components/HomeCarousel';
-import {
-  HomeSpecialties,
-  HomeSpecialtiesProps,
-} from 'components/HomeSpecialties';
-import { HomePostGrid, HomePostGridProps } from 'components/HomePostGrid';
-import { HeaderGridProps } from 'components/HeaderGrid';
-import { FooterGridProps } from 'components/FooterGrid';
+import { HomeCarousel } from 'components/HomeCarousel';
+import { HomeSpecialties } from 'components/HomeSpecialties';
+import { HomePostGrid } from 'components/HomePostGrid';
 import { Base } from '../Base';
 
-export type HomeTemplateProps = {
-  carousel: HomeCarouselProps;
-  specialties: HomeSpecialtiesProps;
-  posts: HomePostGridProps;
-  header: HeaderGridProps;
-  footer: FooterGridProps;
-};
+import { HomeTemplateProps } from './type';
 
 export function HomeTemplate({
   carousel,

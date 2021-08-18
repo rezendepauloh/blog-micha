@@ -1,26 +1,13 @@
 import * as Styled from './styles';
 import Link from 'next/link';
+
 import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp';
 import { EmailOutline as Email } from '@styled-icons/evaicons-outline/EmailOutline';
 import { Map } from '@styled-icons/boxicons-regular/Map';
 
 import { Heading } from 'components/Heading';
 
-export type PhoneProps = {
-  phone: string;
-  url: string;
-};
-
-export type EmailProps = {
-  email: string;
-  url: string;
-};
-
-export type FooterContactProps = {
-  phone: PhoneProps[];
-  email: EmailProps[];
-  location: string;
-};
+import { FooterContactProps } from './type';
 
 export const FooterContact = ({
   phone,

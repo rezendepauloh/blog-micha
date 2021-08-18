@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HomePostGrid, HomePostGridProps } from '.';
+import { HomePostGrid } from '.';
+import { HomePostGridProps } from './type';
 
 import { mockWithTitle, mockWithoutTitle } from './mock';
 

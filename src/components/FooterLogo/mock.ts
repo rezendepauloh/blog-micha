@@ -1,4 +1,4 @@
-import { FooterLogoProps } from '.';
+import { FooterLogoProps } from './type';
 
 export const mockWithImage = {
   text: 'Michely Segóvia',

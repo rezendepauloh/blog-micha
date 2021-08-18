@@ -3,7 +3,7 @@ import {
   mockFooterWithImage,
   mockFooterWithoutImage,
 } from 'components/FooterGrid/mock';
-import { BaseProps } from '.';
+import { BaseProps } from './type';
 
 export const mockBaseWithImage = {
   children: (

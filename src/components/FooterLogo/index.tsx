@@ -1,10 +1,7 @@
 import * as Styled from './styles';
 import { Heading } from 'components/Heading';
 
-export type FooterLogoProps = {
-  text: string;
-  srcImg?: string;
-};
+import { FooterLogoProps } from './type';
 
 export const FooterLogo = ({ text, srcImg = '' }: FooterLogoProps) => {
   return (

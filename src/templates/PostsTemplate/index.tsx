@@ -1,14 +1,8 @@
 import * as Styled from './styles';
-import { HomePostGrid, HomePostGridProps } from 'components/HomePostGrid';
-import { HeaderGridProps } from 'components/HeaderGrid';
-import { FooterGridProps } from 'components/FooterGrid';
+import { HomePostGrid } from 'components/HomePostGrid';
 import { Base } from 'templates/Base';
 
-export type PostsTemplateProps = {
-  posts: HomePostGridProps;
-  header: HeaderGridProps;
-  footer: FooterGridProps;
-};
+import { PostsTemplateProps } from './type';
 
 export function PostsTemplate({ posts, header, footer }: PostsTemplateProps) {
   //Mesclar a forma do react course-1 com React-Course-6

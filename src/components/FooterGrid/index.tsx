@@ -1,17 +1,9 @@
 import * as Styled from './styles';
-import {
-  FooterSocialMedia,
-  FooterSocialMediaProps,
-} from 'components/FooterSocialMedia';
-import { FooterLogo, FooterLogoProps } from 'components/FooterLogo';
-import { FooterContact, FooterContactProps } from 'components/FooterContact';
+import { FooterSocialMedia } from 'components/FooterSocialMedia';
+import { FooterLogo } from 'components/FooterLogo';
+import { FooterContact } from 'components/FooterContact';
 
-export type FooterGridProps = {
-  logoFooter: FooterLogoProps;
-  socialMediaFotter: FooterSocialMediaProps;
-  contactFooter: FooterContactProps;
-  component?: string;
-};
+import { FooterGridProps } from './type';
 
 export const FooterGrid = ({
   logoFooter,

@@ -1,11 +1,7 @@
 import Link from 'next/link';
 import * as Styled from './styles';
 
-export type HeaderLinkMenuProps = {
-  children: React.ReactNode;
-  link: string;
-  newTab?: boolean;
-};
+import { HeaderLinkMenuProps } from './type';
 
 export const HeaderLinkMenu = ({
   children,

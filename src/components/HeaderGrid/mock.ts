@@ -1,4 +1,4 @@
-import { HeaderGridProps } from '.';
+import { HeaderGridProps } from './type';
 import linksMock from 'components/HeaderMenu/mock';
 import logoLinkMock from 'components/HeaderLogo/mock';
 

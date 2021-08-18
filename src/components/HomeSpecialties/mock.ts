@@ -1,4 +1,4 @@
-import { HomeSpecialtiesProps } from '.';
+import { HomeSpecialtiesProps } from './type';
 
 export default {
   title: 'Direito Tributário, Empresarial e Civil',

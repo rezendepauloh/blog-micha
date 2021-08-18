@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { CloneMe, CloneMeProps } from '.';
+import { CloneMe } from '.';
+import { CloneMeProps } from './type';
 
 export default {
   title: 'CloneMe',

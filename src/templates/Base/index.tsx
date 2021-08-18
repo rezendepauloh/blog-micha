@@ -1,13 +1,9 @@
 import * as Styled from './styles';
-import { HeaderGrid, HeaderGridProps } from 'components/HeaderGrid';
-import { FooterGrid, FooterGridProps } from 'components/FooterGrid';
+import { HeaderGrid } from 'components/HeaderGrid';
+import { FooterGrid } from 'components/FooterGrid';
 import { GoTop } from 'components/GoTop';
 
-export type BaseProps = {
-  children: React.ReactNode;
-  header: HeaderGridProps;
-  footer: FooterGridProps;
-};
+import { BaseProps } from './type';
 
 export const Base = ({ header, footer, children }: BaseProps) => {
   return (

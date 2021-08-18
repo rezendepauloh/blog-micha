@@ -1,4 +1,4 @@
-import { HomePostGridProps } from './index';
+import { HomePostGridProps } from './type';
 
 export const mockWithTitle = {
   title: 'Últimos artigos',

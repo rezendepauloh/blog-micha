@@ -1,16 +1,12 @@
 import * as Styled from './styles';
 import { SectionContainer } from 'components/SectionContainer';
-import { HeaderLogo, HeaderLogoProps } from 'components/HeaderLogo';
+import { HeaderLogo } from 'components/HeaderLogo';
 import { HeaderMenu } from 'components/HeaderMenu';
 import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
 import { useState } from 'react';
-import { HeaderLinkMenuProps } from 'components/HeaderLinkMenu';
 
-export type HeaderGridProps = {
-  links?: HeaderLinkMenuProps[];
-  logoData: HeaderLogoProps;
-};
+import { HeaderGridProps } from './type';
 
 export const HeaderGrid = ({ links = [], logoData }: HeaderGridProps) => {
   const [visible, setVisible] = useState(false);

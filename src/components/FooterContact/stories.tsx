@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { FooterContact, FooterContactProps } from '.';
+import { FooterContact } from '.';
+import { FooterContactProps } from './type';
 import { theme } from 'styles/theme';
 
 import mock from './mock';

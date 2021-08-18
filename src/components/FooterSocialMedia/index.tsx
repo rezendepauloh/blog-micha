@@ -3,21 +3,7 @@ import Link from 'next/link';
 import { InstagramAlt as Insta } from '@styled-icons/boxicons-logos/InstagramAlt';
 import { LinkedinSquare as Linkedin } from '@styled-icons/boxicons-logos/LinkedinSquare';
 
-export type InstragramProps = {
-  user: string;
-  url: string;
-};
-
-export type LinkedinProps = {
-  user: string;
-  url: string;
-};
-
-export type FooterSocialMediaProps = {
-  endereco: string;
-  instagram: InstragramProps[];
-  linkedin: LinkedinProps[];
-};
+import { FooterSocialMediaProps } from './type';
 
 export const FooterSocialMedia = ({
   endereco,

@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HeaderLogo, HeaderLogoProps } from '.';
+import { HeaderLogo } from '.';
+import { HeaderLogoProps } from './type';
 
 import mock from './mock';
 

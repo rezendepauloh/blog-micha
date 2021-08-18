@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HomeSpecialties, HomeSpecialtiesProps } from '.';
+import { HomeSpecialties } from '.';
+import { HomeSpecialtiesProps } from './type';
 
 import mock from './mock';
 

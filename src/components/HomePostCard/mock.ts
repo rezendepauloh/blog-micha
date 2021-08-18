@@ -1,4 +1,4 @@
-import { HomePostCardProps } from '.';
+import { HomePostCardProps } from './type';
 
 export default {
   title: 'O que é o contrato social?',

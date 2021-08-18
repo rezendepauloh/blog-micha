@@ -1,18 +1,32 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { HomeTemplate, HomeTemplateProps } from '.';
 
-import mock from './mock';
+import {
+  mockHomeTemplateWithFooterImage,
+  mockHomeTemplateWithoutFooterImage,
+} from './mock';
 
 export default {
   title: 'Templates/HomeTemplate',
   component: HomeTemplate,
-  args: mock,
 } as Meta;
 
-export const Template: Story<HomeTemplateProps> = (args) => {
+export const TemplateWithFooterImage: Story<HomeTemplateProps> = (args) => {
   return (
     <>
       <HomeTemplate {...args} />
     </>
   );
 };
+
+TemplateWithFooterImage.args = mockHomeTemplateWithFooterImage;
+
+export const TemplateWithoutFooterImage: Story<HomeTemplateProps> = (args) => {
+  return (
+    <>
+      <HomeTemplate {...args} />
+    </>
+  );
+};
+
+TemplateWithoutFooterImage.args = mockHomeTemplateWithoutFooterImage;

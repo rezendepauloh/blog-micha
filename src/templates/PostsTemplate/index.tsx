@@ -1,8 +1,8 @@
 import * as Styled from './styles';
-import { HomePostGrid, HomePostGridProps } from '../../components/HomePostGrid';
-import { HeaderGridProps } from '../../components/HeaderGrid';
-import { FooterGridProps } from '../../components/FooterGrid';
-import { Base } from '../Base';
+import { HomePostGrid, HomePostGridProps } from 'components/HomePostGrid';
+import { HeaderGridProps } from 'components/HeaderGrid';
+import { FooterGridProps } from 'components/FooterGrid';
+import { Base } from 'templates/Base';
 
 export type PostsTemplateProps = {
   posts: HomePostGridProps;

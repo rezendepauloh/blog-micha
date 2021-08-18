@@ -2,12 +2,11 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { FooterLogo, FooterLogoProps } from '.';
 import { theme } from 'styles/theme';
 
-import mock from './mock';
+import { mockWithImage, mockWithoutImage } from './mock';
 
 export default {
   title: 'Footer/FooterLogo',
   component: FooterLogo,
-  args: mock,
 } as Meta;
 
 export const ImageOnly: Story<FooterLogoProps> = (args) => {
@@ -22,18 +21,20 @@ export const ImageOnly: Story<FooterLogoProps> = (args) => {
   );
 };
 
+ImageOnly.args = mockWithImage;
+
 export const TextOnly: Story<FooterLogoProps> = (args) => {
   return (
-    <div
-      style={{
-        background: theme.colors.primary,
-      }}
-    >
+    <>
       <FooterLogo {...args} />
-    </div>
+    </>
   );
 };
 
-TextOnly.args = {
-  srcImg: '',
+TextOnly.parameters = {
+  backgrounds: {
+    default: 'dark',
+  },
 };
+
+TextOnly.args = mockWithoutImage;

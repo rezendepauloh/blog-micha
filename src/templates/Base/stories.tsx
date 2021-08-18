@@ -1,17 +1,29 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { Base, BaseProps } from '.';
-import { mockBase } from './mock';
+
+import { mockBaseWithImage, mockBaseWithoutImage } from './mock';
 
 export default {
   title: 'Templates/Base',
   component: Base,
-  args: mockBase,
 } as Meta;
 
-export const Template: Story<BaseProps> = (args) => {
+export const TemplateWithFooterImage: Story<BaseProps> = (args) => {
   return (
-    <div>
+    <>
       <Base {...args} />
-    </div>
+    </>
   );
 };
+
+TemplateWithFooterImage.args = mockBaseWithImage;
+
+export const TemplateWithoutFooterImage: Story<BaseProps> = (args) => {
+  return (
+    <>
+      <Base {...args} />
+    </>
+  );
+};
+
+TemplateWithoutFooterImage.args = mockBaseWithoutImage;

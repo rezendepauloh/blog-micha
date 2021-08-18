@@ -17,13 +17,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "src"
+    "baseUrl": "./src/",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "config/*": ["src/config/*"],
+      "styles/*": ["src/styles/*"],
+      "utils/*": ["src/utils/*"],
+      "templates/*": ["src/templates/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "src"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"

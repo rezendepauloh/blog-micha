@@ -1,5 +1,5 @@
 {
-  "name": "project-4",
+  "name": "blog-micha",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -21,7 +21,7 @@
     "@styled-icons/evaicons-outline": "^10.34.0",
     "@styled-icons/material-outlined": "^10.28.0",
     "bootstrap": "^4.6.0",
-    "next": "^10.0.9",
+    "next": "^11.1.0",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-bootstrap": "^1.6.1",

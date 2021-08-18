@@ -1,10 +1,16 @@
 import { FooterGridProps } from '.';
 import FooterContactMock from 'components/FooterContact/mock';
-import FooterLogoMock from 'components/FooterLogo/mock';
+import { mockWithImage, mockWithoutImage } from 'components/FooterLogo/mock';
 import FooterSocialMediaMock from 'components/FooterSocialMedia/mock';
 
-export default {
-  logoFooter: FooterLogoMock,
+export const mockFooterWithImage = {
+  logoFooter: mockWithImage,
+  socialMediaFotter: FooterSocialMediaMock,
+  contactFooter: FooterContactMock,
+} as FooterGridProps;
+
+export const mockFooterWithoutImage = {
+  logoFooter: mockWithoutImage,
   socialMediaFotter: FooterSocialMediaMock,
   contactFooter: FooterContactMock,
 } as FooterGridProps;

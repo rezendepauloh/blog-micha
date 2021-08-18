@@ -1,12 +1,12 @@
 import * as Styled from './styles';
-import { HomeCarousel, HomeCarouselProps } from '../../components/HomeCarousel';
+import { HomeCarousel, HomeCarouselProps } from 'components/HomeCarousel';
 import {
   HomeSpecialties,
   HomeSpecialtiesProps,
-} from '../../components/HomeSpecialties';
-import { HomePostGrid, HomePostGridProps } from '../../components/HomePostGrid';
-import { HeaderGridProps } from '../../components/HeaderGrid';
-import { FooterGridProps } from '../../components/FooterGrid';
+} from 'components/HomeSpecialties';
+import { HomePostGrid, HomePostGridProps } from 'components/HomePostGrid';
+import { HeaderGridProps } from 'components/HeaderGrid';
+import { FooterGridProps } from 'components/FooterGrid';
 import { Base } from '../Base';
 
 export type HomeTemplateProps = {

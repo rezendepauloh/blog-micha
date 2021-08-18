@@ -1,10 +1,19 @@
 import { PostsTemplateProps } from '.';
-import { mockWithoutTitle } from '../../components/HomePostGrid/mock';
-import headerGridMock from '../../components/HeaderGrid/mock';
-import gridFooterMock from '../../components/FooterGrid/mock';
+import { mockWithoutTitle } from 'components/HomePostGrid/mock';
+import headerGridMock from 'components/HeaderGrid/mock';
+import {
+  mockFooterWithImage,
+  mockFooterWithoutImage,
+} from 'components/FooterGrid/mock';
 
-export default {
+export const mockPostsTemplateWithFooterImage = {
   posts: mockWithoutTitle,
   header: headerGridMock,
-  footer: gridFooterMock,
+  footer: mockFooterWithImage,
+} as PostsTemplateProps;
+
+export const mockPostsTemplateWithoutFooterImage = {
+  posts: mockWithoutTitle,
+  header: headerGridMock,
+  footer: mockFooterWithoutImage,
 } as PostsTemplateProps;

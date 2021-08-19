@@ -36,10 +36,16 @@ export const CardDeck = styled(CardDeckBootstrap)`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: row wrap;
+    flex-wrap: wrap;
     margin: ${theme.spacings.medium} 0;
 
+    > .card {
+      flex: 0 0 23.333%;
+      margin-bottom: ${theme.spacings.small};
+    }
+
     @media ${theme.media.lteMedium} {
+      display: flex;
       flex-flow: column wrap;
       align-content: center;
       width: 100%;

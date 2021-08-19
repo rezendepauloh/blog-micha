@@ -23,7 +23,8 @@
       "config/*": ["src/config/*"],
       "styles/*": ["src/styles/*"],
       "utils/*": ["src/utils/*"],
-      "templates/*": ["src/templates/*"]
+      "templates/*": ["src/templates/*"],
+      "api/*": ["src/api/*"]
     }
   },
   "include": [

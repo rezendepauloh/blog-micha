@@ -30,13 +30,16 @@ export const FooterContact = ({
         </Link>
       ))}
 
-      {email.map((e) => (
-        <Link key={e.email} href={e.url} passHref>
-          <Styled.LinkSocial target={target}>
-            <Email aria-label="Email" /> {e.email}
-          </Styled.LinkSocial>
-        </Link>
-      ))}
+      {email.map((e, index) => {
+        const key = `footer-${index}-${e.email}`;
+        return (
+          <Link key={key} href={e.url} passHref>
+            <Styled.LinkSocial target={target}>
+              <Email aria-label="Email" /> {e.email}
+            </Styled.LinkSocial>
+          </Link>
+        );
+      })}
 
       <Link href={location} passHref>
         <Styled.LinkMaps target={target}>

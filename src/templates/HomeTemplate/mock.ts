@@ -2,24 +2,27 @@ import { HomeTemplateProps } from './type';
 import HomeCarouselMock from 'components/HomeCarousel/mock';
 import HomeSpecialtiesMock from 'components/HomeSpecialties/mock';
 import { mockWithTitle } from 'components/HomePostGrid/mock';
-import headerGridMock from 'components/HeaderGrid/mock';
 import {
-  mockFooterWithImage,
-  mockFooterWithoutImage,
+  mockHeaderWithImage as mockHeaderImage,
+  mockHeaderWithoutImage as mockHeaderWithoutImage,
+} from 'components/HeaderGrid/mock';
+import {
+  mockFooterWithImage as mockFooterImage,
+  mockFooterWithoutImage as mockFooterWithoutImage,
 } from 'components/FooterGrid/mock';
 
-export const mockHomeTemplateWithFooterImage = {
+export const mockHomeTemplateWithImage = {
   carousel: HomeCarouselMock,
   specialties: HomeSpecialtiesMock,
   posts: mockWithTitle,
-  header: headerGridMock,
-  footer: mockFooterWithImage,
+  header: mockHeaderImage,
+  footer: mockFooterImage,
 } as HomeTemplateProps;
 
-export const mockHomeTemplateWithoutFooterImage = {
+export const mockHomeTemplateWithoutImage = {
   carousel: HomeCarouselMock,
   specialties: HomeSpecialtiesMock,
   posts: mockWithTitle,
-  header: headerGridMock,
+  header: mockHeaderWithoutImage,
   footer: mockFooterWithoutImage,
 } as HomeTemplateProps;

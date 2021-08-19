@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { Post, PostProps } from '.';
+import { Post } from '.';
+import { PostProps } from './type';
 
 import mock from './mock';
 

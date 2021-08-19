@@ -1,7 +1,10 @@
-import headerGridMock from 'components/HeaderGrid/mock';
 import {
-  mockFooterWithImage,
-  mockFooterWithoutImage,
+  mockHeaderWithImage as mockHeaderImage,
+  mockHeaderWithoutImage as mockHeaderWithoutImage,
+} from 'components/HeaderGrid/mock';
+import {
+  mockFooterWithImage as mockFooterImage,
+  mockFooterWithoutImage as mockFooterWithoutImage,
 } from 'components/FooterGrid/mock';
 import { BaseProps } from './type';
 
@@ -11,8 +14,8 @@ export const mockBaseWithImage = {
       <h1>Teste</h1>
     </>
   ),
-  header: headerGridMock,
-  footer: mockFooterWithImage,
+  header: mockHeaderImage,
+  footer: mockFooterImage,
 } as BaseProps;
 
 export const mockBaseWithoutImage = {
@@ -21,6 +24,6 @@ export const mockBaseWithoutImage = {
       <h1>Teste</h1>
     </>
   ),
-  header: headerGridMock,
+  header: mockHeaderWithoutImage,
   footer: mockFooterWithoutImage,
 } as BaseProps;

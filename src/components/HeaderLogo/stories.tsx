@@ -2,12 +2,11 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { HeaderLogo } from '.';
 import { HeaderLogoProps } from './type';
 
-import mock from './mock';
+import { mockWithImage, mockWithoutImage } from './mock';
 
 export default {
   title: 'Header/HeaderLogo',
   component: HeaderLogo,
-  args: mock,
 } as Meta;
 
 export const ImageOnly: Story<HeaderLogoProps> = (args) => {
@@ -18,6 +17,8 @@ export const ImageOnly: Story<HeaderLogoProps> = (args) => {
   );
 };
 
+ImageOnly.args = mockWithImage;
+
 export const TextOnly: Story<HeaderLogoProps> = (args) => {
   return (
     <div>
@@ -26,6 +27,4 @@ export const TextOnly: Story<HeaderLogoProps> = (args) => {
   );
 };
 
-TextOnly.args = {
-  srcImg: '',
-};
+TextOnly.args = mockWithoutImage;

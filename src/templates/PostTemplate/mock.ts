@@ -1,5 +1,5 @@
-import { PostsTemplateProps } from './type';
-import { mockWithoutTitle } from 'components/HomePostGrid/mock';
+import { PostTemplateProps } from './type';
+import mock from 'components/Post/mock';
 import {
   mockHeaderWithImage as mockHeaderImage,
   mockHeaderWithoutImage as mockHeaderWithoutImage,
@@ -9,14 +9,14 @@ import {
   mockFooterWithoutImage as mockFooterWithoutImage,
 } from 'components/FooterGrid/mock';
 
-export const mockPostsTemplateWithFooterImage = {
-  posts: mockWithoutTitle,
+export const mockPostTemplateWithFooterImage = {
+  post: mock,
   header: mockHeaderImage,
   footer: mockFooterImage,
-} as PostsTemplateProps;
+} as PostTemplateProps;
 
-export const mockPostsTemplateWithoutFooterImage = {
-  posts: mockWithoutTitle,
+export const mockPostTemplateWithoutFooterImage = {
+  post: mock,
   header: mockHeaderWithoutImage,
   footer: mockFooterWithoutImage,
-} as PostsTemplateProps;
+} as PostTemplateProps;

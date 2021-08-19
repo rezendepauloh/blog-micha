@@ -6,6 +6,8 @@ export const theme = {
     white: '#f5f5f6',
     whiteTwo: '#ffffff',
     mediumGray: '#2d2d2d',
+    darkText: '#333333',
+    darkerGray: '#AAAAAA',
   },
   font: {
     family: {
@@ -40,5 +42,9 @@ export const theme = {
     xxlarge: '4.8rem',
     huge: '5.6rem',
     xhuge: '6.4rem',
+  },
+  sizes: {
+    max: '96rem',
+    content: '80rem',
   },
 } as const;

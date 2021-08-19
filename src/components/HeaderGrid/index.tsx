@@ -26,7 +26,7 @@ export const HeaderGrid = ({ links = [], logoData }: HeaderGridProps) => {
       </Styled.Button>
       <Styled.Container
         fluid
-        visible={visible}
+        visible={visible ? 1 : 0}
         onClick={() => setVisible(false)}
       >
         <SectionContainer>

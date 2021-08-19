@@ -12,7 +12,7 @@ export default {
   component: PostsTemplate,
 } as Meta;
 
-export const TemplateWithFooterImage: Story<PostsTemplateProps> = (args) => {
+export const TemplateWithImageLogo: Story<PostsTemplateProps> = (args) => {
   return (
     <>
       <PostsTemplate {...args} />
@@ -20,9 +20,9 @@ export const TemplateWithFooterImage: Story<PostsTemplateProps> = (args) => {
   );
 };
 
-TemplateWithFooterImage.args = MockImage;
+TemplateWithImageLogo.args = MockImage;
 
-export const TemplateWithoutFooterImage: Story<PostsTemplateProps> = (args) => {
+export const TemplateWithoutImageLogo: Story<PostsTemplateProps> = (args) => {
   return (
     <>
       <PostsTemplate {...args} />
@@ -30,4 +30,4 @@ export const TemplateWithoutFooterImage: Story<PostsTemplateProps> = (args) => {
   );
 };
 
-TemplateWithoutFooterImage.args = MockWithoutImage;
+TemplateWithoutImageLogo.args = MockWithoutImage;

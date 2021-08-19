@@ -1,11 +1,9 @@
-import { ArticleHeader, ArticleHeaderProps } from '../ArticleHeader';
-import { HtmlContent } from '../HtmlContent';
-import { PostContainer } from '../PostContainer';
+import { PostArticleHeader } from 'components/PostArticleHeader';
+import { PostContent } from 'components/PostContent';
+import { PostContainer } from 'components/PostContainer';
 import * as Styled from './styles';
 
-export type PostProps = ArticleHeaderProps & {
-  content: string;
-};
+import { PostProps } from './type';
 
 export const Post = ({
   title,
@@ -20,7 +18,7 @@ export const Post = ({
   return (
     <Styled.Wrapper>
       <PostContainer size="max">
-        <ArticleHeader
+        <PostArticleHeader
           author={author}
           categories={categories}
           title={title}
@@ -32,7 +30,7 @@ export const Post = ({
       </PostContainer>
 
       <PostContainer size="content">
-        <HtmlContent html={content} />
+        <PostContent html={content} />
       </PostContainer>
     </Styled.Wrapper>
   );

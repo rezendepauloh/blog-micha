@@ -9,7 +9,7 @@ export default {
   component: Base,
 } as Meta;
 
-export const TemplateWithFooterImage: Story<BaseProps> = (args) => {
+export const TemplateWithImageLogo: Story<BaseProps> = (args) => {
   return (
     <>
       <Base {...args} />
@@ -17,9 +17,9 @@ export const TemplateWithFooterImage: Story<BaseProps> = (args) => {
   );
 };
 
-TemplateWithFooterImage.args = mockBaseWithImage;
+TemplateWithImageLogo.args = mockBaseWithImage;
 
-export const TemplateWithoutFooterImage: Story<BaseProps> = (args) => {
+export const TemplateWithoutImageLogo: Story<BaseProps> = (args) => {
   return (
     <>
       <Base {...args} />
@@ -27,4 +27,4 @@ export const TemplateWithoutFooterImage: Story<BaseProps> = (args) => {
   );
 };
 
-TemplateWithoutFooterImage.args = mockBaseWithoutImage;
+TemplateWithoutImageLogo.args = mockBaseWithoutImage;

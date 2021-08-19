@@ -1,9 +1,10 @@
 import { screen } from '@testing-library/react';
-import { renderTheme } from '../../styles/render-theme';
-import { Post, PostProps } from '.';
+import { renderTheme } from 'styles/render-theme';
+import { Post } from '.';
+import { PostProps } from './type';
 
 import mock from './mock';
-import { formatDate } from '../../utils/format-date';
+import { formatDate } from 'utils/format-date';
 
 const props: PostProps = mock;
 

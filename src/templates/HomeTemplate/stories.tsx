@@ -3,8 +3,8 @@ import { HomeTemplate } from '.';
 import { HomeTemplateProps } from './type';
 
 import {
-  mockHomeTemplateWithFooterImage,
-  mockHomeTemplateWithoutFooterImage,
+  mockHomeTemplateWithImage as mockImage,
+  mockHomeTemplateWithoutImage as MockWithoutImage,
 } from './mock';
 
 export default {
@@ -12,7 +12,7 @@ export default {
   component: HomeTemplate,
 } as Meta;
 
-export const TemplateWithFooterImage: Story<HomeTemplateProps> = (args) => {
+export const TemplateWithImageLogo: Story<HomeTemplateProps> = (args) => {
   return (
     <>
       <HomeTemplate {...args} />
@@ -20,9 +20,9 @@ export const TemplateWithFooterImage: Story<HomeTemplateProps> = (args) => {
   );
 };
 
-TemplateWithFooterImage.args = mockHomeTemplateWithFooterImage;
+TemplateWithImageLogo.args = mockImage;
 
-export const TemplateWithoutFooterImage: Story<HomeTemplateProps> = (args) => {
+export const TemplateWithoutImageLogo: Story<HomeTemplateProps> = (args) => {
   return (
     <>
       <HomeTemplate {...args} />
@@ -30,4 +30,4 @@ export const TemplateWithoutFooterImage: Story<HomeTemplateProps> = (args) => {
   );
 };
 
-TemplateWithoutFooterImage.args = mockHomeTemplateWithoutFooterImage;
+TemplateWithoutImageLogo.args = MockWithoutImage;

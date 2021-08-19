@@ -1,5 +1,5 @@
 import * as Styled from './styles';
-import { useState } from 'react';
+//import { useState } from 'react';
 import Link from 'next/link';
 
 import { HomePostCard } from 'components/HomePostCard';
@@ -8,40 +8,43 @@ import { Heading } from 'components/Heading';
 import { HomePostGridProps } from './type';
 
 export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
-  const [statePosts, setStatePosts] = useState([]);
-  //const [allPosts, setAllPosts] = useState(posts);
-  const [allPosts] = useState(posts);
-  const [page, setPage] = useState(0);
-  const [postsPerPage] = useState(3);
-  const [buttonDisabled, setButtonDisabled] = useState(false);
-  const [noMorePosts, setNoMorePosts] = useState(false);
+  // const [statePosts, setStatePosts] = useState([]);
+  // //const [allPosts, setAllPosts] = useState(posts);
+  // const [allPosts] = useState(posts);
+  // const [page, setPage] = useState(0);
+  // const [postsPerPage] = useState(3);
+  // const [buttonDisabled, setButtonDisabled] = useState(false);
+  // const [noMorePosts, setNoMorePosts] = useState(false);
 
-  //O botão não fica disabled
-  setButtonDisabled(false);
+  // //O botão não fica disabled
+  // setButtonDisabled(false);
 
-  //Seta os posts
-  setStatePosts(allPosts.slice(page, postsPerPage));
+  // //Seta os posts
+  // setStatePosts(allPosts.slice(page, postsPerPage));
 
-  //Para carregar mais posts
-  const loadMorePosts = () => {
-    const nextPage = page + postsPerPage;
-    const nextPosts = allPosts.slice(nextPage, nextPage + postsPerPage);
+  // //Para carregar mais posts
+  // const loadMorePosts = () => {
+  //   const nextPage = page + postsPerPage;
+  //   const nextPosts = allPosts.slice(nextPage, nextPage + postsPerPage);
 
-    //Caso não tenha novos posts, seta NoMorePosts para true
-    //E retorna
-    if (!nextPosts) {
-      setNoMorePosts(true);
-      return;
-    }
+  //   //Caso não tenha novos posts, seta NoMorePosts para true
+  //   //E retorna
+  //   if (!nextPosts) {
+  //     setNoMorePosts(true);
+  //     return;
+  //   }
 
-    statePosts.push(...nextPosts);
+  //   statePosts.push(...nextPosts);
 
-    setStatePosts(statePosts);
-    setPage(nextPage);
+  //   setStatePosts(statePosts);
+  //   setPage(nextPage);
 
-    console.log(page, postsPerPage, nextPage, nextPage + postsPerPage);
-    console.log('Carregando mais posts');
-  };
+  //   console.log(page, postsPerPage, nextPage, nextPage + postsPerPage);
+  //   console.log('Carregando mais posts');
+  // };
+
+  //Testar esse aqui
+  //https://vpilip.com/how-build-simple-pagination-in-nextjs/
 
   return (
     <>
@@ -53,7 +56,8 @@ export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
         </Styled.Container>
       ) : null}
       <Styled.CardDeck>
-        {statePosts.map((post, index) => {
+        {/* {statePosts.map((post, index) => { */}
+        {posts.map((post, index) => {
           const key = `${post.title}-${index}`;
           return <HomePostCard key={key} {...post} />;
         })}
@@ -62,11 +66,12 @@ export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
         <Link href="/publicacoes" passHref>
           <a>
             <Styled.Button
-              disabled={buttonDisabled}
-              onClick={loadMorePosts}
+              // disabled={buttonDisabled}
+              // onClick={loadMorePosts}
               size="lg"
             >
-              {noMorePosts ? 'Sem mais posts' : 'Ver mais'}
+              {/* {noMorePosts ? 'Sem mais posts' : 'Ver mais'} */}
+              Ver mais
             </Styled.Button>
           </a>
         </Link>

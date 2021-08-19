@@ -3,8 +3,8 @@ import { PostsTemplate } from '.';
 import { PostsTemplateProps } from './type';
 
 import {
-  mockPostsTemplateWithFooterImage,
-  mockPostsTemplateWithoutFooterImage,
+  mockPostsTemplateWithFooterImage as MockImage,
+  mockPostsTemplateWithoutFooterImage as MockWithoutImage,
 } from './mock';
 
 export default {
@@ -20,7 +20,7 @@ export const TemplateWithFooterImage: Story<PostsTemplateProps> = (args) => {
   );
 };
 
-TemplateWithFooterImage.args = mockPostsTemplateWithFooterImage;
+TemplateWithFooterImage.args = MockImage;
 
 export const TemplateWithoutFooterImage: Story<PostsTemplateProps> = (args) => {
   return (
@@ -30,4 +30,4 @@ export const TemplateWithoutFooterImage: Story<PostsTemplateProps> = (args) => {
   );
 };
 
-TemplateWithoutFooterImage.args = mockPostsTemplateWithoutFooterImage;
+TemplateWithoutFooterImage.args = MockWithoutImage;

@@ -10,28 +10,28 @@ export const HeaderLogo = ({
   link,
   newTab = false,
 }: HeaderLogoProps) => {
-  // const nextLink = link.match(/^\//) ? true : false;
+  const nextLink = link.match(/^\//) ? true : false;
   const target = newTab ? '_blank' : '_self';
 
-  // if (nextLink) {
+  if (nextLink) {
+    return (
+      <Heading size="small" uppercase>
+        <Link href={link} passHref>
+          <Styled.Container target={target}>
+            {!!srcImg && <img src={srcImg} alt={text} />}
+            {!srcImg && text}
+          </Styled.Container>
+        </Link>
+      </Heading>
+    );
+  }
+
   return (
     <Heading size="small" uppercase>
-      <Link href={link} passHref>
-        <Styled.Container target={target}>
-          {!!srcImg && <img src={srcImg} alt={text} />}
-          {!srcImg && text}
-        </Styled.Container>
-      </Link>
+      <Styled.Container href={link}>
+        {!!srcImg && <img src={srcImg} alt={text} />}
+        {!srcImg && text}
+      </Styled.Container>
     </Heading>
   );
-  // }
-
-  // return (
-  //   <Heading size="small" uppercase>
-  //     <Styled.Container href={link}>
-  //       {!!srcImg && <img src={srcImg} alt={text} />}
-  //       {!srcImg && text}
-  //     </Styled.Container>
-  //   </Heading>
-  // );
 };

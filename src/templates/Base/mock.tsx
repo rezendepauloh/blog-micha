@@ -1,3 +1,4 @@
+import { BaseProps } from './type';
 import {
   mockHeaderWithImage as mockHeaderImage,
   mockHeaderWithoutImage as mockHeaderWithoutImage,
@@ -6,7 +7,7 @@ import {
   mockFooterWithImage as mockFooterImage,
   mockFooterWithoutImage as mockFooterWithoutImage,
 } from 'components/FooterGrid/mock';
-import { BaseProps } from './type';
+//import { data } from 'api/dados.json';
 
 export const mockBaseWithImage = {
   children: (

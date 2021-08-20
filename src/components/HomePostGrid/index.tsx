@@ -1,6 +1,7 @@
 import * as Styled from './styles';
 //import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { HomePostCard } from 'components/HomePostCard';
 import { Heading } from 'components/Heading';
@@ -15,6 +16,8 @@ export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
   // const [postsPerPage] = useState(3);
   // const [buttonDisabled, setButtonDisabled] = useState(false);
   // const [noMorePosts, setNoMorePosts] = useState(false);
+  const router = useRouter();
+  console.log(router.pathname);
 
   // //O botão não fica disabled
   // setButtonDisabled(false);

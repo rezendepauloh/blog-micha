@@ -7,7 +7,7 @@ export const HeaderMenu = ({ links = [] }: HeaderMenuProps) => {
   return (
     <Styled.Container aria-label="Main menu">
       {links.map((link, index) => {
-        const key = `${link.link}-${index}`;
+        const key = `${link.id}-${index}`;
         return <HeaderLinkMenu key={key} {...link} />;
       })}
     </Styled.Container>

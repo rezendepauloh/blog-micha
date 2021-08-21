@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 import { HeaderGridProps } from './type';
 
-export const HeaderGrid = ({ links = [], logoData }: HeaderGridProps) => {
+export const HeaderGrid = ({ links, logoData }: HeaderGridProps) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -32,7 +32,7 @@ export const HeaderGrid = ({ links = [], logoData }: HeaderGridProps) => {
         <SectionContainer>
           <Styled.MenuContainer>
             <Logo {...logoData} />
-            <HeaderMenu links={links} />
+            <HeaderMenu {...links} />
           </Styled.MenuContainer>
         </SectionContainer>
       </Styled.Container>

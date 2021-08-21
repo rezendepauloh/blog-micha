@@ -1,5 +1,6 @@
 export type HeaderLinkMenuProps = {
-  children: React.ReactNode;
+  id: string;
+  text: React.ReactNode;
   link: string;
   newTab?: boolean;
 };

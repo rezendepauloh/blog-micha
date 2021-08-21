@@ -4,7 +4,7 @@ import * as Styled from './styles';
 import { HeaderLinkMenuProps } from './type';
 
 export const HeaderLinkMenu = ({
-  children,
+  text,
   link,
   newTab = false,
 }: HeaderLinkMenuProps) => {
@@ -14,14 +14,14 @@ export const HeaderLinkMenu = ({
   if (nextLink) {
     return (
       <Link href={link} passHref>
-        <Styled.Container target={target}>{children}</Styled.Container>
+        <Styled.Container target={target}>{text}</Styled.Container>
       </Link>
     );
   }
 
   return (
     <Styled.Container href={link} target={target}>
-      {children}
+      {text}
     </Styled.Container>
   );
 };

@@ -7,11 +7,11 @@ export default {
   title: 'Header/HeaderLinkMenu',
   component: HeaderLinkMenu,
   args: {
-    children: 'MenuLink',
+    text: 'MenuLink',
     link: 'https://www.google.com.br/',
   },
   argTypes: {
-    children: { type: 'string' },
+    text: { type: 'string' },
   },
   parameters: {
     backgrounds: {

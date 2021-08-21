@@ -1,7 +1,7 @@
-import { HeaderLinkMenuProps } from 'components/HeaderLinkMenu/type';
+import { HeaderMenuProps } from 'components/HeaderMenu/type';
 import { LogoProps } from 'components/Logo/type';
 
 export type HeaderGridProps = {
-  links?: HeaderLinkMenuProps[];
+  links: HeaderMenuProps;
   logoData: LogoProps;
 };

@@ -1,11 +1,13 @@
-import { FooterLogoProps } from './type';
+import { LogoProps } from './type';
 
 export const mockWithImage = {
   text: 'Michely Segóvia',
   srcImg: 'assets/images/logo-h.svg',
-} as FooterLogoProps;
+  link: 'http://localhost',
+} as LogoProps;
 
 export const mockWithoutImage = {
   text: 'Michely Segóvia',
   srcImg: '',
-} as FooterLogoProps;
+  link: 'http://localhost',
+} as LogoProps;

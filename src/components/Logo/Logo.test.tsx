@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react';
 import { renderTheme } from 'styles/render-theme';
-import { HeaderLogo } from '.';
+import { Logo } from '.';
 
-describe('<HeaderLogo />', () => {
+describe('<Logo />', () => {
   it('should render text logo', () => {
-    renderTheme(<HeaderLogo link="#target" text="Olá mundo" />);
+    renderTheme(<Logo link="#target" text="Olá mundo" />);
     expect(
       screen.getByRole('heading', { name: 'Olá mundo' }),
     ).toBeInTheDocument();
@@ -15,9 +15,7 @@ describe('<HeaderLogo />', () => {
   });
 
   it('should render image logo', () => {
-    renderTheme(
-      <HeaderLogo link="#target" text="Olá mundo" srcImg="image.jpg" />,
-    );
+    renderTheme(<Logo link="#target" text="Olá mundo" srcImg="image.jpg" />);
     expect(screen.getByAltText('Olá mundo')).toHaveAttribute(
       'src',
       'image.jpg',
@@ -25,9 +23,7 @@ describe('<HeaderLogo />', () => {
   });
 
   it('should render internal link', () => {
-    renderTheme(
-      <HeaderLogo link="/target" text="Olá mundo" srcImg="image.jpg" />,
-    );
+    renderTheme(<Logo link="/target" text="Olá mundo" srcImg="image.jpg" />);
     expect(screen.getByAltText('Olá mundo')).toHaveAttribute(
       'src',
       'image.jpg',
@@ -35,14 +31,14 @@ describe('<HeaderLogo />', () => {
   });
 
   it('should render a link with target _blank', () => {
-    renderTheme(<HeaderLogo link="/target" text="Olá mundo" newTab={true} />);
+    renderTheme(<Logo link="/target" text="Olá mundo" newTab={true} />);
     expect(
       screen.getByRole('heading', { name: 'Olá mundo' }),
     ).toBeInTheDocument();
   });
 
   it('should render render internal link with text only', () => {
-    renderTheme(<HeaderLogo link="/target" text="Olá mundo" />);
+    renderTheme(<Logo link="/target" text="Olá mundo" />);
     expect(
       screen.getByRole('heading', { name: 'Olá mundo' }),
     ).toBeInTheDocument();
@@ -50,7 +46,7 @@ describe('<HeaderLogo />', () => {
 
   it('should match snapshot', () => {
     const { container } = renderTheme(
-      <HeaderLogo link="#target" text="Olá mundo" srcImg="image.jpg" />,
+      <Logo link="#target" text="Olá mundo" srcImg="image.jpg" />,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

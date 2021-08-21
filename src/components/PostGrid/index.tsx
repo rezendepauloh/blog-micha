@@ -1,14 +1,14 @@
 import * as Styled from './styles';
 //import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+//import { useRouter } from 'next/router';
 
-import { HomePostCard } from 'components/HomePostCard';
+import { PostCard } from 'components/PostCard';
 import { Heading } from 'components/Heading';
 
-import { HomePostGridProps } from './type';
+import { PostGridProps } from './type';
 
-export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
+export function PostGrid({ posts = [], title = '' }: PostGridProps) {
   // const [statePosts, setStatePosts] = useState([]);
   // //const [allPosts, setAllPosts] = useState(posts);
   // const [allPosts] = useState(posts);
@@ -16,8 +16,9 @@ export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
   // const [postsPerPage] = useState(3);
   // const [buttonDisabled, setButtonDisabled] = useState(false);
   // const [noMorePosts, setNoMorePosts] = useState(false);
-  const router = useRouter();
-  console.log(router.pathname);
+
+  //const router = useRouter();
+  //console.log(router.pathname);
 
   // //O botão não fica disabled
   // setButtonDisabled(false);
@@ -62,7 +63,7 @@ export function HomePostGrid({ posts = [], title = '' }: HomePostGridProps) {
         {/* {statePosts.map((post, index) => { */}
         {posts.map((post, index) => {
           const key = `${post.title}-${index}`;
-          return <HomePostCard key={key} {...post} />;
+          return <PostCard key={key} {...post} />;
         })}
       </Styled.CardDeck>
       <Styled.Container>

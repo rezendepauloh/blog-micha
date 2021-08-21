@@ -1,6 +1,6 @@
 import { HeaderGridProps } from './type';
 import linksMock from 'components/HeaderMenu/mock';
-import { mockWithImage, mockWithoutImage } from 'components/HeaderLogo/mock';
+import { mockWithImage, mockWithoutImage } from 'components/Logo/mock';
 
 export const mockHeaderWithImage = {
   links: linksMock,

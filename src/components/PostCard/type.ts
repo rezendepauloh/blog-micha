@@ -1,4 +1,4 @@
-export type HomePostCardProps = {
+export type PostCardProps = {
   title: string;
   url: string;
   date: string;

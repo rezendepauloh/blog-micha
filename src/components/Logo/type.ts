@@ -1,4 +1,4 @@
-export type HeaderLogoProps = {
+export type LogoProps = {
   text: string;
   srcImg?: string;
   link: string;

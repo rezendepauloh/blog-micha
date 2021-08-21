@@ -14,9 +14,9 @@ export default {
 
 export const TemplateWithImage: Story<FooterGridProps> = (args) => {
   return (
-    <div>
+    <>
       <FooterGrid {...args} />
-    </div>
+    </>
   );
 };
 
@@ -24,9 +24,9 @@ TemplateWithImage.args = MockImage;
 
 export const TemplateWithoutImage: Story<FooterGridProps> = (args) => {
   return (
-    <div>
+    <>
       <FooterGrid {...args} />
-    </div>
+    </>
   );
 };
 

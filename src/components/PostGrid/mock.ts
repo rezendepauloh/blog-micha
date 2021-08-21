@@ -1,4 +1,4 @@
-import { HomePostGridProps } from './type';
+import { PostGridProps } from './type';
 
 export const mockWithTitle = {
   title: 'Últimos artigos',
@@ -28,7 +28,7 @@ export const mockWithTitle = {
         'É uma das etapas mais importantes na abertura de sua empresa. Trata-se do contrato constituidor das sociedades contratuais. Deverá conter as cláusulas obrigatórias previstas no artigo 997 do Código Civil. ',
     },
   ],
-} as HomePostGridProps;
+} as PostGridProps;
 
 export const mockWithoutTitle = {
   posts: [
@@ -105,4 +105,4 @@ export const mockWithoutTitle = {
         'É uma das etapas mais importantes na abertura de sua empresa. Trata-se do contrato constituidor das sociedades contratuais. Deverá conter as cláusulas obrigatórias previstas no artigo 997 do Código Civil. ',
     },
   ],
-} as HomePostGridProps;
+} as PostGridProps;

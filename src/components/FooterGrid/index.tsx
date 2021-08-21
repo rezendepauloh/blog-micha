@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 import { FooterSocialMedia } from 'components/FooterSocialMedia';
-import { FooterLogo } from 'components/FooterLogo';
+import { Logo } from 'components/Logo';
 import { FooterContact } from 'components/FooterContact';
 
 import { FooterGridProps } from './type';
@@ -14,7 +14,7 @@ export const FooterGrid = ({
     <Styled.Container fluid>
       <Styled.Row>
         <Styled.Col md="auto">
-          <FooterLogo {...logoFooter} />
+          <Logo {...logoFooter} />
         </Styled.Col>
         <Styled.Col md="auto">
           <FooterSocialMedia {...socialMediaFotter} />

@@ -3,15 +3,9 @@ import { Heading } from 'components/Heading';
 import Link from 'next/link';
 import { formatDate } from 'utils/format-date';
 
-import { HomePostCardProps } from './type';
+import { PostCardProps } from './type';
 
-export function HomePostCard({
-  title,
-  url,
-  date,
-  imgSrc,
-  content,
-}: HomePostCardProps) {
+export function PostCard({ title, url, date, imgSrc, content }: PostCardProps) {
   return (
     <Styled.Card>
       <Link href={url} passHref>

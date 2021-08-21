@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
-import { HomePostCard } from '.';
+import { PostGrid } from '.';
 import { renderTheme } from 'styles/render-theme';
 
-import mock from './mock';
+import { mockWithTitle } from './mock';
 
-describe('<HomePostCard />', () => {
+describe('<PostGrid />', () => {
   it('should render', () => {
-    renderTheme(<HomePostCard {...mock} />);
+    renderTheme(<PostGrid {...mockWithTitle} />);
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 });

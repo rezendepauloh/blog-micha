@@ -1,7 +1,7 @@
 import { HomeTemplateProps } from './type';
 import HomeCarouselMock from 'components/HomeCarousel/mock';
-import HomeSpecialtiesMock from 'components/HomeSpecialties/mock';
-import { mockWithTitle } from 'components/HomePostGrid/mock';
+import { specialties as HomeSpecialtiesMock } from 'components/HomeSpecialties/mock';
+import { mockWithTitle } from 'components/PostGrid/mock';
 import {
   mockHeaderWithImage as mockHeaderImage,
   mockHeaderWithoutImage as mockHeaderWithoutImage,

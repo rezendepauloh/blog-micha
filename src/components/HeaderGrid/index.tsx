@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 import { SectionContainer } from 'components/SectionContainer';
-import { HeaderLogo } from 'components/HeaderLogo';
+import { Logo } from 'components/Logo';
 import { HeaderMenu } from 'components/HeaderMenu';
 import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
@@ -31,7 +31,7 @@ export const HeaderGrid = ({ links = [], logoData }: HeaderGridProps) => {
       >
         <SectionContainer>
           <Styled.MenuContainer>
-            <HeaderLogo {...logoData} />
+            <Logo {...logoData} />
             <HeaderMenu links={links} />
           </Styled.MenuContainer>
         </SectionContainer>

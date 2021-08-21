@@ -1,5 +1,5 @@
 import { PostsTemplateProps } from './type';
-import { mockWithoutTitle } from 'components/HomePostGrid/mock';
+import { mockWithoutTitle } from 'components/PostGrid/mock';
 import {
   mockHeaderWithImage as mockHeaderImage,
   mockHeaderWithoutImage as mockHeaderWithoutImage,

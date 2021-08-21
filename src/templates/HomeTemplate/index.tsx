@@ -1,7 +1,7 @@
 import * as Styled from './styles';
 import { HomeCarousel } from 'components/HomeCarousel';
 import { HomeSpecialties } from 'components/HomeSpecialties';
-import { HomePostGrid } from 'components/HomePostGrid';
+import { PostGrid } from 'components/PostGrid';
 import { Base } from '../Base';
 
 import { HomeTemplateProps } from './type';
@@ -18,7 +18,7 @@ export function HomeTemplate({
       <Styled.Container fluid>
         <HomeCarousel {...carousel} />
         <HomeSpecialties {...specialties} />
-        <HomePostGrid {...posts} />
+        <PostGrid {...posts} />
       </Styled.Container>
     </Base>
   );

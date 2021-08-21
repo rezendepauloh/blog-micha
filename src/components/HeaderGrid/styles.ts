@@ -64,6 +64,11 @@ export const MenuContainer = styled.div`
     justify-content: space-between;
     align-items: center;
 
+    > h1 > div > a > img {
+      height: 9rem;
+      width: 100%;
+    }
+
     @media ${theme.media.lteMedium} {
       display: block;
       text-align: center;

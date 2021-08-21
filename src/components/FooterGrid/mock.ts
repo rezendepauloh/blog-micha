@@ -1,6 +1,6 @@
 import { FooterGridProps } from './type';
 import FooterContactMock from 'components/FooterContact/mock';
-import { mockWithImage, mockWithoutImage } from 'components/FooterLogo/mock';
+import { mockWithImage, mockWithoutImage } from 'components/Logo/mock';
 import FooterSocialMediaMock from 'components/FooterSocialMedia/mock';
 
 export const mockFooterWithImage = {

@@ -19,4 +19,9 @@ export const Container = styled(ContainerBootstrap)`
 
 export const Row = styled(RowBootstrap)``;
 
-export const Col = styled(ColBootstrap)``;
+export const Col = styled(ColBootstrap)`
+  > h1 > div > img {
+    height: 16rem;
+    width: 100%;
+  }
+`;

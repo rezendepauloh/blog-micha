@@ -6,8 +6,11 @@
       "blogDescription": "O melhor escritório de advocacia do mundo.",
       "logo": {
         "id": "603e59da85540677309fd518",
+        "text": "Michely Segóvia",
         "alternativeText": "",
-        "url": "https://res.cloudinary.com/dlizakp2a/image/upload/v1614698965/Ubuntu_gel_by_Midge_Mantissa_Sinnaeve_7caea7ddb4.jpg"
+        "srcImg": "assets/images/logo-h.svg",
+        "url": "/",
+        "newTab": false
       },
       "menuLink": [
         {

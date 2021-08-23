@@ -22,18 +22,22 @@ export const FooterContact = ({
         Informações de contato
       </Heading>
 
-      {phone.map((p) => (
-        <Link key={p.phone} href={p.url} passHref>
-          <Styled.LinkSocial target={target}>
-            <Whatsapp aria-label="Whatsapp" /> {p.phone}
-          </Styled.LinkSocial>
-        </Link>
-      ))}
+      {phone.map((p) => {
+        const url = `https://api.whatsapp.com/send?phone=55:${p.phone}&text=Olá`;
+        return (
+          <Link key={p.phone} href={url} passHref>
+            <Styled.LinkSocial target={target}>
+              <Whatsapp aria-label="Whatsapp" /> {p.phone}
+            </Styled.LinkSocial>
+          </Link>
+        );
+      })}
 
       {email.map((e, index) => {
         const key = `footer-${index}-${e.email}`;
+        const url = `mailto:${e.email}`;
         return (
-          <Link key={key} href={e.url} passHref>
+          <Link key={key} href={url} passHref>
             <Styled.LinkSocial target={target}>
               <Email aria-label="Email" /> {e.email}
             </Styled.LinkSocial>

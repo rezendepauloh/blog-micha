@@ -7,19 +7,20 @@ import { LogoProps } from './type';
 export const Logo = ({
   text,
   srcImg = '',
-  link,
+  alternativeText = '',
+  url,
   newTab = false,
 }: LogoProps) => {
-  const nextLink = link.match(/^\//) ? true : false;
+  const nextLink = url.match(/^\//) ? true : false;
   const target = newTab ? '_blank' : '_self';
 
   if (nextLink) {
     return (
       <Heading size="small" uppercase>
         <Styled.Container>
-          <Link href={link} passHref>
+          <Link href={url} passHref>
             <Styled.Link target={target}>
-              {!!srcImg && <img src={srcImg} alt={text} />}
+              {!!srcImg && <img src={srcImg} alt={alternativeText} />}
               {!srcImg && text}
             </Styled.Link>
           </Link>
@@ -31,8 +32,8 @@ export const Logo = ({
   return (
     <Heading size="small" uppercase>
       <Styled.Container>
-        <Styled.Link href={link}>
-          {!!srcImg && <img src={srcImg} alt={text} />}
+        <Styled.Link href={url}>
+          {!!srcImg && <img src={srcImg} alt={alternativeText} />}
           {!srcImg && text}
         </Styled.Link>
       </Styled.Container>

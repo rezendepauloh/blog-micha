@@ -1,6 +1,7 @@
 export type LogoProps = {
   text: string;
   srcImg?: string;
-  link: string;
+  alternativeText?: string;
+  url: string;
   newTab?: boolean;
 };

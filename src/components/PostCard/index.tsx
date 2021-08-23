@@ -2,6 +2,7 @@ import * as Styled from './styles';
 import { Heading } from 'components/Heading';
 import Link from 'next/link';
 import { formatDate } from 'utils/format-date';
+import { createExcerpt } from 'utils/create-excerpt';
 
 import { PostCardProps } from './type';
 
@@ -17,7 +18,7 @@ export function PostCard({ title, url, date, imgSrc, content }: PostCardProps) {
                 {title}
               </Heading>
             </Styled.TitleCard>
-            <Styled.TextCard>{content}</Styled.TextCard>
+            <Styled.TextCard>{createExcerpt(content)}</Styled.TextCard>
           </Styled.BodyCard>
           <Styled.FooterCard>
             <small className="text-muted">{formatDate(date)}</small>

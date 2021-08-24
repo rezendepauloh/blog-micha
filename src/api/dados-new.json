@@ -1,0 +1,96 @@
+{
+  "data": {
+    "base": {
+      "id": "6124f1b3b7d4394a74786966",
+      "blogName": "Michely Segóvia Advocacia",
+      "blogDescription": "O melhor escritório de advocacia do mundo.",
+      "logo": {
+        "id": "6124f1b3b7d4394a74786967",
+        "text": "Michely Segóvia",
+        "srcImg": {
+          "id": "6124f0c6b7d4394a74786965",
+          "alternativeText": "",
+          "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629810879/logo_h_be529e7a63.svg"
+        },
+        "alternativeText": null,
+        "url": "/",
+        "newTab": false
+      },
+      "header": {
+        "menuLink": [
+          {
+            "id": "6124f1b3b7d4394a7478696b",
+            "text": "/",
+            "newTab": false
+          },
+          {
+            "id": "6124f1b3b7d4394a7478696c",
+            "text": "/escritorio",
+            "newTab": false
+          },
+          {
+            "id": "6124f1b3b7d4394a7478696d",
+            "text": "/equipe",
+            "newTab": false
+          },
+          {
+            "id": "6124f1b3b7d4394a7478696e",
+            "text": "Publicações",
+            "newTab": false
+          },
+          {
+            "id": "6124f1b3b7d4394a7478696f",
+            "text": "Contato",
+            "newTab": false
+          }
+        ]
+      },
+      "footer": {
+        "socialMedia": {
+          "street": "Rua do Catete",
+          "number": 435,
+          "neighborhood": "Jardim Monte Líbano",
+          "city": "Campo Grande",
+          "state": "MS",
+          "cep": "790041-70"
+        },
+        "instagram": [
+          {
+            "user": "Larissa Mancini",
+            "url": "https://www.instagram.com/larimancini.adv/"
+          },
+          {
+            "user": "Hellen Almeida",
+            "url": "https://www.instagram.com/hellenalmeida.adv/"
+          }
+        ],
+        "linkedin": [
+          {
+            "user": "Larissa Mancini",
+            "url": "https://www.linkedin.com/in/larissa-mancini-a18587194/"
+          },
+          {
+            "user": "Hellen Almeida",
+            "url": "https://www.linkedin.com/in/hellen-almeida-240a14205/"
+          }
+        ],
+        "phone": [
+          {
+            "phone": "(67) 99238-0886",
+            "owner": "Larissa Mancini"
+          },
+          {
+            "phone": "(67) 99143-8422",
+            "owner": "Hellen Almeida"
+          }
+        ],
+        "email": [
+          {
+            "email": "almeidaemancini@gmail.com"
+          }
+        ],
+        "location": "https://goo.gl/maps/f2kyjuzcaEW1jNaq7"
+      }
+    }
+  }
+}

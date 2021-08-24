@@ -1,0 +1,56 @@
+fragment image on UploadFile {
+    id
+    alternativeText
+    srcImg: url
+  }
+
+  query GET_BASE {
+    base {
+      id
+    	blogName
+    	blogDescription
+    	logo {
+      	id
+        text
+        srcImg {
+          ...image
+        }
+    		alternativeText
+    		url
+        newTab
+    	}
+      header {
+        menuLink {
+          id
+          text
+          newTab
+        }
+      }
+      footer {
+        socialMedia: footerMediaAddress {
+          street
+          number
+          neighborhood
+          city
+          state
+          cep
+        }
+        instagram: footerMediaInstagram {
+          user
+          url
+        }
+        linkedin: footerMediaLinkedin {
+          user
+          url
+        }
+        phone: footerPhone {
+          phone
+          owner
+        }
+        email: footerEmail {
+          email
+        }
+        location
+      }
+    }
+  }

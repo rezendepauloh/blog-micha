@@ -1,11 +1,10 @@
 type PhoneProps = {
   phone: string;
-  url: string;
+  owner: string;
 };
 
 type EmailProps = {
   email: string;
-  url: string;
 };
 
 export type FooterContactProps = {

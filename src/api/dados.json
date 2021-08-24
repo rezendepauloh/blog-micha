@@ -45,7 +45,12 @@
         }
       ],
       "footerMedia": {
-        "endereco": "Rua do Catete, 435, Jardim Monte Líbano, Campo Grande-MS, CEP: 79004170",
+        "street": "Rua do Catete",
+        "number": 435,
+        "neighborhood": "Jardim Monte Líbano",
+        "city": "Campo Grande",
+        "state": "MS",
+        "cep": "79004170",
         "instagram": [
           {
             "user": "Larissa Mancini",
@@ -71,21 +76,19 @@
         "phone": [
           {
             "phone": "(67) 99238-0886",
-            "url": "https://api.whatsapp.com/send?phone=556792380886&text=Olá,%20Larissa%20Mancini"
+            "owner": "Larissa Mancini"
           },
           {
             "phone": "(67) 99143-8422",
-            "url": "https://api.whatsapp.com/send?phone=556791438422&text=Olá,%20Hellen%20Almeida"
+            "owner": "Hellen Almeida"
           }
         ],
         "email": [
           {
-            "email": "almeidaemancini@gmail.com",
-            "url": "mailto:almeidaemancini@gmail.com"
+            "email": "almeidaemancini@gmail.com"
           },
           {
-            "email": "almeidaemancini@gmail.com",
-            "url": "mailto:almeidaemancini@gmail.com"
+            "email": "almeidaemancini@gmail.com"
           }
         ],
         "location": "https://goo.gl/maps/f2kyjuzcaEW1jNaq7"

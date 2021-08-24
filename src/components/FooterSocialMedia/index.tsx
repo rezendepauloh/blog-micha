@@ -6,7 +6,12 @@ import { LinkedinSquare as Linkedin } from '@styled-icons/boxicons-logos/Linkedi
 import { FooterSocialMediaProps } from './type';
 
 export const FooterSocialMedia = ({
-  endereco,
+  street,
+  number,
+  neighborhood,
+  city,
+  state,
+  cep,
   instagram,
   linkedin,
 }: FooterSocialMediaProps) => {
@@ -14,7 +19,9 @@ export const FooterSocialMedia = ({
 
   return (
     <Styled.Container>
-      <Styled.Paragraph>{endereco}</Styled.Paragraph>
+      <Styled.Paragraph>
+        {street}, {number}, {neighborhood}, {city}-{state}, CEP: {cep}
+      </Styled.Paragraph>
 
       <Styled.SocialIcon>
         <Insta aria-label="Instagram" />

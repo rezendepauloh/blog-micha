@@ -23,7 +23,12 @@ export const FooterContact = ({
       </Heading>
 
       {phone.map((p) => {
-        const url = `https://api.whatsapp.com/send?phone=55:${p.phone}&text=Olá`;
+        const replaceOwner = p.owner.replace(' ', '%20');
+        const replacePhone = p.phone.replace(
+          /\((\d{2})\)\s\d(\d{4})-(\d{4})/g,
+          '$1$2$3',
+        );
+        const url = `https://api.whatsapp.com/send?phone=55${replacePhone}&text=Olá,%20${replaceOwner}`;
         return (
           <Link key={p.phone} href={url} passHref>
             <Styled.LinkSocial target={target}>

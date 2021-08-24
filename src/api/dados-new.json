@@ -91,6 +91,93 @@
         ],
         "location": "https://goo.gl/maps/f2kyjuzcaEW1jNaq7"
       }
-    }
+    },
+    "home": {
+      "carousel": [
+        {
+          "id": "61255f6823833c1f14915604",
+          "imgSrc": {
+            "id": "61255e5a23833c1f14915600",
+            "alternativeText": "",
+            "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629838945/carousel01_1c7dfc2624.jpg"
+          },
+          "imgAlt": "carousel01",
+          "heading": "Direito Civil",
+          "paragraph": "Direito civil é isso isso e aquilo"
+        },
+        {
+          "id": "61255f6823833c1f14915605",
+          "imgSrc": {
+            "id": "61255ebb23833c1f14915601",
+            "alternativeText": "",
+            "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629839042/carousel02_01c081f89a.jpg"
+          },
+          "imgAlt": "carousel02",
+          "heading": "Advocacia estratégica",
+          "paragraph": "A advocacia é isso isso e aquilo"
+        },
+        {
+          "id": "61255f6823833c1f14915606",
+          "imgSrc": {
+            "id": "61255eec23833c1f14915602",
+            "alternativeText": "",
+            "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629839092/carousel03_f3e28d28ae.jpg"
+          },
+          "imgAlt": "carousel03",
+          "heading": "Atendimentos",
+          "paragraph": "Atendimento presencial e online"
+        }
+      ],
+      "specialty": {
+        "title": "Direito Tributário, Empresarial e Civil.",
+        "content": "Planejamento, gestão e soluções inteligentes. A Advocacia Almeida & Mancini, atua por meio de assessorias e consultorias jurídicas.",
+        "linkSpecialty": [
+          {
+            "specialty": "Direito Tributário",
+            "url": "/alguma-coisa-01"
+          },
+          {
+            "specialty": "Direito Empresarial",
+            "url": "/alguma-coisa-02"
+          },
+          {
+            "specialty": "Direito Civil",
+            "url": "/alguma-coisa-03"
+          }
+        ]
+      }
+    },
+    "posts": [
+      {
+        "id": "612541a01475f81bd475621c",
+        "title": "O que é o contrato social?",
+        "slug": "o-que-e-o-contrato-social",
+        "content": "<p>É uma das etapas mais importantes na abertura de sua empresa. Trata-se do contrato constituidor das sociedades contratuais. Deverá conter as cláusulas obrigatórias previstas no artigo 997 do Código Civil.&nbsp;<br><br>O contrato social é o documento escrito em que os sócios estabelecem as características da sociedade, criando entre si direitos e obrigações. Precisa ser claro e público o objeto que a sociedade exerce.&nbsp;<br>&nbsp;</p><blockquote><p>Cumpre esclarecer que deve ser levado a registro no <strong>órgão </strong>competente. Se for sociedade empresária deverá ser levado a registro na Junta Comercial, caso seja sociedade simples no Cartório de Registro Civil de Pessoas Jurídicas.&nbsp;</p></blockquote><p><br>Os elementos essenciais para o contrato social são:&nbsp;</p><ol><li>Qualificação dos sócios</li><li>Atividades e serviços conforme o CNAE (Classificação Nacional de Atividade Empresarial)</li><li>Localização da empresa</li><li>Participação societária e administradores</li><li>Regras para entrada e saída de sócios</li><li>Explicação do capital social.</li></ol><p>Deve ser levado a registro no órgão competente. Se for sociedade empresária deverá ser levado a registro na Junta Comercial, caso seja sociedade simples no Cartório de Registro Civil de Pessoas Jurídicas.</p>",
+        "allowComments": false,
+        "createdAt": "2021-08-24T18:59:44.141Z",
+        "cover": {
+          "id": "612540641475f81bd475621b",
+          "alternativeText": "",
+          "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629831275/post1_adfcd3e9c3.png"
+        },
+        "author": {
+          "id": "612531e485d6a21950914c08",
+          "displayName": "Michely Segóvia",
+          "slug": "michely-segovia"
+        },
+        "category": {
+          "id": "61252fe085d6a21950914c06",
+          "displayName": "Direito Penal",
+          "slug": "direito-penal"
+        },
+        "tags": [
+          {
+            "id": "612530a985d6a21950914c07",
+            "displayName": "Direito",
+            "slug": "direito"
+          }
+        ]
+      }
+    ]
   }
 }

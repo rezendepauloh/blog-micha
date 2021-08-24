@@ -1,56 +1,196 @@
+# Write your query or mutation here
 fragment image on UploadFile {
-    id
-    alternativeText
-    srcImg: url
-  }
+  id
+  alternativeText
+	srcImg: url
+}
 
-  query GET_BASE {
-    base {
+fragment cover on Post {
+	cover {
+  	...image
+  }
+}
+
+fragment tag on Tag {
+  id
+  displayName
+	slug
+}
+
+fragment author on Author {
+  id
+  displayName
+  slug
+}
+
+fragment category on Category {
+  id
+  displayName
+  slug
+}
+
+fragment tags on Post {
+  tags {
+    ...tag
+  }
+}
+
+fragment authorPost on Post {
+  author {
+    ...author
+  }
+}
+
+fragment categoryPost on Post {
+  category {
+    ...category
+  }
+}
+
+query GET_HOME {
+  base {
+    id
+    blogName
+    blogDescription
+    logo {
       id
-    	blogName
-    	blogDescription
-    	logo {
-      	id
-        text
-        srcImg {
-          ...image
-        }
-    		alternativeText
-    		url
-        newTab
-    	}
-      header {
-        menuLink {
-          id
-          text
-          newTab
-        }
+      text
+      srcImg {
+        ...image
       }
-      footer {
-        socialMedia: footerMediaAddress {
-          street
-          number
-          neighborhood
-          city
-          state
-          cep
-        }
-        instagram: footerMediaInstagram {
-          user
-          url
-        }
-        linkedin: footerMediaLinkedin {
-          user
-          url
-        }
-        phone: footerPhone {
-          phone
-          owner
-        }
-        email: footerEmail {
-          email
-        }
-        location
+      alternativeText
+      url
+      newTab
+    }
+    header {
+      menuLink {
+        id
+        text
+        newTab
+      }
+    }
+    footer {
+      socialMedia: footerMediaAddress {
+        street
+        number
+        neighborhood
+        city
+        state
+        cep
+      }
+      instagram: footerMediaInstagram {
+        user
+        url
+      }
+      linkedin: footerMediaLinkedin {
+        user
+        url
+      }
+      phone: footerPhone {
+        phone
+        owner
+      }
+      email: footerEmail {
+        email
+      }
+      location
+    }
+  }
+  home {
+    carousel {
+      id
+      imgSrc {
+        ...image
+      }
+      imgAlt
+      heading
+      paragraph
+    }
+    specialty {
+      title
+      content
+      linkSpecialty {
+        specialty
+        url
       }
     }
   }
+  posts(
+    limit:3
+    sort:"createdAt:asc"
+  )  {
+    id
+    title
+    slug
+    content
+    allowComments
+    createdAt
+    ...cover
+    ...authorPost
+    ...categoryPost
+    ...tags
+  }
+}
+
+query GET_POSTS {
+  base {
+    id
+    blogName
+    blogDescription
+    logo {
+      id
+      text
+      srcImg {
+        ...image
+      }
+      alternativeText
+      url
+      newTab
+    }
+    header {
+      menuLink {
+        id
+        text
+        newTab
+      }
+    }
+    footer {
+      socialMedia: footerMediaAddress {
+        street
+        number
+        neighborhood
+        city
+        state
+        cep
+      }
+      instagram: footerMediaInstagram {
+        user
+        url
+      }
+      linkedin: footerMediaLinkedin {
+        user
+        url
+      }
+      phone: footerPhone {
+        phone
+        owner
+      }
+      email: footerEmail {
+        email
+      }
+      location
+    }
+  }
+  posts {
+    id
+    title
+    slug
+    content
+    allowComments
+    createdAt
+    ...cover
+    ...authorPost
+    ...categoryPost
+    ...tags
+  }
+}

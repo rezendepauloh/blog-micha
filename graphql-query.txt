@@ -66,6 +66,7 @@ query GET_HOME {
       menuLink {
         id
         text
+        link
         newTab
       }
     }
@@ -99,7 +100,7 @@ query GET_HOME {
   home {
     carousel {
       id
-      imgSrc {
+      srcImg: imgSrc {
         ...image
       }
       imgAlt
@@ -151,6 +152,7 @@ query GET_POSTS {
       menuLink {
         id
         text
+        link
         newTab
       }
     }

@@ -7,7 +7,7 @@ import { theme } from 'styles/theme';
 
 describe('<HeaderMenu />', () => {
   it('should render links', () => {
-    renderTheme(<HeaderMenu links={mock} />);
+    renderTheme(<HeaderMenu {...mock} />);
     expect(screen.getAllByRole('link')).toHaveLength(mock.length);
   });
 
@@ -17,7 +17,7 @@ describe('<HeaderMenu />', () => {
   });
 
   it('should render links', () => {
-    renderTheme(<HeaderMenu links={mock} />);
+    renderTheme(<HeaderMenu {...mock} />);
     expect(screen.getByText(/link 10/i).parentElement).toHaveStyleRule(
       'flex-flow',
       'column wrap',
@@ -28,7 +28,7 @@ describe('<HeaderMenu />', () => {
   });
 
   it('should match snapshot', () => {
-    const { container } = renderTheme(<HeaderMenu links={mock} />);
+    const { container } = renderTheme(<HeaderMenu {...mock} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

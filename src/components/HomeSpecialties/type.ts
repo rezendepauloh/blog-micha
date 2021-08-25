@@ -6,5 +6,5 @@ export type SpecialtiesProps = {
 export type HomeSpecialtiesProps = {
   title: string;
   content: string;
-  specialties: SpecialtiesProps[];
+  linkSpecialty: SpecialtiesProps[];
 };

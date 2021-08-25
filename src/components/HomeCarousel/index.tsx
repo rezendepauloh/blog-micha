@@ -15,7 +15,7 @@ export function HomeCarousel({ carousel }: HomeCarouselProps) {
     <Styled.Carousel fade activeIndex={index} onSelect={handleSelect}>
       {carousel.map((c, index) => {
         const key = `${index}-${c.imgAlt}`;
-        const imgsrc = `${c.imgSrc}`;
+        const imgsrc = `${c.srcImg.srcImg}`;
         const imgalt = `${c.imgAlt}`;
         return (
           <Styled.Item key={key}>

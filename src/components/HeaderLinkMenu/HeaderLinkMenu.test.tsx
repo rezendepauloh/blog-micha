@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import { renderTheme } from 'styles/render-theme';
 import { HeaderLinkMenu } from '.';
 
-describe('<MenuLink />', () => {
+describe('<HeaderLinkMenu />', () => {
   it('should render a link', () => {
     renderTheme(
       <HeaderLinkMenu link="http://localhost">Children</HeaderLinkMenu>,

@@ -1,5 +1,9 @@
+type imgCarousel = {
+  srcImg: string;
+};
+
 type CarouselProps = {
-  imgSrc: string;
+  srcImg: imgCarousel;
   imgAlt: string;
   heading: string;
   paragraph: string;

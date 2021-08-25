@@ -7,7 +7,7 @@ import { HomeSpecialtiesProps } from './type';
 export function HomeSpecialties({
   title,
   content,
-  specialties,
+  linkSpecialty,
 }: HomeSpecialtiesProps) {
   return (
     <Styled.Jumbotron fluid>
@@ -17,7 +17,7 @@ export function HomeSpecialties({
       <p>{content}</p>
 
       <p>
-        {specialties.map((s) => {
+        {linkSpecialty.map((s) => {
           const key = `${s.specialty}`.replace(/\s/g, '');
           return (
             <Link key={key} href={s.url} passHref>

@@ -2,12 +2,12 @@ import { FooterSocialMediaProps } from './type';
 import { data } from 'api/dados.json';
 
 export default {
-  street: data.base.footerMedia.street,
-  number: data.base.footerMedia.number,
-  neighborhood: data.base.footerMedia.neighborhood,
-  city: data.base.footerMedia.city,
-  state: data.base.footerMedia.state,
-  cep: data.base.footerMedia.cep,
-  instagram: data.base.footerMedia.instagram,
-  linkedin: data.base.footerMedia.linkedin,
+  street: data.base.footer.socialMedia.street,
+  number: data.base.footer.socialMedia.number,
+  neighborhood: data.base.footer.socialMedia.neighborhood,
+  city: data.base.footer.socialMedia.city,
+  state: data.base.footer.socialMedia.state,
+  cep: data.base.footer.socialMedia.cep,
+  instagram: data.base.footer.instagram,
+  linkedin: data.base.footer.linkedin,
 } as FooterSocialMediaProps;

@@ -6,13 +6,13 @@ export const Wrapper = styled.div`
     color: ${theme.colors.mediumGray};
     font-style: italic;
 
-    .categories span::after {
+    /* .categories span::after {
       content: ', ';
     }
 
     .categories span:last-child::after {
       content: '';
-    }
+    } */
 
     a {
       color: ${theme.colors.secondary};

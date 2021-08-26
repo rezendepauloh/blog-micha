@@ -1,9 +1,7 @@
 import { PostProps } from 'components/Post/type';
-import { HeaderGridProps } from 'components/HeaderGrid/type';
-import { FooterGridProps } from 'components/FooterGrid/type';
+import { BaseStrapi } from 'templates/Base/type';
 
 export type PostTemplateProps = {
   post: PostProps;
-  header: HeaderGridProps;
-  footer: FooterGridProps;
+  base: BaseStrapi;
 };

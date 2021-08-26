@@ -1,16 +1,52 @@
 import { FooterGridProps } from './type';
-import FooterContactMock from 'components/FooterContact/mock';
-import { mockWithImage, mockWithoutImage } from 'components/Logo/mock';
-import FooterSocialMediaMock from 'components/FooterSocialMedia/mock';
+import { data } from 'api/dados.json';
 
 export const mockFooterWithImage = {
-  logoFooter: mockWithImage,
-  socialMediaFotter: FooterSocialMediaMock,
-  contactFooter: FooterContactMock,
+  logoFooter: {
+    text: data.base.logoText,
+    srcImg: data.base.logo.srcImg,
+    alternativeText: data.base.logo.alternativeText,
+    url: data.base.logoUrl,
+    newTab: data.base.logoNewTab,
+  },
+  socialMediaFotter: {
+    street: data.base.footer.socialMedia.street,
+    number: data.base.footer.socialMedia.number,
+    neighborhood: data.base.footer.socialMedia.neighborhood,
+    city: data.base.footer.socialMedia.city,
+    state: data.base.footer.socialMedia.state,
+    cep: data.base.footer.socialMedia.cep,
+    instagram: data.base.footer.instagram,
+    linkedin: data.base.footer.linkedin,
+  },
+  contactFooter: {
+    phone: data.base.footer.phone,
+    email: data.base.footer.email,
+    location: data.base.footer.location,
+  },
 } as FooterGridProps;
 
 export const mockFooterWithoutImage = {
-  logoFooter: mockWithoutImage,
-  socialMediaFotter: FooterSocialMediaMock,
-  contactFooter: FooterContactMock,
+  logoFooter: {
+    text: data.base.logoText,
+    srcImg: '',
+    alternativeText: '',
+    url: data.base.logoUrl,
+    newTab: data.base.logoNewTab,
+  },
+  socialMediaFotter: {
+    street: data.base.footer.socialMedia.street,
+    number: data.base.footer.socialMedia.number,
+    neighborhood: data.base.footer.socialMedia.neighborhood,
+    city: data.base.footer.socialMedia.city,
+    state: data.base.footer.socialMedia.state,
+    cep: data.base.footer.socialMedia.cep,
+    instagram: data.base.footer.instagram,
+    linkedin: data.base.footer.linkedin,
+  },
+  contactFooter: {
+    phone: data.base.footer.phone,
+    email: data.base.footer.email,
+    location: data.base.footer.location,
+  },
 } as FooterGridProps;

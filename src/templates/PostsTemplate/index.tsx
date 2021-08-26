@@ -6,9 +6,9 @@ import { Heading } from 'components/Heading';
 
 import { PostsTemplateProps } from './type';
 
-export function PostsTemplate({ posts, header, footer }: PostsTemplateProps) {
+export function PostsTemplate({ posts, base }: PostsTemplateProps) {
   return (
-    <Base header={header} footer={footer}>
+    <Base base={base}>
       <Styled.Container fluid>
         <Styled.TitleContainer>
           <Heading as="h1" colorDark={false} size="medium" uppercase>

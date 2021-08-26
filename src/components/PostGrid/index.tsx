@@ -8,7 +8,7 @@ import { Heading } from 'components/Heading';
 
 import { PostGridProps } from './type';
 
-export function PostGrid({ posts = [], title = '' }: PostGridProps) {
+export function PostGrid({ posts = [] }: PostGridProps) {
   // const [statePosts, setStatePosts] = useState([]);
   // //const [allPosts, setAllPosts] = useState(posts);
   // const [allPosts] = useState(posts);
@@ -52,13 +52,11 @@ export function PostGrid({ posts = [], title = '' }: PostGridProps) {
 
   return (
     <>
-      {title ? (
-        <Styled.Container>
-          <Heading uppercase as="h2" size="medium" colorDark={true}>
-            {title}
-          </Heading>
-        </Styled.Container>
-      ) : null}
+      <Styled.Container>
+        <Heading uppercase as="h2" size="medium" colorDark={true}>
+          Últimas Publicações
+        </Heading>
+      </Styled.Container>
       <Styled.CardDeck>
         {/* {statePosts.map((post, index) => { */}
         {posts.map((post, index) => {

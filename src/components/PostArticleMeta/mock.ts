@@ -1,10 +1,10 @@
 import { PostArticleMetaProps } from './type';
-import { data } from 'api/dados.json';
+import { data } from 'api/dados-posts.json';
 
-const { author, categories, createdAt } = data.posts[0];
+const { author, category, createdAt } = data.posts[0];
 
 export default {
   author,
-  categories,
+  category,
   createdAt,
 } as PostArticleMetaProps;

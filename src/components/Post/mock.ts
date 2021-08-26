@@ -1,15 +1,15 @@
 import { PostProps } from './type';
-import { data } from 'api/dados.json';
+import { data } from 'api/dados-posts.json';
 
-const { title, excerpt, cover, content, author, categories, createdAt } =
+const { id, title, cover, content, author, category, createdAt } =
   data.posts[0];
 
 export default {
+  id,
   title,
-  excerpt,
   cover,
   content,
   author,
-  categories,
+  category,
   createdAt,
 } as PostProps;

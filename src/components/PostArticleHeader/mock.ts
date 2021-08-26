@@ -1,13 +1,13 @@
 import { PostArticleHeaderProps } from './type';
 import { data } from 'api/dados.json';
 
-const { title, excerpt, cover, author, categories, createdAt } = data.posts[0];
+const { title, content, cover, author, category, createdAt } = data.posts[0];
 
 export default {
   title,
-  excerpt,
+  content,
   cover,
   author,
-  categories,
+  category,
   createdAt,
 } as PostArticleHeaderProps;

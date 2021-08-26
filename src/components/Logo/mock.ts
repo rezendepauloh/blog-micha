@@ -2,17 +2,17 @@ import { LogoProps } from './type';
 import { data } from 'api/dados.json';
 
 export const mockWithImage = {
-  text: data.base.logo.text,
-  srcImg: data.base.logo.srcImg.srcImg,
+  text: data.base.logoText,
+  srcImg: data.base.logo.srcImg,
   alternativeText: data.base.logo.alternativeText,
-  url: data.base.logo.url,
-  newTab: data.base.logo.newTab,
+  url: data.base.logoUrl,
+  newTab: data.base.logoNewTab,
 } as LogoProps;
 
 export const mockWithoutImage = {
-  text: data.base.logo.text,
+  text: data.base.logoText,
   srcImg: '',
   alternativeText: '',
-  url: data.base.logo.url,
-  newTab: data.base.logo.newTab,
+  url: data.base.logoUrl,
+  newTab: data.base.logoNewTab,
 } as LogoProps;

@@ -16,7 +16,7 @@ describe('<ArticleHeader />', () => {
       screen.getByRole('heading', { name: props.title }),
     ).toBeInTheDocument();
     expect(screen.getByRole('img', { name: props.title })).toBeInTheDocument();
-    expect(screen.getByText(props.excerpt)).toBeInTheDocument();
+    expect(screen.getByText(props.content)).toBeInTheDocument();
     expect(screen.getByText(formatDate(props.createdAt))).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });

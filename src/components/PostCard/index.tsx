@@ -6,12 +6,18 @@ import { createExcerpt } from 'utils/create-excerpt';
 
 import { PostCardProps } from './type';
 
-export function PostCard({ title, url, date, imgSrc, content }: PostCardProps) {
+export function PostCard({
+  title,
+  slug,
+  cover,
+  content,
+  createdAt,
+}: PostCardProps) {
   return (
     <Styled.Card>
-      <Link href={url} passHref>
+      <Link href={`/post/${slug}`} passHref>
         <a>
-          <Styled.ImgCard variant="top" src={imgSrc} alt={title} />
+          <Styled.ImgCard variant="top" src={cover.srcImg} alt={title} />
           <Styled.BodyCard>
             <Styled.TitleCard>
               <Heading as="h5" size="small" colorDark={true}>
@@ -21,7 +27,7 @@ export function PostCard({ title, url, date, imgSrc, content }: PostCardProps) {
             <Styled.TextCard>{createExcerpt(content)}</Styled.TextCard>
           </Styled.BodyCard>
           <Styled.FooterCard>
-            <small className="text-muted">{formatDate(date)}</small>
+            <small className="text-muted">{formatDate(createdAt)}</small>
           </Styled.FooterCard>
         </a>
       </Link>

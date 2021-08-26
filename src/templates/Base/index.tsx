@@ -5,12 +5,12 @@ import { GoTop } from 'components/GoTop';
 
 import { BaseProps } from './type';
 
-export const Base = ({ header, footer, children }: BaseProps) => {
+export const Base = ({ base, children }: BaseProps) => {
   return (
     <>
-      <HeaderGrid {...header} />
+      <HeaderGrid {...base.header} />
       <Styled.Container>{children}</Styled.Container>
-      <FooterGrid {...footer} />
+      <FooterGrid {...base.footer} />
       <GoTop />
     </>
   );

@@ -40,7 +40,7 @@ describe('<PostArticleMeta />', () => {
 
   it('should match snapshot with no author and categories', () => {
     const { container } = renderTheme(
-      <PostArticleMeta {...props} author={undefined} categories={undefined} />,
+      <PostArticleMeta {...props} author={undefined} category={undefined} />,
     );
     expect(container).toMatchSnapshot();
   });

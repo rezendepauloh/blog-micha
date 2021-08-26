@@ -52,15 +52,11 @@ query GET_HOME {
     id
     blogName
     blogDescription
+    logoText
+    logoUrl
+    logoNewTab
     logo {
-      id
-      text
-      srcImg {
-        ...image
-      }
-      alternativeText
-      url
-      newTab
+      ...image
     }
     header {
       menuLink {
@@ -138,15 +134,11 @@ query GET_POSTS {
     id
     blogName
     blogDescription
+    logoText
+    logoUrl
+    logoNewTab
     logo {
-      id
-      text
-      srcImg {
-        ...image
-      }
-      alternativeText
-      url
-      newTab
+      ...image
     }
     header {
       menuLink {

@@ -10,11 +10,10 @@ export function HomeTemplate({
   carousel,
   specialties,
   posts,
-  header,
-  footer,
+  base,
 }: HomeTemplateProps) {
   return (
-    <Base header={header} footer={footer}>
+    <Base base={base}>
       <Styled.Container fluid>
         <HomeCarousel {...carousel} />
         <HomeSpecialties {...specialties} />

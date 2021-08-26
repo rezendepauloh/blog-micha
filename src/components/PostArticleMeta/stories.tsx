@@ -15,7 +15,7 @@ export default {
       },
     },
     author: { type: null },
-    categories: { type: null },
+    category: { type: null },
   },
 } as Meta<PostArticleMetaProps>;
 
@@ -38,7 +38,7 @@ export const NoAuthor: Story<PostArticleMetaProps> = (args) => {
 export const NoCategories: Story<PostArticleMetaProps> = (args) => {
   return (
     <div>
-      <PostArticleMeta {...args} categories={undefined} />
+      <PostArticleMeta {...args} category={undefined} />
     </div>
   );
 };
@@ -46,7 +46,7 @@ export const NoCategories: Story<PostArticleMetaProps> = (args) => {
 export const NoAuthorAndCategories: Story<PostArticleMetaProps> = (args) => {
   return (
     <div>
-      <PostArticleMeta {...args} categories={undefined} author={undefined} />
+      <PostArticleMeta {...args} category={undefined} author={undefined} />
     </div>
   );
 };

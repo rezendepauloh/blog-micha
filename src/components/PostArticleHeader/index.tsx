@@ -1,24 +1,25 @@
 import { PostArticleMeta } from 'components/PostArticleMeta';
 import { Heading } from 'components/Heading';
 import * as Styled from './styles';
+import { createExcerpt } from 'utils/create-excerpt';
 
 import { PostArticleHeaderProps } from './type';
 
 export const PostArticleHeader = ({
   title,
-  excerpt,
+  content,
   cover,
   author,
-  categories,
+  category,
   createdAt,
 }: PostArticleHeaderProps) => {
   return (
     <Styled.Wrapper>
       <Heading size="huge">{title}</Heading>
-      <Styled.Excerpt>{excerpt}</Styled.Excerpt>
+      <Styled.Excerpt>{createExcerpt(content)}</Styled.Excerpt>
       <Styled.Cover src={cover.url} alt={title} />
       <PostArticleMeta
-        categories={categories}
+        category={category}
         author={author}
         createdAt={createdAt}
       />

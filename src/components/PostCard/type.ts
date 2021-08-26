@@ -1,7 +1,14 @@
+export type CoverProps = {
+  id: string;
+  alternativeText: string;
+  srcImg: string;
+};
+
 export type PostCardProps = {
+  id: string;
   title: string;
-  url: string;
-  date: string;
-  imgSrc: string;
+  slug: string;
+  cover: CoverProps;
   content: string;
+  createdAt: string;
 };

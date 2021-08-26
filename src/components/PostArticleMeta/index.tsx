@@ -7,7 +7,7 @@ import { PostArticleMetaProps } from './type';
 export const PostArticleMeta = ({
   createdAt,
   author = undefined,
-  categories = [],
+  category = undefined,
 }: PostArticleMetaProps) => {
   return (
     <Styled.Wrapper>
@@ -24,19 +24,15 @@ export const PostArticleMeta = ({
 
         <time dateTime={createdAt}>{formatDate(createdAt)}</time>
 
-        {categories && categories.length > 0 && (
+        {category && typeof category !== 'undefined' && (
           <>
             <span className="separator"> | </span>
             <span className="categories">
-              {categories.map((category) => {
-                return (
-                  <span key={`article-meta-cat-${category.id}`}>
-                    <Link href={`/category/${category.slug}`}>
-                      <a>{category.displayName}</a>
-                    </Link>
-                  </span>
-                );
-              })}
+              <span>
+                <Link href={`/category/${category.slug}`}>
+                  <a>{category.displayName}</a>
+                </Link>
+              </span>
             </span>
           </>
         )}

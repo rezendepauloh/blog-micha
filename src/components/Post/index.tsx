@@ -8,11 +8,10 @@ import { PostProps } from './type';
 export const Post = ({
   title,
   author,
-  categories,
+  category,
   content,
   cover,
   createdAt,
-  excerpt,
   id,
 }: PostProps) => {
   return (
@@ -20,9 +19,9 @@ export const Post = ({
       <PostContainer size="max">
         <PostArticleHeader
           author={author}
-          categories={categories}
+          category={category}
           title={title}
-          excerpt={excerpt}
+          content={content}
           id={id}
           cover={cover}
           createdAt={createdAt}

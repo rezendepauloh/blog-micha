@@ -93,61 +93,6 @@
         "location": "https://goo.gl/maps/f2kyjuzcaEW1jNaq7"
       }
     },
-    "home": {
-      "carousel": [
-        {
-          "id": "61255f6823833c1f14915604",
-          "srcImg": {
-            "id": "61255e5a23833c1f14915600",
-            "alternativeText": "",
-            "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629838945/carousel01_1c7dfc2624.jpg"
-          },
-          "imgAlt": "carousel01",
-          "heading": "Direito Civil",
-          "paragraph": "Direito civil é isso isso e aquilo"
-        },
-        {
-          "id": "61255f6823833c1f14915605",
-          "srcImg": {
-            "id": "61255ebb23833c1f14915601",
-            "alternativeText": "",
-            "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629839042/carousel02_01c081f89a.jpg"
-          },
-          "imgAlt": "carousel02",
-          "heading": "Advocacia estratégica",
-          "paragraph": "A advocacia é isso isso e aquilo"
-        },
-        {
-          "id": "61255f6823833c1f14915606",
-          "srcImg": {
-            "id": "61255eec23833c1f14915602",
-            "alternativeText": "",
-            "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629839092/carousel03_f3e28d28ae.jpg"
-          },
-          "imgAlt": "carousel03",
-          "heading": "Atendimentos",
-          "paragraph": "Atendimento presencial e online"
-        }
-      ],
-      "specialty": {
-        "title": "Direito Tributário, Empresarial e Civil.",
-        "content": "Planejamento, gestão e soluções inteligentes. A Advocacia Almeida & Mancini, atua por meio de assessorias e consultorias jurídicas.",
-        "linkSpecialty": [
-          {
-            "specialty": "Direito Tributário",
-            "url": "/alguma-coisa-01"
-          },
-          {
-            "specialty": "Direito Empresarial",
-            "url": "/alguma-coisa-02"
-          },
-          {
-            "specialty": "Direito Civil",
-            "url": "/alguma-coisa-03"
-          }
-        ]
-      }
-    },
     "posts": [
       {
         "id": "612541a01475f81bd475621c",
@@ -224,6 +169,41 @@
             "id": "61259de6309e3b176002286c",
             "displayName": "Herança",
             "slug": "heranca"
+          }
+        ]
+      },
+      {
+        "id": "61259e54309e3b176002286e",
+        "title": "Por que você deve registrar sua marca?",
+        "slug": "por-que-voce-deve-registrar-sua-marca",
+        "content": "<p>Várias são as vantagens, mas elencamos as principais.&nbsp;<br><br><strong>Uso exclusivo da marca em todo território nacional:</strong> com o registro da sua marca, você poderá utilizá-la em todo território nacional, tendo a proteção e uso exclusivo, ou seja, outras pessoas não poderão utilizar sua marca.&nbsp;<br><br><strong>Proteção contra cópias ou uso indevido por terceiros:</strong> nos casos de utilização indevida de marca, a legislação brasileira estabelece mecanismos judiciais para fazer cessar o respectivo uso, desta forma, havendo o registro em vigor, a proteção contra cópias&nbsp; é apenas de quem registra primeiro, cabendo ações de indenizações às pessoas que utilizarem indevidamente sua marca já registrada.&nbsp;<br><br><strong>Evita o risco de ter que mudar sua marca e perder todo o investimento realizado: </strong>sabemos que atualmente se o seu negócio não se encontra no meio digital, você não existirá para muitos clientes. Por isso, o investimento na logo não será perdido, pois, registrando-a não corre o risco de perdê-la ou ter que alterá-la.&nbsp;&nbsp;<br><br><strong>Possibilidade de vender, franquear ou licenciar sua marca: </strong>o registro da marca tem a vertente de mercantilização, por isso, após registrada, você poderá vendê-la, agregando muito mais valor à empresa, também poderá franquear, licenciar e expandir.&nbsp;<br><br><strong>Credibilidade e fortalecimento da sua marca:</strong> a credibilidade de um negócio está interligada à capacidade da empresa de cumprir metas e alcançar objetivos. O registro de marca agrega valor e credibilidade, pois quando uma empresa pensa em crescer e quer abrir para receber investimentos, aportes ou editais, é comumente exigido o registro.</p>",
+        "allowComments": false,
+        "createdAt": "2021-08-25T01:35:16.266Z",
+        "cover": {
+          "id": "61259e3e309e3b176002286d",
+          "alternativeText": "",
+          "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629855289/post4_178368103c.jpg"
+        },
+        "author": {
+          "id": "612531e485d6a21950914c08",
+          "displayName": "Michely Segóvia",
+          "slug": "michely-segovia"
+        },
+        "category": {
+          "id": "61252fe085d6a21950914c06",
+          "displayName": "Direito Penal",
+          "slug": "direito-penal"
+        },
+        "tags": [
+          {
+            "id": "612530a985d6a21950914c07",
+            "displayName": "Direito",
+            "slug": "direito"
+          },
+          {
+            "id": "61259dde309e3b176002286b",
+            "displayName": "Empresa",
+            "slug": "empresa"
           }
         ]
       }

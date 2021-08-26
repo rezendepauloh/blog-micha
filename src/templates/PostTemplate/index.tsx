@@ -5,9 +5,9 @@ import { Base } from 'templates/Base';
 
 import { PostTemplateProps } from './type';
 
-export function PostTemplate({ post, header, footer }: PostTemplateProps) {
+export function PostTemplate({ post, base }: PostTemplateProps) {
   return (
-    <Base header={header} footer={footer}>
+    <Base base={base}>
       <Styled.Container fluid>
         <Post {...post} />
       </Styled.Container>

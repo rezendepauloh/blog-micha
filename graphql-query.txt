@@ -67,14 +67,13 @@ query GET_HOME {
       }
     }
     footer {
-      socialMedia: footerMediaAddress {
-        street
-        number
-        neighborhood
-        city
-        state
-        cep
-      }
+      street
+      number
+      neighborhood
+      city
+      state
+      cep
+      location
       instagram: footerMediaInstagram {
         user
         url
@@ -90,7 +89,6 @@ query GET_HOME {
       email: footerEmail {
         email
       }
-      location
     }
   }
   home {
@@ -149,14 +147,13 @@ query GET_POSTS {
       }
     }
     footer {
-      socialMedia: footerMediaAddress {
-        street
-        number
-        neighborhood
-        city
-        state
-        cep
-      }
+      street
+      number
+      neighborhood
+      city
+      state
+      cep
+      location
       instagram: footerMediaInstagram {
         user
         url
@@ -172,7 +169,6 @@ query GET_POSTS {
       email: footerEmail {
         email
       }
-      location
     }
   }
   posts {

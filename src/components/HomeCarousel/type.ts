@@ -2,7 +2,7 @@ type imgCarousel = {
   srcImg: string;
 };
 
-type CarouselProps = {
+export type CarouselProps = {
   srcImg: imgCarousel;
   imgAlt: string;
   heading: string;

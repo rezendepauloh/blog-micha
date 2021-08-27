@@ -15,7 +15,7 @@ export function HomeTemplate({
   return (
     <Base base={base}>
       <Styled.Container fluid>
-        <HomeCarousel {...carousel} />
+        <HomeCarousel carousel={carousel} />
         <HomeSpecialties {...specialties} />
         <PostGrid {...posts} />
       </Styled.Container>

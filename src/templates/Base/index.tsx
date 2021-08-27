@@ -9,38 +9,38 @@ export const Base = ({ base, children }: BaseProps) => {
   return (
     <>
       <HeaderGrid
-        links={base.header.links}
+        links={{ links: base.headerMenu }}
         logoData={{
-          text: base.header.logoData.text,
-          srcImg: base.header.logoData.srcImg,
-          alternativeText: base.header.logoData.alternativeText,
-          url: base.header.logoData.url,
-          newTab: base.header.logoData.newTab,
+          text: base.logo.text,
+          srcImg: base.logo.srcImg,
+          alternativeText: base.logo.alternativeText,
+          url: base.logo.url,
+          newTab: base.logo.newTab,
         }}
       />
       <Styled.Container>{children}</Styled.Container>
       <FooterGrid
         logoFooter={{
-          text: base.footer.logoFooter.text,
-          srcImg: base.footer.logoFooter.srcImg,
-          alternativeText: base.footer.logoFooter.alternativeText,
-          url: base.footer.logoFooter.url,
-          newTab: base.footer.logoFooter.newTab,
+          text: base.logo.text,
+          srcImg: base.logo.srcImg,
+          alternativeText: base.logo.alternativeText,
+          url: base.logo.url,
+          newTab: base.logo.newTab,
         }}
         socialMediaFotter={{
-          street: base.footer.socialMediaFotter.street,
-          number: base.footer.socialMediaFotter.number,
-          neighborhood: base.footer.socialMediaFotter.neighborhood,
-          city: base.footer.socialMediaFotter.city,
-          state: base.footer.socialMediaFotter.state,
-          cep: base.footer.socialMediaFotter.cep,
-          instagram: base.footer.socialMediaFotter.instagram,
-          linkedin: base.footer.socialMediaFotter.linkedin,
+          street: base.footerSocialMedia.street,
+          number: base.footerSocialMedia.number,
+          neighborhood: base.footerSocialMedia.neighborhood,
+          city: base.footerSocialMedia.city,
+          state: base.footerSocialMedia.state,
+          cep: base.footerSocialMedia.cep,
+          instagram: base.footerSocialMedia.instagram,
+          linkedin: base.footerSocialMedia.linkedin,
         }}
         contactFooter={{
-          phone: base.footer.contactFooter.phone,
-          email: base.footer.contactFooter.email,
-          location: base.footer.contactFooter.location,
+          phone: base.footerContact.phone,
+          email: base.footerContact.email,
+          location: base.footerContact.location,
         }}
       />
       <GoTop />

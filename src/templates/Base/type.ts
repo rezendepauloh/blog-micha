@@ -1,12 +1,16 @@
-import { HeaderGridProps } from 'components/HeaderGrid/type';
-import { FooterGridProps } from 'components/FooterGrid/type';
+import { LogoProps } from 'components/Logo/type';
+import { HeaderLinkMenuProps } from 'components/HeaderLinkMenu/type';
+import { FooterSocialMediaProps } from 'components/FooterSocialMedia/type';
+import { FooterContactProps } from 'components/FooterContact/type';
 
 export type BaseStrapi = {
   id: string;
   blogName: string;
   blogDescription: string;
-  header: HeaderGridProps;
-  footer: FooterGridProps;
+  logo: LogoProps;
+  headerMenu: HeaderLinkMenuProps[];
+  footerSocialMedia: FooterSocialMediaProps;
+  footerContact: FooterContactProps;
 };
 
 export type BaseProps = {

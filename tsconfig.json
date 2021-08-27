@@ -24,7 +24,8 @@
       "styles/*": ["src/styles/*"],
       "utils/*": ["src/utils/*"],
       "templates/*": ["src/templates/*"],
-      "api/*": ["src/api/*"]
+      "api/*": ["src/api/*"],
+      "graphql/*": ["src/graphql/*"]
     }
   },
   "include": [

@@ -47,14 +47,13 @@
         ]
       },
       "footer": {
-        "socialMedia": {
-          "street": "Rua do Catete",
-          "number": 435,
-          "neighborhood": "Jardim Monte Líbano",
-          "city": "Campo Grande",
-          "state": "MS",
-          "cep": "790041-70"
-        },
+        "street": "Rua do Catete",
+        "number": 435,
+        "neighborhood": "Jardim Monte Líbano",
+        "city": "Campo Grande",
+        "state": "MS",
+        "cep": "790041-70",
+        "location": "https://goo.gl/maps/f2kyjuzcaEW1jNaq7",
         "instagram": [
           {
             "user": "Larissa Mancini",
@@ -89,8 +88,7 @@
           {
             "email": "almeidaemancini@gmail.com"
           }
-        ],
-        "location": "https://goo.gl/maps/f2kyjuzcaEW1jNaq7"
+        ]
       }
     },
     "posts": [

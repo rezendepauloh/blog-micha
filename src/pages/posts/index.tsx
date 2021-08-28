@@ -3,19 +3,12 @@ import { GetStaticProps } from 'next';
 
 import { theme } from 'styles/theme';
 
-import { HomeTemplate } from 'templates/HomeTemplate';
-import { HomeTemplateProps } from 'templates/HomeTemplate/type';
-import { loadHome } from 'api/load-data';
+import { PostsTemplate } from 'templates/PostsTemplate';
+import { PostsTemplateProps } from 'templates/PostsTemplate/type';
+import { loadPosts } from 'api/load-data';
 
-export default function Index({
-  carousel,
-  specialties,
-  posts,
-  base,
-}: HomeTemplateProps) {
-  const homeArgs = {
-    carousel: carousel,
-    specialties: specialties,
+export default function PostsPage({ posts, base }: PostsTemplateProps) {
+  const postsArgs = {
     posts: posts,
     base: base,
   };
@@ -29,16 +22,16 @@ export default function Index({
         <meta name="description" content={blogDescription} />
         <meta name="theme-color" content={theme.colors.primary} />
       </Head>
-      <HomeTemplate {...homeArgs} />
+      <PostsTemplate {...postsArgs} />
     </>
   );
 }
 
-export const getStaticProps: GetStaticProps<HomeTemplateProps> = async () => {
+export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
   let data = null;
 
   try {
-    data = await loadHome();
+    data = await loadPosts();
   } catch (e) {
     data = null;
     console.log(e.message);
@@ -54,7 +47,6 @@ export const getStaticProps: GetStaticProps<HomeTemplateProps> = async () => {
   }
 
   const {
-    home: { carousel, specialty },
     posts,
     base: {
       id,
@@ -83,8 +75,6 @@ export const getStaticProps: GetStaticProps<HomeTemplateProps> = async () => {
 
   return {
     props: {
-      carousel: carousel,
-      specialties: specialty,
       posts: { posts: posts },
       base: {
         id: id,

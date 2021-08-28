@@ -65,7 +65,7 @@ export function PostGrid({ posts = [] }: PostGridProps) {
         })}
       </Styled.CardDeck>
       <Styled.Container>
-        <Link href="/publicacoes" passHref>
+        <Link href="/posts" passHref>
           <a>
             <Styled.Button
               // disabled={buttonDisabled}

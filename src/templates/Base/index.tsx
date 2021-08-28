@@ -6,41 +6,57 @@ import { GoTop } from 'components/GoTop';
 import { BaseProps } from './type';
 
 export const Base = ({ base, children }: BaseProps) => {
+  const {
+    headerMenu: menu,
+    logo: { text, srcImg, alternativeText, url, newTab },
+    footerSocialMedia: {
+      street,
+      number,
+      neighborhood,
+      city,
+      state,
+      cep,
+      instagram,
+      linkedin,
+    },
+    footerContact: { phone, email, location },
+  } = base;
+
   return (
     <>
       <HeaderGrid
-        links={{ links: base.headerMenu }}
+        links={{ links: menu }}
         logoData={{
-          text: base.logo.text,
-          srcImg: base.logo.srcImg,
-          alternativeText: base.logo.alternativeText,
-          url: base.logo.url,
-          newTab: base.logo.newTab,
+          text: text,
+          srcImg: srcImg,
+          alternativeText: alternativeText,
+          url: url,
+          newTab: newTab,
         }}
       />
       <Styled.Container>{children}</Styled.Container>
       <FooterGrid
         logoFooter={{
-          text: base.logo.text,
-          srcImg: base.logo.srcImg,
-          alternativeText: base.logo.alternativeText,
-          url: base.logo.url,
-          newTab: base.logo.newTab,
+          text: text,
+          srcImg: srcImg,
+          alternativeText: alternativeText,
+          url: url,
+          newTab: newTab,
         }}
         socialMediaFotter={{
-          street: base.footerSocialMedia.street,
-          number: base.footerSocialMedia.number,
-          neighborhood: base.footerSocialMedia.neighborhood,
-          city: base.footerSocialMedia.city,
-          state: base.footerSocialMedia.state,
-          cep: base.footerSocialMedia.cep,
-          instagram: base.footerSocialMedia.instagram,
-          linkedin: base.footerSocialMedia.linkedin,
+          street: street,
+          number: number,
+          neighborhood: neighborhood,
+          city: city,
+          state: state,
+          cep: cep,
+          instagram: instagram,
+          linkedin: linkedin,
         }}
         contactFooter={{
-          phone: base.footerContact.phone,
-          email: base.footerContact.email,
-          location: base.footerContact.location,
+          phone: phone,
+          email: email,
+          location: location,
         }}
       />
       <GoTop />

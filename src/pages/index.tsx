@@ -9,13 +9,13 @@ import { loadHome } from 'api/load-posts';
 
 export default function Index({
   carousel,
-  specialty,
+  specialties,
   posts,
   base,
 }: HomeTemplateProps) {
   const homeArgs = {
     carousel: carousel,
-    specialty: specialty,
+    specialties: specialties,
     posts: posts,
     base: base,
   };
@@ -51,14 +51,37 @@ export const getStaticProps: GetStaticProps<HomeTemplateProps> = async () => {
     };
   }
 
-  //Vai ter que destrinchar o base de acordo com o json...
   return {
     props: {
       carousel: data.home.carousel,
-      specialty: data.home.specialty,
-      posts: data.posts,
+      specialties: data.home.specialty,
+      posts: { posts: data.posts },
       base: {
         blogName: data.base.blogName,
+        blogDescription: data.base.blogDescription,
+        logo: {
+          text: data.base.logoText,
+          srcImg: data.base.logo.srcImg,
+          alternativeText: data.base.logo.alternativeText,
+          url: data.base.logoUrl,
+          newTab: data.base.logoNewTab,
+        },
+        headerMenu: data.base.header.menuLink,
+        footerSocialMedia: {
+          street: data.base.footer.street,
+          number: data.base.footer.number,
+          neighborhood: data.base.footer.neighborhood,
+          city: data.base.footer.city,
+          state: data.base.footer.state,
+          cep: data.base.footer.cep,
+          instagram: data.base.footer.instagram,
+          linkedin: data.base.footer.linkedin,
+        },
+        footerContact: {
+          phone: data.base.footer.phone,
+          email: data.base.footer.email,
+          location: data.base.footer.location,
+        },
       },
     },
     revalidate: 24 * 60 * 60,

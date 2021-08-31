@@ -17,7 +17,7 @@ export const PostArticleHeader = ({
     <Styled.Wrapper>
       <Heading size="huge">{title}</Heading>
       <Styled.Excerpt>{createExcerpt(content)}</Styled.Excerpt>
-      <Styled.Cover src={cover.url} alt={title} />
+      <Styled.Cover src={cover.srcImg} alt={title} />
       <PostArticleMeta
         category={category}
         author={author}

@@ -127,7 +127,9 @@ query GET_HOME {
   }
 }
 
-query GET_POSTS {
+query GET_POSTS(
+  $postSlug: String
+) {
   base {
     id
     blogName
@@ -171,7 +173,11 @@ query GET_POSTS {
       }
     }
   }
-  posts {
+  posts(
+    where: {
+        slug: $postSlug
+      }
+  ) {
     id
     title
     slug
@@ -184,3 +190,10 @@ query GET_POSTS {
     ...tags
   }
 }
+
+
+
+----------------------
+query variables
+
+{"postSlug": "por-que-voce-deve-registrar-sua-marca"}

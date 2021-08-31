@@ -85,7 +85,7 @@ export const GRAPHQL_GET_HOME = gql`
 export const GRAPHQL_GET_POSTS = gql`
   ${GRAPHQL_FRAGMENTS}
 
-  query GET_POSTS {
+  query GET_POSTS($postSlug: String) {
     base {
       id
       blogName
@@ -129,7 +129,7 @@ export const GRAPHQL_GET_POSTS = gql`
         }
       }
     }
-    posts {
+    posts(where: { slug: $postSlug }) {
       id
       title
       slug

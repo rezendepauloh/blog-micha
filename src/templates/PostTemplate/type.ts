@@ -1,7 +1,7 @@
-import { PostProps } from 'components/Post/type';
+import { PostStrapi } from 'components/Post/type';
 import { BaseStrapi } from 'templates/Base/type';
 
 export type PostTemplateProps = {
-  post: PostProps;
+  post: PostStrapi;
   base: BaseStrapi;
 };

@@ -1,6 +1,9 @@
 import * as Styled from './styles';
+
 import { Heading } from 'components/Heading';
+
 import Link from 'next/link';
+
 import { formatDate } from 'utils/format-date';
 import { createExcerpt } from 'utils/create-excerpt';
 

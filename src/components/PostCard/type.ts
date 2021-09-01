@@ -1,3 +1,5 @@
+import { PostArticleMetaProps } from 'components/PostArticleMeta/type';
+
 export type CoverProps = {
   id: string;
   alternativeText: string;
@@ -10,5 +12,4 @@ export type PostCardProps = {
   slug: string;
   cover: CoverProps;
   content: string;
-  createdAt: string;
-};
+} & PostArticleMetaProps;

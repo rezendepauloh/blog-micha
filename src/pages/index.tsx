@@ -1,10 +1,14 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
+import { useRouter } from 'next/dist/client/router';
 
 import { theme } from 'styles/theme';
 
 import { HomeTemplate } from 'templates/HomeTemplate';
+import { Loading } from 'templates/Loading';
+
 import { HomeTemplateProps } from 'templates/HomeTemplate/type';
+
 import { loadHome } from 'api/load-data';
 
 export default function Index({
@@ -13,6 +17,12 @@ export default function Index({
   posts,
   base,
 }: HomeTemplateProps) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loading />;
+  }
+
   const homeArgs = {
     carousel: carousel,
     specialties: specialties,
@@ -44,8 +54,8 @@ export const getStaticProps: GetStaticProps<HomeTemplateProps> = async () => {
     console.log(e.message);
   }
 
-  console.log('O data: ');
-  console.log(data);
+  // console.log('O data: ');
+  // console.log(data);
 
   if (!data || !data.posts || !data.posts.length) {
     return {

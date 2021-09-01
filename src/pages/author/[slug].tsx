@@ -2,81 +2,68 @@ import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
 
-import { loadPosts, loadPost } from 'api/load-data';
+import { theme } from 'styles/theme';
 
-import { PostTemplate } from 'templates/PostTemplate';
+import { PostsTemplate } from 'templates/PostsTemplate';
 import { Loading } from 'templates/Loading';
 
-import { StrapiPostAndBase } from 'api/type';
+import { PostsTemplateProps } from 'templates/PostsTemplate/type';
+import { StrapiPostsAndBase } from 'api/type';
 
-import { createExcerpt } from 'utils/create-excerpt';
+import { loadPostsWithFilter } from 'api/load-data';
 
-export default function PostPage({ posts, base }: StrapiPostAndBase) {
+export default function AuthorPage({ posts, base }: PostsTemplateProps) {
   const router = useRouter();
 
   if (router.isFallback) {
     return <Loading />;
   }
 
-  const postArgs = {
-    post: posts,
+  const postsArgs = {
+    posts: posts,
     base: base,
   };
 
-  const { title, content } = posts;
-  const { blogName } = base;
+  const authorName = posts.posts[0].author.displayName;
+
+  const { blogName, blogDescription } = base;
 
   return (
     <>
       <Head>
         <title>
-          {title} - {blogName}
+          Autor: {authorName} - {blogName}
         </title>
-        <meta name="description" content={createExcerpt(content)} />
+        <meta name="description" content={blogDescription} />
+        <meta name="theme-color" content={theme.colors.primary} />
       </Head>
-      <PostTemplate {...postArgs} />
+      <PostsTemplate {...postsArgs} />
     </>
   );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  let data = null;
-  let paths = [];
-
-  try {
-    data = await loadPosts();
-    paths = data.posts.map((post: StrapiPostAndBase) => ({
-      params: { slug: post.posts.slug },
-    }));
-  } catch (e) {
-    console.log(e.message);
-    data = null;
-  }
-
-  if (!data || !data.posts || !data.posts.length) {
-    paths = [];
-  }
-
   return {
-    paths,
+    paths: [],
     fallback: true,
   };
 };
 
-export const getStaticProps: GetStaticProps<StrapiPostAndBase> = async (
+//Erro de tipagem por causa do posts...
+export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
   ctx,
 ) => {
   let data = null;
-  const variables = { postSlug: ctx.params.slug as string };
+  const variables = { authorSlug: ctx.params.slug as string };
 
   try {
-    data = await loadPost(variables);
+    data = await loadPostsWithFilter(variables);
   } catch (e) {
     data = null;
   }
 
-  // console.log('O data: ');
-  // console.log(data);
+  // console.log('O author: ');
+  // console.log(data.posts[0].author);
 
   if (!data || !data.posts || !data.posts.length) {
     return {
@@ -111,12 +98,9 @@ export const getStaticProps: GetStaticProps<StrapiPostAndBase> = async (
     },
   } = data;
 
-  // console.log('O post: ');
-  // console.log(posts[0]);
-
   return {
     props: {
-      posts: posts[0],
+      posts: { posts: posts },
       base: {
         id: id,
         blogName: blogName,
@@ -144,6 +128,9 @@ export const getStaticProps: GetStaticProps<StrapiPostAndBase> = async (
           email: email,
           location: location,
         },
+      },
+      variables: {
+        ...variables,
       },
     },
     revalidate: 24 * 60 * 60,

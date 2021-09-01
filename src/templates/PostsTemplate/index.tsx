@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 
-import { PostGrid } from 'components/PostGrid';
+import { PostList } from 'components/PostList';
 import { Base } from 'templates/Base';
 import { Heading } from 'components/Heading';
 
@@ -15,7 +15,7 @@ export function PostsTemplate({ posts, base }: PostsTemplateProps) {
             Publicações
           </Heading>
         </Styled.TitleContainer>
-        <PostGrid {...posts} />
+        <PostList {...posts} title={posts.title} />
       </Styled.Container>
     </Base>
   );

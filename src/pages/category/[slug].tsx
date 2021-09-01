@@ -19,11 +19,6 @@ export default function CategoryPage({ posts, base }: PostsTemplateProps) {
     return <Loading />;
   }
 
-  const postsArgs = {
-    posts: posts,
-    base: base,
-  };
-
   //VAMOS TER QUE MEXER NOS TIPOS.
   //TEMOS QUE DEIXAR OS COMPONENTS TUDO IGUAIS
   //COM OS MESMOS TIPOS PARA QUE ISSO TUDO FUNCIONE
@@ -31,6 +26,11 @@ export default function CategoryPage({ posts, base }: PostsTemplateProps) {
   const categoryName = posts.posts[0].category.displayName;
 
   const { blogName, blogDescription } = base;
+
+  const categoryArgs = {
+    posts: { title: `Categoria: ${categoryName}`, ...posts },
+    base: base,
+  };
 
   return (
     <>
@@ -41,7 +41,7 @@ export default function CategoryPage({ posts, base }: PostsTemplateProps) {
         <meta name="description" content={blogDescription} />
         <meta name="theme-color" content={theme.colors.primary} />
       </Head>
-      <PostsTemplate {...postsArgs} />
+      <PostsTemplate {...categoryArgs} />
     </>
   );
 }

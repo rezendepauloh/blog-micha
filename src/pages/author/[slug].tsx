@@ -19,14 +19,14 @@ export default function AuthorPage({ posts, base }: PostsTemplateProps) {
     return <Loading />;
   }
 
-  const postsArgs = {
-    posts: posts,
-    base: base,
-  };
-
   const authorName = posts.posts[0].author.displayName;
 
   const { blogName, blogDescription } = base;
+
+  const authorArgs = {
+    posts: { title: `Autor: ${authorName}`, ...posts },
+    base: base,
+  };
 
   return (
     <>
@@ -37,7 +37,7 @@ export default function AuthorPage({ posts, base }: PostsTemplateProps) {
         <meta name="description" content={blogDescription} />
         <meta name="theme-color" content={theme.colors.primary} />
       </Head>
-      <PostsTemplate {...postsArgs} />
+      <PostsTemplate {...authorArgs} />
     </>
   );
 }

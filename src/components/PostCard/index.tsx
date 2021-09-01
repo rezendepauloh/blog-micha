@@ -20,7 +20,11 @@ export function PostCard({
     <Styled.Card>
       <Link href={`/post/${slug}`} passHref>
         <a>
-          <Styled.ImgCard variant="top" src={cover.srcImg} alt={title} />
+          <Styled.ImgCard
+            variant="top"
+            src={cover.srcImg}
+            alt={cover.alternativeText ? cover.alternativeText : title}
+          />
           <Styled.BodyCard>
             <Styled.TitleCard>
               <Heading as="h5" size="small" colorDark={true}>

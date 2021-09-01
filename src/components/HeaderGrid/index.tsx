@@ -28,6 +28,7 @@ export const HeaderGrid = ({ links, logoData }: HeaderGridProps) => {
         fluid
         visible={visible ? 1 : 0}
         onClick={() => setVisible(false)}
+        style={logoData.srcImg ? {} : { padding: '17px' }}
       >
         <SectionContainer>
           <Styled.MenuContainer>

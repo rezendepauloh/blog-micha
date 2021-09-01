@@ -1,7 +1,7 @@
-import { PostGridProps } from 'components/PostGrid/type';
+import { PostListProps } from 'components/PostList/type';
 import { BaseStrapi } from 'templates/Base/type';
 
 export type PostsTemplateProps = {
-  posts: PostGridProps;
+  posts: PostListProps;
   base: BaseStrapi;
 };

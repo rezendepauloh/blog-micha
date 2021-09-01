@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { Container as SectionContainer } from 'components/SectionContainer/styles';
 import { Title as Heading } from 'components/Heading/styles';
 import { Container as ContainerBootstrap } from 'react-bootstrap';
+// import { HeaderGridProps } from './type';
 
 type MenuVisible = {
   visible?: boolean;

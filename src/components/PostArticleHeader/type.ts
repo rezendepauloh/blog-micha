@@ -1,6 +1,6 @@
 import { PostArticleMetaProps } from 'components/PostArticleMeta/type';
 
-type StrapiImage = {
+export type StrapiImage = {
   id: string;
   alternativeText: string;
   srcImg: string;

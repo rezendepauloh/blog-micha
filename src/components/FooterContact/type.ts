@@ -1,9 +1,9 @@
-type PhoneProps = {
+export type PhoneProps = {
   phone: string;
   owner: string;
 };
 
-type EmailProps = {
+export type EmailProps = {
   email: string;
 };
 

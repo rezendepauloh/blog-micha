@@ -14,3 +14,12 @@ export const Container = styled(ContainerBootstrap)`
     background: ${theme.colors.white};
   `}
 `;
+
+export const TitleContainer = styled.div`
+  ${({ theme }) => css`
+    justify-content: center;
+    text-align: center;
+    background: ${theme.colors.primary};
+    padding: ${theme.spacings.medium};
+  `}
+`;

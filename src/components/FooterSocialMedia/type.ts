@@ -1,4 +1,4 @@
-type InstragramProps = {
+export type InstragramProps = {
   user: string;
   url: string;
 };

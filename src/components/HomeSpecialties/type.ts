@@ -1,6 +1,6 @@
 export type SpecialtiesProps = {
   specialty: string;
-  url: string;
+  content: string;
 };
 
 export type HomeSpecialtiesProps = {

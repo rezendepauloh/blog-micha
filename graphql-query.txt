@@ -106,7 +106,7 @@ query GET_HOME {
       content
       linkSpecialty {
         specialty
-        url
+        content
       }
     }
   }
@@ -127,9 +127,7 @@ query GET_HOME {
   }
 }
 
-query GET_POSTS(
-  $postSlug: String
-) {
+query GET_ABOUT {
   base {
     id
     blogName
@@ -173,11 +171,60 @@ query GET_POSTS(
       }
     }
   }
-  posts(
-    where: {
-        slug: $postSlug
+  about {
+    title
+    content
+		cover {
+      ...image
+    }
+  }
+}
+
+query GET_POSTS {
+  base {
+    id
+    blogName
+    blogDescription
+    logoText
+    logoUrl
+    logoNewTab
+    logo {
+      ...image
+    }
+    header {
+      menuLink {
+        id
+        text
+        link
+        newTab
       }
-  ) {
+    }
+    footer {
+      street
+      number
+      neighborhood
+      city
+      state
+      cep
+      location
+      instagram: footerMediaInstagram {
+        user
+        url
+      }
+      linkedin: footerMediaLinkedin {
+        user
+        url
+      }
+      phone: footerPhone {
+        phone
+        owner
+      }
+      email: footerEmail {
+        email
+      }
+    }
+  }
+  posts {
     id
     title
     slug
@@ -190,8 +237,6 @@ query GET_POSTS(
     ...tags
   }
 }
-
-
 
 ----------------------
 query variables

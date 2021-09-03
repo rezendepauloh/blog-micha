@@ -30,6 +30,7 @@ export const Col = styled(ColBootstrap)`
     > img {
       width: 100%;
       border-radius: ${theme.spacings.xsmall};
+      border: 2px solid ${theme.colors.primary};
     }
 
     > img:hover {
@@ -46,10 +47,10 @@ export const Col = styled(ColBootstrap)`
   `}
 `;
 
-export const Paragraph = styled.p`
+export const Paragraph = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    margin: ${theme.spacings.xsmall} 0;
+    margin: ${theme.spacings.xsmall} ${theme.spacings.small};
     color: ${theme.colors.white};
     text-align: justify;
     line-height: ${theme.spacings.medium};

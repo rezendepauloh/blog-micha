@@ -1,0 +1,104 @@
+{
+  "data": {
+    "base": {
+      "id": "6124f1b3b7d4394a74786966",
+      "blogName": "Michely Segóvia Advocacia",
+      "blogDescription": "O melhor escritório de advocacia do mundo.",
+      "logoText": "Michely Segóvia",
+      "logoUrl": "/",
+      "logoNewTab": false,
+      "logo": {
+        "id": "6124f0c6b7d4394a74786965",
+        "alternativeText": "",
+        "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629810879/logo_h_be529e7a63.svg"
+      },
+      "header": {
+        "menuLink": [
+          {
+            "id": "6124f1b3b7d4394a7478696b",
+            "text": "Home",
+            "link": "/",
+            "newTab": false
+          },
+          {
+            "id": "6124f1b3b7d4394a7478696c",
+            "text": "Sobre mim",
+            "link": "/sobre",
+            "newTab": false
+          },
+          {
+            "id": "6124f1b3b7d4394a7478696d",
+            "text": "Equipe",
+            "link": "/equipe",
+            "newTab": false
+          },
+          {
+            "id": "6124f1b3b7d4394a7478696e",
+            "text": "Publicações",
+            "link": "/posts",
+            "newTab": false
+          },
+          {
+            "id": "6124f1b3b7d4394a7478696f",
+            "text": "Contato",
+            "link": "/contato",
+            "newTab": false
+          }
+        ]
+      },
+      "footer": {
+        "street": "Rua do Catete",
+        "number": 435,
+        "neighborhood": "Jardim Monte Líbano",
+        "city": "Campo Grande",
+        "state": "MS",
+        "cep": "790041-70",
+        "location": "https://goo.gl/maps/f2kyjuzcaEW1jNaq7",
+        "instagram": [
+          {
+            "user": "Larissa Mancini",
+            "url": "https://www.instagram.com/larimancini.adv/"
+          },
+          {
+            "user": "Hellen Almeida",
+            "url": "https://www.instagram.com/hellenalmeida.adv/"
+          }
+        ],
+        "linkedin": [
+          {
+            "user": "Larissa Mancini",
+            "url": "https://www.linkedin.com/in/larissa-mancini-a18587194/"
+          },
+          {
+            "user": "Hellen Almeida",
+            "url": "https://www.linkedin.com/in/hellen-almeida-240a14205/"
+          }
+        ],
+        "phone": [
+          {
+            "phone": "(67) 99238-0886",
+            "owner": "Larissa Mancini"
+          },
+          {
+            "phone": "(67) 99143-8422",
+            "owner": "Hellen Almeida"
+          }
+        ],
+        "email": [
+          {
+            "email": "almeidaemancini@gmail.com"
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "Sobre a Almeida & Mancini",
+      "content": "<p>Almeida e Mancini Advocacia é um escritório situado em Campo Grande - MS, com atendimentos no Brasil inteiro, que atua no campo preventivo das relações obrigacionais, estruturando negócios e contratos, bem como, no campo contencioso na solução de conflitos. Tem o intuito de preservar os interesses dos clientes – quer seja na esfera judicial ou administrativa. Somos especialistas em consultoria estratégica direcionada à redução de custos e potencialização do lucro das empresas, aplicando as melhores soluções estratégicas, de forma legal e segura. Destaca-se no mercado jurídico por prestar uma advocacia artesanal, que se traduz em um acompanhamento jurídico individualizado, eficiente e fiel aos interesses de seus clientes. Atuação nas áreas de Empresarial, Tributário e Civil.&nbsp;</p>",
+      "cover": {
+        "id": "61328e510dc1da574c158c6c",
+        "alternativeText": "",
+        "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1630703179/about_0fb879b22d.jpg"
+      }
+    }
+  }
+}

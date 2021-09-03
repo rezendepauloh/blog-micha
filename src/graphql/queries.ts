@@ -1,5 +1,5 @@
 import { gql } from 'graphql-request';
-import { GRAPHQL_FRAGMENTS } from './fragments';
+import { GRAPHQL_FRAGMENTS, GRAPHQL_ABOUT_FRAGMENTS } from './fragments';
 
 export const GRAPHQL_GET_HOME = gql`
   ${GRAPHQL_FRAGMENTS}
@@ -63,7 +63,7 @@ export const GRAPHQL_GET_HOME = gql`
         content
         linkSpecialty {
           specialty
-          url
+          content
         }
       }
     }
@@ -78,6 +78,63 @@ export const GRAPHQL_GET_HOME = gql`
       ...authorPost
       ...categoryPost
       ...tags
+    }
+  }
+`;
+
+export const GRAPHQL_GET_ABOUT = gql`
+  ${GRAPHQL_ABOUT_FRAGMENTS}
+
+  query GET_ABOUT {
+    base {
+      id
+      blogName
+      blogDescription
+      logoText
+      logoUrl
+      logoNewTab
+      logo {
+        ...image
+      }
+      header {
+        menuLink {
+          id
+          text
+          link
+          newTab
+        }
+      }
+      footer {
+        street
+        number
+        neighborhood
+        city
+        state
+        cep
+        location
+        instagram: footerMediaInstagram {
+          user
+          url
+        }
+        linkedin: footerMediaLinkedin {
+          user
+          url
+        }
+        phone: footerPhone {
+          phone
+          owner
+        }
+        email: footerEmail {
+          email
+        }
+      }
+    }
+    about {
+      title
+      content
+      cover {
+        ...image
+      }
     }
   }
 `;

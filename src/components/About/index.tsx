@@ -30,7 +30,7 @@ export const About = ({
                 {title}
               </Heading>
             </Styled.TitleContainer>
-            <Styled.Paragraph>{content}</Styled.Paragraph>
+            <Styled.Paragraph dangerouslySetInnerHTML={{ __html: content }} />
           </Styled.Col>
           <Styled.Col md={6}>
             <img

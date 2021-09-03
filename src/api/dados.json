@@ -35,7 +35,7 @@
           {
             "id": "6124f1b3b7d4394a7478696e",
             "text": "Publicações",
-            "link": "/publicacoes",
+            "link": "/posts",
             "newTab": false
           },
           {
@@ -133,15 +133,15 @@
         "linkSpecialty": [
           {
             "specialty": "Direito Tributário",
-            "url": "/alguma-coisa-01"
+            "content": "<p>Somos especialistas em consultoria estratégica direcionada à redução de custos e potencialização do lucro das empresas, aplicando as melhores soluções estratégicas, de forma legal e segura.</p><ul><li>Planejamento Tributário</li><li>Defesa administrativas</li><li>Defesas em Execuções Fiscais</li><li>Recuperação Administrativa de Crédito Tributário</li><li>Revisão Tributária</li><li>Orientação na obtenção de Incentivos Fiscais</li><li>Assessoria preventiva mensal</li></ul><p>Estão entre os principais serviços oferecidos:</p><p><strong>Contencioso Tributário Administrativo</strong><br><br>Atuação em defesas administrativas de diversos tipos de processos tributários. A defesa é feita nas esferas federal, estadual e municipal, com o acompanhamento e suporte durante todas as fases do processo.</p><p><strong>Contencioso Tributário Judicial</strong><br><br>Atuamos na representação dos clientes em ações judiciais dentro da área tributária, sendo o contencioso tributário uma ferramenta importante para prevenir o pagamento desnecessário e indevido de multas, tributos e juros originados de autuações promovidas por alguns órgãos fiscalizadores. Nesse sentido, elaboramos ações que visam a anular ou minimizar medidas impostas ao contribuinte.</p><p><strong>Recuperação Tributária</strong><br><br>Análise da operação e documentação da empresa visando encontrar oportunidades para otimização tributária. É realizado um estudo aprofundado para identificar quais tributos foram pagos de forma indevida.</p><p><strong>Revisão e Planejamento Tributário</strong><br><br>A revisão e o planejamento do pagamento de tributos é uma estruturação de planos de pagamento inteligente de tributos, avaliação de créditos e passivos e otimização fiscal, considerando também questões societárias, contratuais e financeiras.</p><p><strong>Orientação na obtenção de Incentivos Fiscais</strong><br><br>Consultoria especializada em impostos incidem sobre a operação da empresa. Após entender as necessidades e identificar as oportunidades para o cliente, é indicado estratégias para maximização de resultados.</p>"
           },
           {
             "specialty": "Direito Empresarial",
-            "url": "/alguma-coisa-02"
+            "content": "<ul><li>Abertura de sociedades</li><li>Dissolução de sociedades</li><li>Constituição de Holdings</li><li>Elaboração e análise de contratos empresariais</li><li>Demandas judiciais</li><li>Registros de marcas, patentes e desenhos industriais</li><li>Auxílio e abertura para Startups</li><li>Litígios Empresariais</li><li>Adequação à Lei Geral de Proteção de dados</li><li>Compliance</li><li>Recuperação judicial, extrajudicial e falência</li><li>Assessoria e consultoria jurídica para todos os portes de empresas</li></ul><p>Estão entre os principais serviços oferecidos:</p><p><strong>Constituição e dissolução de sociedades</strong><br><br>Visando planejar, estruturar e escolher o melhor tipo societário para sua empresa, a abertura feita corretamente com planejamento é o ponto principal para evitar problemas e diluir riscos. Assim como, na dissolução de sociedade é necessário um profissional para solucionar os conflitos causados pelo rompimento da sociedade e apuração dos haveres.</p><p><strong>Registros de marcas, patentes e desenhos industriais</strong><br><br>Realizamos os devidos registros nos órgãos competentes, com o registro há uso exclusivo em todo território nacional, proteção contra cópias ou uso indevido por terceiros, possibilidade de vender, franquear ou licenciar.</p><p><strong>Assessoria mensal para pessoas jurídicas</strong><br><br>Planejamento societário,elaboração de contratos, proteção de patrimônio, consultoria, muitos problemas dos empresários podem ser sanados com a assessoria mensal especializada. Atuação preventiva e permanente, evitando situações de risco ou mediando conflitos antes de serem judicializados.</p>"
           },
           {
             "specialty": "Direito Civil",
-            "url": "/alguma-coisa-03"
+            "content": "<ul><li>Elaboração e revisão de contratos</li><li>Atuação em procedimentos judiciais</li><li>Elaboração de pactos antenupciais</li><li>Contratos de união estável e de namoro</li><li>Divórcio e separação extrajudicial</li><li>Partilha, sobrepartilha e arrolamento de bens</li><li>Testamento e inventários</li><li>Planejamento patrimonial</li></ul><p>Estão entre os principais serviços oferecidos:</p><p><strong>Inventário e divórcio extrajudicial</strong><br><br>O processo extrajudicial é um procedimento mais célere. Além de ser uma forma mais barata e mais rápida também, porém existem algumas regras que precisam ser consideradas para realização do mesmo na esfera extrajudicial.</p><p><strong>Demandas judiciais</strong><br><br>Atuação em demandas judiciais cíveis, visando diminuir os riscos e obrigações quanto às pessoas físicas.</p><p><strong>Contratos</strong><br><br>Elaboração de contratos, contrato de locação, sublocação, compra e venda, prestação de serviço, contrato de namoro, bem como, contratos dos mais diversos tipos para sua segurança jurídica.</p>"
           }
         ]
       }

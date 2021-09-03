@@ -49,3 +49,11 @@ export const GRAPHQL_FRAGMENTS = gql`
     }
   }
 `;
+
+export const GRAPHQL_ABOUT_FRAGMENTS = gql`
+  fragment image on UploadFile {
+    id
+    alternativeText
+    srcImg: url
+  }
+`;

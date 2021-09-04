@@ -13,6 +13,11 @@ export const HeaderLinkMenu = ({
   const nextLink = link.match(/^\//) ? true : false;
   const router = useRouter();
 
+  //Vamos dar um replace no router para que ele ative o currentActive
+  //Para o author, category e tag em publicações
+  //console.log(router.pathname);
+  //console.log(link.match(/^\//));
+
   if (nextLink) {
     return (
       <Link href={link} passHref>

@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+import { Title as HeadingContainer } from 'components/Heading/styles';
 
 const rotate = () => keyframes`
   0% {
@@ -47,6 +48,12 @@ export const Container = styled.div`
       border-left: 0.5rem solid ${theme.colors.secondary};
       border-top: 0.5rem solid ${theme.colors.secondary};
       animation: ${rotate()} 1s linear reverse infinite;
+    }
+
+    ${HeadingContainer} {
+      position: absolute;
+      top: 54%;
+      left: 48%;
     }
   `}
 `;

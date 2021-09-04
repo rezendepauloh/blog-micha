@@ -1,6 +1,8 @@
 // import { PostTemplateProps } from 'templates/PostTemplate/type';
 import { BaseStrapi } from 'templates/Base/type';
 import { PostStrapi } from 'components/Post/type';
+import { PostListProps } from 'components/PostList/type';
+import { PostCardProps } from 'components/PostCard/type';
 
 export type LoadPostsVariables = {
   categorySlug?: string;
@@ -23,12 +25,12 @@ export type StrapiPostAndBase = {
 
 export type StrapiPostsAndBase = {
   base: BaseStrapi;
-  posts: PostStrapi;
+  posts: PostCardProps;
   variables?: LoadPostsVariables;
 };
 
 export type StrapiPostsListAndBase = {
   base: BaseStrapi;
-  posts: PostStrapi;
+  posts: PostListProps;
   variables?: LoadPostsVariables;
 };

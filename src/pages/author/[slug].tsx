@@ -8,7 +8,7 @@ import { PostsTemplate } from 'templates/PostsTemplate';
 import { Loading } from 'templates/Loading';
 
 import { PostsTemplateProps } from 'templates/PostsTemplate/type';
-import { StrapiPostsAndBase } from 'api/type';
+import { StrapiPostsListAndBase } from 'api/type';
 
 import { loadPostsWithFilter } from 'api/load-data';
 
@@ -49,8 +49,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-//Erro de tipagem por causa do posts...
-export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
+export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
   ctx,
 ) => {
   let data = null;

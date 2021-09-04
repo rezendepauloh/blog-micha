@@ -8,7 +8,7 @@ import { PostsTemplate } from 'templates/PostsTemplate';
 import { Loading } from 'templates/Loading';
 
 import { PostsTemplateProps } from 'templates/PostsTemplate/type';
-import { StrapiPostsAndBase } from 'api/type';
+import { StrapiPostsListAndBase } from 'api/type';
 
 import { loadPostsWithFilter } from 'api/load-data';
 
@@ -19,12 +19,7 @@ export default function CategoryPage({ posts, base }: PostsTemplateProps) {
     return <Loading />;
   }
 
-  //VAMOS TER QUE MEXER NOS TIPOS.
-  //TEMOS QUE DEIXAR OS COMPONENTS TUDO IGUAIS
-  //COM OS MESMOS TIPOS PARA QUE ISSO TUDO FUNCIONE
-
   const categoryName = posts.posts[0].category.displayName;
-  //const categoryName = 'Oi';
 
   const { blogName, blogDescription } = base;
 
@@ -54,8 +49,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-//Erro de tipagem por causa do posts...
-export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
+export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
   ctx,
 ) => {
   let data = null;
@@ -77,10 +71,6 @@ export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
   }
 
   const {
-    //posts: { posts },
-    // posts: {
-    //   posts: { id: idPost, title, content, cover, slug },
-    // },
     posts,
     base: {
       id,
@@ -110,16 +100,6 @@ export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
   return {
     props: {
       posts: { posts: posts },
-      // posts: {
-      //   posts: {
-      //     id: idPost,
-      //     title: title,
-      //     content: content,
-      //     cover: cover,
-      //     slug: slug,
-      //   },
-      // },
-      //posts: post,
       base: {
         id: id,
         blogName: blogName,

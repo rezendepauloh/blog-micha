@@ -4,6 +4,10 @@ import { Title as HeadingContainer } from 'components/Heading/styles';
 
 export const Carousel = styled(CarouselBootstrap)`
   ${({ theme }) => css`
+    .carousel-indicators {
+      z-index: 4;
+    }
+
     @media ${theme.media.lteMedium} {
       > ol {
         margin-bottom: -9px;

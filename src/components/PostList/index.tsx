@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 //import { useState } from 'react';
-import Link from 'next/link';
+
 //import { useRouter } from 'next/router';
 
 import { PostItem } from 'components/PostItem';
@@ -65,18 +65,14 @@ export function PostList({ posts = [], title = 'Artigos' }: PostListProps) {
         })}
       </Styled.List>
       <Styled.ButtonContainer>
-        <Link href="/posts" passHref>
-          <a>
-            <Styled.Button
-              // disabled={buttonDisabled}
-              // onClick={loadMorePosts}
-              size="lg"
-            >
-              {/* {noMorePosts ? 'Sem mais posts' : 'Ver mais'} */}
-              Ver mais
-            </Styled.Button>
-          </a>
-        </Link>
+        <Styled.Button
+          // disabled={buttonDisabled}
+          // onClick={loadMorePosts}
+          size="lg"
+        >
+          {/* {noMorePosts ? 'Sem mais posts' : 'Ver mais'} */}
+          Ver mais
+        </Styled.Button>
       </Styled.ButtonContainer>
     </>
   );

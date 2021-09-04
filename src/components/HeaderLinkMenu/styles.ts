@@ -30,5 +30,14 @@ export const Container = styled.a`
       left: 25%;
       width: 50%;
     }
+
+    &.currentActive {
+      color: ${theme.colors.secondary};
+    }
+
+    &.currentActive::after {
+      left: 25%;
+      width: 50%;
+    }
   `}
 `;

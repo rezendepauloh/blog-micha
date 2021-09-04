@@ -12,5 +12,15 @@ export const Container = styled(ContainerBootstrap)`
     width: 100%;
     padding: 0;
     background: ${theme.colors.primary};
+    margin-top: ${theme.spacings.medium};
+  `}
+`;
+
+export const TitleContainer = styled.div`
+  ${({ theme }) => css`
+    justify-content: center;
+    text-align: center;
+    background: ${theme.colors.primary};
+    padding: ${theme.spacings.medium};
   `}
 `;

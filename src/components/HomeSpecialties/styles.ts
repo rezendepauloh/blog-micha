@@ -93,6 +93,7 @@ export const Header = styled(ModalHeader)`
 
     ${HeadingContainer} {
       margin: ${theme.spacings.xsmall} 0;
+      font-weight: bolder;
     }
   `}
 `;

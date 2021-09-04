@@ -24,6 +24,7 @@ export default function CategoryPage({ posts, base }: PostsTemplateProps) {
   //COM OS MESMOS TIPOS PARA QUE ISSO TUDO FUNCIONE
 
   const categoryName = posts.posts[0].category.displayName;
+  //const categoryName = 'Oi';
 
   const { blogName, blogDescription } = base;
 
@@ -66,8 +67,8 @@ export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
     data = null;
   }
 
-  // console.log('O category: ');
-  // console.log(data.posts[0].category);
+  console.log('O data: ');
+  console.log(data);
 
   if (!data || !data.posts || !data.posts.length) {
     return {
@@ -76,6 +77,10 @@ export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
   }
 
   const {
+    //posts: { posts },
+    // posts: {
+    //   posts: { id: idPost, title, content, cover, slug },
+    // },
     posts,
     base: {
       id,
@@ -105,6 +110,16 @@ export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
   return {
     props: {
       posts: { posts: posts },
+      // posts: {
+      //   posts: {
+      //     id: idPost,
+      //     title: title,
+      //     content: content,
+      //     cover: cover,
+      //     slug: slug,
+      //   },
+      // },
+      //posts: post,
       base: {
         id: id,
         blogName: blogName,

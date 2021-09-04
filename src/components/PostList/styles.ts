@@ -59,5 +59,12 @@ export const Button = styled(ButtonBootstrap)`
       transition: all 300ms ease-in-out;
       border: 1px solid;
     }
+
+    &:focus {
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.primary};
+      transition: all 300ms ease-in-out;
+      border: 1px solid ${theme.colors.primary};
+    }
   `}
 `;

@@ -29,7 +29,11 @@ export const Container = styled.div`
   `}
 `;
 
-export const List = styled.ul``;
+export const List = styled.ul`
+  ${({ theme }) => css`
+    margin: ${theme.spacings.xsmall} 0;
+  `}
+`;
 
 export const ButtonContainer = styled.div`
   ${({ theme }) => css`

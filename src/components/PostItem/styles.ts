@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
-// import { Card as CardBootstrap } from 'react-bootstrap';
 import { Media as MediaBootstrap } from 'react-bootstrap';
-// import { Title as HeadingContainer } from 'components/Heading/styles';
+import { Title as HeadingContainer } from 'components/Heading/styles';
 
 export const Item = styled(MediaBootstrap)`
   ${({ theme }) => css`
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     background-color: ${theme.colors.white};
     line-height: ${theme.spacings.small};
     margin: ${theme.spacings.medium} 0;
@@ -37,11 +37,42 @@ export const Item = styled(MediaBootstrap)`
 
     @media ${theme.media.lteMedium} {
       width: 100%;
-      margin: auto;
+      padding: ${theme.spacings.small} ${theme.spacings.xsmall}
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      > img {
+        width: 150px;
+        height: 150px;
+      }
     }
 
     @media ${theme.media.small} {
+      width: 100%;
       margin: ${theme.spacings.xsmall} 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      > img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media ${theme.media.medium} {
+      width: 100%;
+      margin: ${theme.spacings.xsmall} 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   `}
 `;
@@ -64,6 +95,25 @@ export const BodyItem = styled(MediaBootstrap.Body)`
       &:hover {
         filter: brightness(50%);
       }
+    }
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      margin: ${theme.spacings.xsmall} 0;
+
+      > ${HeadingContainer} {
+        text-text-align: left;
+      }
+    }
+
+    @media ${theme.media.small} {
+      width: 100%;
+      margin: ${theme.spacings.xsmall} 0;
+    }
+
+    @media ${theme.media.medium} {
+      width: 100%;
+      margin: ${theme.spacings.xsmall} 0;
     }
   `}
 `;

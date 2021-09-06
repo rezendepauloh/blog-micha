@@ -47,22 +47,6 @@ export const About = ({
             <Heading size="small" as="h4" colorDark={false}>
               Instagram
             </Heading>
-          </Styled.Col>
-          <Styled.Col md={4}>
-            <Heading size="small" as="h4" colorDark={false}>
-              Telefone
-            </Heading>
-          </Styled.Col>
-          <Styled.Col md={4}>
-            <Heading size="small" as="h4" colorDark={false}>
-              Email
-            </Heading>
-          </Styled.Col>
-        </Styled.Row>
-      </Styled.Container>
-      <Styled.Container fluid>
-        <Styled.Row>
-          <Styled.Col md={4}>
             {instagram.map((i) => (
               <Link key={i.user} href={i.url} passHref>
                 <Styled.LinkSocial target={target}>
@@ -73,6 +57,9 @@ export const About = ({
             ))}
           </Styled.Col>
           <Styled.Col md={4}>
+            <Heading size="small" as="h4" colorDark={false}>
+              Telefone
+            </Heading>
             {phone.map((p) => {
               const replaceOwner = p.owner.replace(' ', '%20');
               const replacePhone = p.phone.replace(
@@ -90,6 +77,9 @@ export const About = ({
             })}
           </Styled.Col>
           <Styled.Col md={4}>
+            <Heading size="small" as="h4" colorDark={false}>
+              Email
+            </Heading>
             {email.map((e, index) => {
               const key = `${index}-${e.email}`;
               const url = `mailto:${e.email}`;

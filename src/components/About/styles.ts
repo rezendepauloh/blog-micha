@@ -27,6 +27,7 @@ export const Row = styled(RowBootstrap)``;
 
 export const Col = styled(ColBootstrap)`
   ${({ theme }) => css`
+    margin: inherit;
     > img {
       width: 100%;
       border-radius: ${theme.spacings.xsmall};
@@ -49,11 +50,22 @@ export const Col = styled(ColBootstrap)`
 
 export const Paragraph = styled.div`
   ${({ theme }) => css`
-    width: 100%;
-    margin: ${theme.spacings.xsmall} ${theme.spacings.small};
+    max-width: 100%;
+    margin: ${theme.spacings.xsmall} ${theme.spacings.medium};
     color: ${theme.colors.white};
     text-align: justify;
     line-height: ${theme.spacings.medium};
+
+    > p {
+      margin: ${theme.spacings.medium} 0;
+      color: ${theme.colors.white};
+    }
+
+    @media ${theme.media.lteMedium} {
+    }
+
+    @media ${theme.media.small} {
+    }
   `}
 `;
 

@@ -17,7 +17,10 @@ export const Container = styled(ContainerBootstrap)`
   `}
 `;
 
-export const Row = styled(RowBootstrap)``;
+export const Row = styled(RowBootstrap)`
+  margin-right: 0;
+  margin-left: 0;
+`;
 
 export const Col = styled(ColBootstrap)`
   > h1 > div > img {

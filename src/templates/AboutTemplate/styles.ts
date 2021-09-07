@@ -12,7 +12,7 @@ export const Container = styled(ContainerBootstrap)`
     width: 100%;
     padding: 0;
     background: ${theme.colors.primary};
-    margin-top: ${theme.spacings.medium};
+    margin-top: 0;
   `}
 `;
 

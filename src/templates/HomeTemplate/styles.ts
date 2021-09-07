@@ -10,7 +10,7 @@ export const Container = styled(ContainerBootstrap)`
     left: 0;
     right: 0;
     width: 100%;
-    padding: ${theme.spacings.medium} 0;
+    padding: 0;
     background: ${theme.colors.white};
   `}
 `;

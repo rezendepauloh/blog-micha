@@ -7,13 +7,6 @@ import { Title as HeadingContainer } from 'components/Heading/styles';
 
 export const Container = styled(ContainerBootstrap)`
   ${({ theme }) => css`
-    /* display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%; */
     padding: ${theme.spacings.medium} 0;
     background: ${theme.colors.primary};
   `}
@@ -23,7 +16,10 @@ export const Container = styled(ContainerBootstrap)`
   }
 `;
 
-export const Row = styled(RowBootstrap)``;
+export const Row = styled(RowBootstrap)`
+  margin-right: 0;
+  margin-left: 0;
+`;
 
 export const Col = styled(ColBootstrap)`
   ${({ theme }) => css`
@@ -44,6 +40,8 @@ export const Col = styled(ColBootstrap)`
 
     ${HeadingContainer} {
       margin: 0;
+      justify-content: center;
+      display: flex;
     }
   `}
 `;
@@ -100,7 +98,7 @@ export const TitleContainer = styled.div`
 export const LinkSocial = styled.a`
   ${({ theme }) => css`
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: flex-start;
     top: 0;
     left: 0;
@@ -112,14 +110,13 @@ export const LinkSocial = styled.a`
     margin: ${theme.spacings.xsmall};
     font-weight: bold;
 
-    & > .instaAbout {
-      padding: 0;
-    }
-
-    //Entender melhor o content para poder adicionar os espacos
-    > svg::before {
+    /* &::before {
       content: 's';
     }
+
+    &::after {
+      content: 't';
+    } */
 
     &:hover {
       color: ${theme.colors.white};

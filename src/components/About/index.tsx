@@ -50,8 +50,7 @@ export const About = ({
             {instagram.map((i) => (
               <Link key={i.user} href={i.url} passHref>
                 <Styled.LinkSocial target={target}>
-                  <Insta aria-label="Instagram" className="instaAbout" />{' '}
-                  {i.user}
+                  <Insta aria-label="Instagram" /> {i.user}
                 </Styled.LinkSocial>
               </Link>
             ))}

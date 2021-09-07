@@ -12,17 +12,21 @@ export const HeaderLinkMenu = ({
   const target = newTab ? '_blank' : '_self';
   const nextLink = link.match(/^\//) ? true : false;
   const router = useRouter();
+  let routerPath = router.pathname;
 
-  //Vamos dar um replace no router para que ele ative o currentActive
-  //Para o author, category e tag em publicações
-  //console.log(router.pathname);
-  //console.log(link.match(/^\//));
+  if (
+    routerPath == '/category/[slug]' ||
+    routerPath == '/author/[slug]' ||
+    routerPath == '/post/[slug]'
+  ) {
+    routerPath = '/posts';
+  }
 
   if (nextLink) {
     return (
       <Link href={link} passHref>
         <Styled.Container
-          className={router.pathname == link ? 'currentActive' : ''}
+          className={routerPath == link ? 'currentActive' : ''}
           target={target}
         >
           {text}
@@ -33,7 +37,7 @@ export const HeaderLinkMenu = ({
 
   return (
     <Styled.Container
-      className={router.pathname == link ? 'currentActive' : ''}
+      className={routerPath == link ? 'currentActive' : ''}
       href={link}
       target={target}
     >

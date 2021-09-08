@@ -26,7 +26,8 @@ export const theme = {
     },
   },
   media: {
-    xsmall: '(max-width: 575.98px)',
+    xxsmall: '(max-width: 375px)',
+    xsmall: '(min-width: 376px) and (max-width: 575.98px)',
     small: '(min-width: 576px) and (max-width: 767.98px)',
     lteMedium: '(max-width: 768px)',
     medium: '(min-width: 768px) and (max-width: 991.98px)',

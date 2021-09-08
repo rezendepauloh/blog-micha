@@ -26,6 +26,21 @@ export const LinkSocial = styled.a`
       color: ${theme.colors.white};
       transition: all 300ms ease-in-out;
     }
+
+    @media ${theme.media.lteMedium} {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media ${theme.media.medium} {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media ${theme.media.large} {
+      display: flex;
+      justify-content: center;
+    }
   `}
 `;
 
@@ -34,6 +49,16 @@ export const Paragraph = styled.p`
     width: 100%;
     margin: ${theme.spacings.xsmall} 0;
     color: ${theme.colors.white};
+
+    @media ${theme.media.medium} {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media ${theme.media.large} {
+      display: flex;
+      justify-content: center;
+    }
   `}
 `;
 
@@ -54,6 +79,24 @@ export const SocialIcon = styled.i`
     > svg {
       width: 2.5rem;
       height: 2.5rem;
+    }
+
+    @media ${theme.media.large} {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media ${theme.media.medium} {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media ${theme.media.lteMedium} {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
   `}
 `;

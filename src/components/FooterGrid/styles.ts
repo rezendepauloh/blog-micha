@@ -23,8 +23,22 @@ export const Row = styled(RowBootstrap)`
 `;
 
 export const Col = styled(ColBootstrap)`
-  > h1 > div > img {
-    height: 16rem;
-    width: 100%;
-  }
+  ${({ theme }) => css`
+    > h1 > div > img {
+      height: 16rem;
+      width: 100%;
+    }
+
+    @media ${theme.media.medium} {
+      width: 100%;
+    }
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+    }
+
+    @media ${theme.media.large} {
+      width: 100%;
+    }
+  `}
 `;

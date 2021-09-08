@@ -6,6 +6,7 @@ export const Container = styled.div`
     align-items: center;
     text-decoration: none;
     color: ${theme.colors.white};
+    justify-content: center;
 
     > a > img {
       height: 15rem;

@@ -13,6 +13,7 @@ export const Container = styled.div`
 
     ${HeadingContainer} {
       margin: ${theme.spacings.xsmall} 0;
+      font-weight: bold;
     }
 
     @media ${theme.media.lteMedium} {
@@ -22,11 +23,25 @@ export const Container = styled.div`
       margin: auto;
     }
 
+    @media ${theme.media.xxsmall} {
+      ${HeadingContainer} {
+        margin: ${theme.spacings.small} 0;
+        font-weight: bold;
+        font-size: ${theme.font.sizes.medium};
+      }
+    }
+
     @media ${theme.media.small} {
       flex-flow: column wrap;
       align-content: center;
       width: 100%;
       margin: ${theme.spacings.xsmall} 0;
+
+      ${HeadingContainer} {
+        margin: ${theme.spacings.xsmall} 0;
+        font-weight: bold;
+        font-size: ${theme.font.sizes.medium};
+      }
     }
   `}
 `;
@@ -71,6 +86,10 @@ export const Button = styled(ButtonBootstrap)`
       background-color: ${theme.colors.white};
       transition: all 300ms ease-in-out;
       border: 1px solid;
+    }
+
+    @media ${theme.media.xxsmall} {
+      margin-bottom: ${theme.spacings.small};
     }
   `}
 `;

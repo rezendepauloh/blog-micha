@@ -11,7 +11,7 @@ type Category = {
 };
 
 export type PostArticleMetaProps = {
-  createdAt: string;
+  created_at: string;
   author?: Author;
   category?: Category;
 };

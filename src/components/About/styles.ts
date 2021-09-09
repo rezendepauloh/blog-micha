@@ -79,6 +79,15 @@ export const TitleContainer = styled.div`
       margin: ${theme.spacings.xsmall} 0;
     }
 
+    ${HeadingContainer}::before {
+      content: '| ';
+      white-space: pre-wrap;
+    }
+    ${HeadingContainer}::after {
+      content: ' |';
+      white-space: pre-wrap;
+    }
+
     @media ${theme.media.lteMedium} {
       flex-flow: column wrap;
       align-content: center;

@@ -11,6 +11,7 @@ export const Item = styled(MediaBootstrap)`
     line-height: ${theme.spacings.small};
     margin: ${theme.spacings.medium} 0;
     padding: ${theme.spacings.medium} ${theme.spacings.small};
+    margin-left: 8px;
 
     &:hover {
       box-shadow: 15px 15px 12px ${theme.colors.mediumGray}1a;
@@ -37,7 +38,8 @@ export const Item = styled(MediaBootstrap)`
 
     @media ${theme.media.lteMedium} {
       width: 100%;
-      padding: ${theme.spacings.small} ${theme.spacings.xsmall}
+      padding: ${theme.spacings.small} ${theme.spacings.xsmall};
+      margin-left: 8px;
 
       display: flex;
       flex-direction: column;
@@ -53,6 +55,7 @@ export const Item = styled(MediaBootstrap)`
     @media ${theme.media.small} {
       width: 100%;
       margin: ${theme.spacings.xsmall} 0;
+      margin-left: 8px;
 
       display: flex;
       flex-direction: column;
@@ -68,11 +71,16 @@ export const Item = styled(MediaBootstrap)`
     @media ${theme.media.medium} {
       width: 100%;
       margin: ${theme.spacings.xsmall} 0;
+      margin-left: 8px;
 
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+
+    @media ${theme.media.large} {
+      margin-left: 8px;
     }
   `}
 `;

@@ -13,7 +13,7 @@ export const PostArticleHeader = ({
   cover,
   author,
   category,
-  createdAt,
+  created_at,
 }: PostArticleHeaderProps) => {
   return (
     <Styled.Wrapper>
@@ -26,7 +26,7 @@ export const PostArticleHeader = ({
       <PostArticleMeta
         category={category}
         author={author}
-        createdAt={createdAt}
+        created_at={created_at}
       />
     </Styled.Wrapper>
   );

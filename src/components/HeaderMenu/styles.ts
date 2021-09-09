@@ -10,5 +10,10 @@ export const Container = styled.nav`
       flex-flow: column wrap;
       align-content: center;
     }
+
+    @media ${theme.media.medium} {
+      flex-flow: column wrap;
+      align-content: center;
+    }
   `}
 `;

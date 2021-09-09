@@ -7,5 +7,9 @@ export const Container = styled.div`
     @media ${theme.media.lteMedium} {
       padding-top: 0;
     }
+
+    @media ${theme.media.medium} {
+      padding-top: 0;
+    }
   `}
 `;

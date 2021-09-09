@@ -11,7 +11,7 @@ export const Post = ({
   category,
   content,
   cover,
-  createdAt,
+  created_at,
   id,
 }: PostProps) => {
   return (
@@ -24,7 +24,7 @@ export const Post = ({
           content={content}
           id={id}
           cover={cover}
-          createdAt={createdAt}
+          created_at={created_at}
         />
       </PostContainer>
 

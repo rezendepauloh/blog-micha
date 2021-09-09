@@ -56,6 +56,28 @@ export const Container = styled(ContainerBootstrap)<MenuVisible>`
         justify-content: center;
       }
     }
+
+    @media ${theme.media.medium} {
+      height: 100vh;
+      visibility: hidden;
+      opacity: 0;
+      ${visible && menuVisible()}
+
+      > ${SectionContainer} {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 100vh;
+        align-items: center;
+        overflow-y: auto;
+      }
+
+      & ${Heading} {
+        padding-bottom: ${theme.spacings.large};
+        display: flex;
+        justify-content: center;
+      }
+    }
   `}
 `;
 
@@ -71,6 +93,12 @@ export const MenuContainer = styled.div`
     }
 
     @media ${theme.media.lteMedium} {
+      display: block;
+      text-align: center;
+      padding: ${theme.spacings.xxlarge} 0;
+    }
+
+    @media ${theme.media.medium} {
       display: block;
       text-align: center;
       padding: ${theme.spacings.xxlarge} 0;
@@ -93,6 +121,12 @@ export const Button = styled.button<MenuVisible>`
     pointer-events: ${visible ? 'none' : 'all'};
 
     @media ${theme.media.lteMedium} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media ${theme.media.medium} {
       display: flex;
       align-items: center;
       justify-content: center;

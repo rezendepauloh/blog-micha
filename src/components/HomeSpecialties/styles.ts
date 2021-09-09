@@ -65,14 +65,24 @@ export const Button = styled(ButtonBootstrap)`
 `;
 
 export const Modal = styled(ModalBootstrap)`
-  .modal-content {
-    border-radius: 5px;
-  }
+  ${({ theme }) => css`
+    .modal-content {
+      border-radius: 5px;
+    }
 
-  .modal-lg,
-  .modal-xl {
-    max-width: 80%;
-  }
+    .modal-lg,
+    .modal-xl {
+      max-width: 80%;
+    }
+
+    @media ${theme.media.xxsmall} {
+      margin-left: 0;
+      .modal-lg,
+      .modal-xl {
+        max-width: 100%;
+      }
+    }
+  `}
 `;
 
 export const Header = styled(ModalHeader)`

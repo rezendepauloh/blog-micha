@@ -11,6 +11,7 @@ export const Container = styled.div`
       margin: ${theme.spacings.small} 0;
       border-bottom: 1px solid ${theme.colors.primary};
       padding-bottom: ${theme.spacings.medium};
+      padding-left: 5px;
     }
 
     @media ${theme.media.lteMedium} {

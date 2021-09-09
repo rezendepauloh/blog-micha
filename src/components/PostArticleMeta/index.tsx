@@ -5,7 +5,7 @@ import * as Styled from './styles';
 import { PostArticleMetaProps } from './type';
 
 export const PostArticleMeta = ({
-  createdAt,
+  created_at,
   author = undefined,
   category = undefined,
 }: PostArticleMetaProps) => {
@@ -22,7 +22,7 @@ export const PostArticleMeta = ({
           </>
         )}
 
-        <time dateTime={createdAt}>{formatDate(createdAt)}</time>
+        <time dateTime={created_at}>{formatDate(created_at)}</time>
 
         {category && typeof category !== 'undefined' && (
           <>

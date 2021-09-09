@@ -14,7 +14,7 @@ export function PostItem({
   slug,
   cover,
   content,
-  createdAt,
+  created_at,
   author,
   category,
 }: PostItemProps) {
@@ -37,7 +37,7 @@ export function PostItem({
             <PostArticleMeta
               category={category}
               author={author}
-              createdAt={createdAt}
+              created_at={created_at}
             />
             <p>{createExcerptInPostItem(content)}</p>
             <p>

@@ -36,7 +36,7 @@ export const ImgCard = styled(CardBootstrap.Img)`
 export const BodyCard = styled(CardBootstrap.Body)``;
 
 export const TitleCard = styled(CardBootstrap.Title)`
-  ${HeadingContainer} {
+  > ${HeadingContainer} {
     font-weight: bold;
     margin: 0.2rem 0;
   }

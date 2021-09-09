@@ -14,7 +14,7 @@ export function PostCard({
   slug,
   cover,
   content,
-  createdAt,
+  created_at,
 }: PostCardProps) {
   return (
     <Styled.Card>
@@ -34,7 +34,7 @@ export function PostCard({
             <Styled.TextCard>{createExcerpt(content)}</Styled.TextCard>
           </Styled.BodyCard>
           <Styled.FooterCard>
-            <small className="text-muted">{formatDate(createdAt)}</small>
+            <small className="text-muted">{formatDate(created_at)}</small>
           </Styled.FooterCard>
         </a>
       </Link>

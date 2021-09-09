@@ -1,7 +1,5 @@
 import * as Styled from './styles';
-//import { useState } from 'react';
-
-//import { useRouter } from 'next/router';
+// import { useState } from 'react';
 
 import { PostItem } from 'components/PostItem';
 import { Heading } from 'components/Heading';
@@ -16,9 +14,6 @@ export function PostList({ posts = [], title = 'Artigos' }: PostListProps) {
   // const [postsPerPage] = useState(3);
   // const [buttonDisabled, setButtonDisabled] = useState(false);
   // const [noMorePosts, setNoMorePosts] = useState(false);
-
-  //const router = useRouter();
-  //console.log(router.pathname);
 
   // //O botão não fica disabled
   // setButtonDisabled(false);
@@ -48,7 +43,8 @@ export function PostList({ posts = [], title = 'Artigos' }: PostListProps) {
   // };
 
   //Testar esse aqui
-  //https://vpilip.com/how-build-simple-pagination-in-nextjs/
+  //https://vpilip.com/how-build-simple-pagination-in-nextjs/ - Não mais esse
+  //https://www.contentful.com/blog/2021/04/23/paginating-contentful-blogposts-with-nextjs-graphql-api/
 
   return (
     <>

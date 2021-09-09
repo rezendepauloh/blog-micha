@@ -112,14 +112,14 @@ query GET_HOME {
   }
   posts(
     limit:3
-    sort:"createdAt:asc"
+    sort:"created_at:asc"
   )  {
     id
     title
     slug
     content
     allowComments
-    createdAt
+    created_at
     ...cover
     ...authorPost
     ...categoryPost
@@ -230,7 +230,7 @@ query GET_POSTS {
     slug
     content
     allowComments
-    createdAt
+    created_at
     ...cover
     ...authorPost
     ...categoryPost

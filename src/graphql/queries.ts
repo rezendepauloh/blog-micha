@@ -4,7 +4,7 @@ import { GRAPHQL_FRAGMENTS, GRAPHQL_ABOUT_FRAGMENTS } from './fragments';
 export const GRAPHQL_GET_HOME = gql`
   ${GRAPHQL_FRAGMENTS}
 
-  query GET_HOME($sort: String = "createdAt:asc") {
+  query GET_HOME($sort: String = "created_at:asc") {
     base {
       id
       blogName
@@ -73,7 +73,7 @@ export const GRAPHQL_GET_HOME = gql`
       slug
       content
       allowComments
-      createdAt
+      created_at
       ...cover
       ...authorPost
       ...categoryPost
@@ -147,7 +147,7 @@ export const GRAPHQL_GET_POSTS = gql`
     $postSlug: String
     $authorSlug: String
     $tagSlug: String
-    $sort: String = "createdAt:desc"
+    $sort: String = "created_at:desc"
   ) {
     base {
       id
@@ -206,7 +206,7 @@ export const GRAPHQL_GET_POSTS = gql`
       slug
       content
       allowComments
-      createdAt
+      created_at
       ...cover
       ...authorPost
       ...categoryPost

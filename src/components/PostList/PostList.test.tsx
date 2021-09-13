@@ -1,14 +1,15 @@
-// import { screen } from '@testing-library/react';
-// import { PostList } from '.';
-// import { renderTheme } from 'styles/render-theme';
+import { screen } from '@testing-library/react';
+import { PostList } from '.';
+import { renderTheme } from 'styles/render-theme';
 
-// import mock from './mock';
+import mock from './mock';
 
-// describe('<PostList />', () => {
-//   it('should render', () => {
-//     renderTheme(<PostList {...mock} />);
-//     expect(screen.getByRole('heading')).toBeInTheDocument();
-//   });
-// });
+describe('<PostList />', () => {
+  it('should render', () => {
+    renderTheme(<PostList posts={mock.posts} title={mock.title} />);
 
-export {};
+    //Headings
+    const headings = screen.getAllByRole('heading');
+    expect(headings).toHaveLength(4);
+  });
+});

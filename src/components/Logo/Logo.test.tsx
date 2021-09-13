@@ -1,55 +1,88 @@
-// import { screen } from '@testing-library/react';
-// import { renderTheme } from 'styles/render-theme';
-// import { Logo } from '.';
+import { screen } from '@testing-library/react';
+import { renderTheme } from 'styles/render-theme';
+import { Logo } from '.';
 
-// describe('<Logo />', () => {
-//   it('should render text logo', () => {
-//     renderTheme(<Logo link="#target" text="Olá mundo" />);
-//     expect(
-//       screen.getByRole('heading', { name: 'Olá mundo' }),
-//     ).toBeInTheDocument();
-//     expect(screen.getByRole('link', { name: 'Olá mundo' })).toHaveAttribute(
-//       'href',
-//       '#target',
-//     );
-//   });
+import { mockWithImage, mockWithoutImage } from './mock';
 
-//   it('should render image logo', () => {
-//     renderTheme(<Logo link="#target" text="Olá mundo" srcImg="image.jpg" />);
-//     expect(screen.getByAltText('Olá mundo')).toHaveAttribute(
-//       'src',
-//       'image.jpg',
-//     );
-//   });
+describe('<Logo />', () => {
+  it('should render text logo', () => {
+    renderTheme(
+      <Logo
+        url={mockWithoutImage.url}
+        text={mockWithoutImage.text}
+        srcImg={null}
+      />,
+    );
+    expect(
+      screen.getByRole('heading', { name: 'Michely Segóvia' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Michely Segóvia' }),
+    ).toHaveAttribute('href', '/');
+  });
 
-//   it('should render internal link', () => {
-//     renderTheme(<Logo link="/target" text="Olá mundo" srcImg="image.jpg" />);
-//     expect(screen.getByAltText('Olá mundo')).toHaveAttribute(
-//       'src',
-//       'image.jpg',
-//     );
-//   });
+  it('should render text logo with a internal link', () => {
+    renderTheme(
+      <Logo url="/teste" text={mockWithoutImage.text} srcImg={null} />,
+    );
+    expect(
+      screen.getByRole('heading', { name: 'Michely Segóvia' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Michely Segóvia' }),
+    ).toHaveAttribute('href', '/teste');
+  });
 
-//   it('should render a link with target _blank', () => {
-//     renderTheme(<Logo link="/target" text="Olá mundo" newTab={true} />);
-//     expect(
-//       screen.getByRole('heading', { name: 'Olá mundo' }),
-//     ).toBeInTheDocument();
-//   });
+  it('should render image logo', () => {
+    renderTheme(
+      <Logo
+        url={mockWithImage.url}
+        text={mockWithImage.text}
+        srcImg={mockWithImage.srcImg}
+        alternativeText={mockWithImage.alternativeText}
+      />,
+    );
+    expect(screen.getByAltText('')).toHaveAttribute(
+      'src',
+      'https://res.cloudinary.com/dgiqhufpy/image/upload/v1629810879/logo_h_be529e7a63.svg',
+    );
+  });
 
-//   it('should render render internal link with text only', () => {
-//     renderTheme(<Logo link="/target" text="Olá mundo" />);
-//     expect(
-//       screen.getByRole('heading', { name: 'Olá mundo' }),
-//     ).toBeInTheDocument();
-//   });
+  it('should render internal link', () => {
+    renderTheme(
+      <Logo
+        url="/target"
+        text={mockWithImage.text}
+        alternativeText="Olá mundo"
+        srcImg="image.jpg"
+      />,
+    );
+    expect(screen.getByAltText('Olá mundo')).toHaveAttribute(
+      'src',
+      'image.jpg',
+    );
+  });
 
-//   it('should match snapshot', () => {
-//     const { container } = renderTheme(
-//       <Logo link="#target" text="Olá mundo" srcImg="image.jpg" />,
-//     );
-//     expect(container.firstChild).toMatchSnapshot();
-//   });
-// });
+  it('should render a link with target _blank', () => {
+    renderTheme(
+      <Logo url="/target" text={mockWithoutImage.text} newTab={true} />,
+    );
+    expect(
+      screen.getByRole('heading', { name: 'Michely Segóvia' }),
+    ).toBeInTheDocument();
+  });
 
-export {};
+  it('should render render internal link with text only', () => {
+    renderTheme(<Logo url="/target" text="Olá mundo" />);
+    expect(
+      screen.getByRole('heading', { name: 'Olá mundo' }),
+    ).toBeInTheDocument();
+  });
+
+  it('should match snapshot', () => {
+    const { container } = renderTheme(
+      <Logo url="#target" text="Olá mundo" srcImg="image.jpg" />,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

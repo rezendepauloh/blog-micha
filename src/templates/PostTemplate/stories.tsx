@@ -3,8 +3,8 @@ import { PostTemplate } from '.';
 import { PostTemplateProps } from './type';
 
 import {
-  mockPostTemplateWithFooterImage as MockImage,
-  mockPostTemplateWithoutFooterImage as MockWithoutImage,
+  mockPostTemplateWithImage as MockImage,
+  mockPostTemplateWithoutImage as MockWithoutImage,
 } from './mock';
 
 export default {

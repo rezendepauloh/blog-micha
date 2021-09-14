@@ -1,21 +1,81 @@
-// import { screen } from '@testing-library/react';
-// import { PostTemplate } from '.';
-// import { renderTheme } from 'styles/render-theme';
+import { screen } from '@testing-library/react';
+import { PostTemplate } from '.';
+import { renderTheme } from 'styles/render-theme';
 
-// import {
-//   mockPostTemplateWithFooterImage,
-//   mockPostTemplateWithoutFooterImage,
-// } from './mock';
+import {
+  mockPostTemplateWithImage,
+  mockPostTemplateWithoutImage,
+} from './mock';
 
-// describe('<PostTemplate />', () => {
-//   it('should render with Image Logo', () => {
-//     renderTheme(<PostTemplate {...mockPostTemplateWithFooterImage} />);
-//     expect(screen.getByRole('heading')).toBeInTheDocument();
-//   });
-//   it('should render without Image Logo', () => {
-//     renderTheme(<PostTemplate {...mockPostTemplateWithoutFooterImage} />);
-//     expect(screen.getByRole('heading')).toBeInTheDocument();
-//   });
-// });
+//Fazendo um "mock" do useRouter()
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const useRouter = jest.spyOn(require('next/router'), 'useRouter');
+export function mockNextUseRouter(pathname: string) {
+  useRouter.mockImplementation(() => ({
+    route: '',
+    basePath: '',
+    pathname,
+    query: {},
+    asPath: '',
+    push: async () => true,
+    replace: async () => true,
+    reload: () => null,
+    back: () => null,
+    prefetch: async () => undefined,
+    beforePopState: () => null,
+    isFallback: false,
+    events: {
+      on: () => null,
+      off: () => null,
+      emit: () => null,
+    },
+  }));
+}
 
-export {};
+describe('<PostTemplate />', () => {
+  mockNextUseRouter('/post/[slug]');
+  it('should render with Image Logo', () => {
+    renderTheme(
+      <PostTemplate
+        post={mockPostTemplateWithImage.post}
+        base={mockPostTemplateWithImage.base}
+      />,
+    );
+
+    //Headings
+    const headings = screen.getAllByRole('heading');
+    expect(headings).toHaveLength(5);
+
+    //Snapshot
+    const { container } = renderTheme(
+      <PostTemplate
+        post={mockPostTemplateWithImage.post}
+        base={mockPostTemplateWithImage.base}
+      />,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+  it('should render without Image Logo', () => {
+    renderTheme(
+      <PostTemplate
+        post={mockPostTemplateWithoutImage.post}
+        base={mockPostTemplateWithoutImage.base}
+      />,
+    );
+
+    //Headings
+    const headings = screen.getAllByRole('heading');
+    expect(headings).toHaveLength(5);
+
+    //Snapshot
+    const { container } = renderTheme(
+      <PostTemplate
+        post={mockPostTemplateWithoutImage.post}
+        base={mockPostTemplateWithoutImage.base}
+      />,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+});

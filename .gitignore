@@ -39,3 +39,4 @@ yarn-error.log*
 storybook-static/*
 
 src/components/**/__snapshots__/*
+src/templates/**/__snapshots__/*

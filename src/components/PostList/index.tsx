@@ -12,7 +12,7 @@ export function PostList({ posts = [], title = 'Artigos' }: PostListProps) {
   const [page, setPage] = useState(0);
   const [postsPerPage] = useState(3);
 
-  const noMorePosts = page + postsPerPage >= allPosts.length;
+  const noMorePosts = posts ? page + postsPerPage >= allPosts.length : true;
 
   const loadInitial = useCallback((allPosts, page, postsPerPage) => {
     setStatePosts(allPosts.slice(page, postsPerPage));

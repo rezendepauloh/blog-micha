@@ -41,9 +41,9 @@ export function PostItem({
             />
             <p>{createExcerptInPostItem(content)}</p>
             <p>
-              <Link href={`/post/${slug}`} passHref>
-                <a>Ler</a>
-              </Link>
+              {/* <Link href={`/post/${slug}`} passHref> */}
+              <a href={`/post/${slug}`}>Ler</a>
+              {/* </Link> */}
             </p>
           </Styled.BodyItem>
         </Styled.Item>

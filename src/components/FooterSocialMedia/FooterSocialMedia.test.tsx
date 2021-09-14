@@ -20,7 +20,7 @@ describe('<FooterSocialMedia />', () => {
     );
 
     //Debug
-    screen.debug();
+    //screen.debug();
 
     // const images = screen.getAllByRole('img', { name: /title/i });
     // expect(images).toHaveLength(3);

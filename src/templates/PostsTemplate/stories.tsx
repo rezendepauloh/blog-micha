@@ -3,8 +3,8 @@ import { PostsTemplate } from '.';
 import { PostsTemplateProps } from './type';
 
 import {
-  mockPostsTemplateWithFooterImage as MockImage,
-  mockPostsTemplateWithoutFooterImage as MockWithoutImage,
+  mockPostsTemplateWithImage as MockImage,
+  mockPostsTemplateWithoutImage as MockWithoutImage,
 } from './mock';
 
 export default {

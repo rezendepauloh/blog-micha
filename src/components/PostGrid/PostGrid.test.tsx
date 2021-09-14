@@ -12,4 +12,12 @@ describe('<PostGrid />', () => {
     const headings = screen.getAllByRole('heading');
     expect(headings).toHaveLength(4);
   });
+
+  it('should render without posts', () => {
+    renderTheme(<PostGrid posts={[]} />);
+
+    //Headings
+    const headings = screen.getAllByRole('heading');
+    expect(headings).toHaveLength(1);
+  });
 });

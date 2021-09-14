@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import { HomeCarousel } from '.';
 import { renderTheme } from 'styles/render-theme';
 
@@ -47,5 +47,23 @@ describe('<HomeCarousel />', () => {
       'https://res.cloudinary.com/dgiqhufpy/image/upload/v1629839092/carousel03_f3e28d28ae.jpg',
     );
     expect(images[2]).toHaveAttribute('alt', 'carousel03');
+  });
+
+  it('should render another image', () => {
+    renderTheme(<HomeCarousel carousel={mock.carousel} />);
+
+    expect(
+      screen.getByRole('button', { name: 'Previous' }),
+    ).toBeInTheDocument();
+
+    expect(screen.getByRole('button', { name: 'Next' })).toBeInTheDocument();
+
+    const buttonNext = screen.getByRole('button', { name: 'Next' });
+    const buttonPrevious = screen.getByRole('button', { name: 'Previous' });
+    fireEvent.click(buttonNext);
+    fireEvent.click(buttonPrevious);
+
+    // const images = screen.getAllByRole('img', { name: /title/i });
+    // expect(images).toHaveLength(3);
   });
 });

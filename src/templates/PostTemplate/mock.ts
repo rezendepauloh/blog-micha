@@ -2,7 +2,7 @@ import { PostTemplateProps } from './type';
 import mock from 'components/Post/mock';
 import { data } from 'api/dados-posts.json';
 
-export const mockPostTemplateWithFooterImage = {
+export const mockPostTemplateWithImage = {
   post: mock,
   base: {
     id: data.base.id,
@@ -34,7 +34,7 @@ export const mockPostTemplateWithFooterImage = {
   },
 } as PostTemplateProps;
 
-export const mockPostTemplateWithoutFooterImage = {
+export const mockPostTemplateWithoutImage = {
   post: mock,
   base: {
     id: data.base.id,

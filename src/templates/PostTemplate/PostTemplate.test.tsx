@@ -1,45 +1,22 @@
 import { screen } from '@testing-library/react';
 import { PostTemplate } from '.';
 import { renderTheme } from 'styles/render-theme';
+import RouterMock from 'utils/mockRouter';
 
 import {
   mockPostTemplateWithImage,
   mockPostTemplateWithoutImage,
 } from './mock';
 
-//Fazendo um "mock" do useRouter()
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-export function mockNextUseRouter(pathname: string) {
-  useRouter.mockImplementation(() => ({
-    route: '',
-    basePath: '',
-    pathname,
-    query: {},
-    asPath: '',
-    push: async () => true,
-    replace: async () => true,
-    reload: () => null,
-    back: () => null,
-    prefetch: async () => undefined,
-    beforePopState: () => null,
-    isFallback: false,
-    events: {
-      on: () => null,
-      off: () => null,
-      emit: () => null,
-    },
-  }));
-}
-
 describe('<PostTemplate />', () => {
-  mockNextUseRouter('/post/[slug]');
   it('should render with Image Logo', () => {
     renderTheme(
-      <PostTemplate
-        post={mockPostTemplateWithImage.post}
-        base={mockPostTemplateWithImage.base}
-      />,
+      <RouterMock>
+        <PostTemplate
+          post={mockPostTemplateWithImage.post}
+          base={mockPostTemplateWithImage.base}
+        />
+      </RouterMock>,
     );
 
     //Headings
@@ -48,20 +25,24 @@ describe('<PostTemplate />', () => {
 
     //Snapshot
     const { container } = renderTheme(
-      <PostTemplate
-        post={mockPostTemplateWithImage.post}
-        base={mockPostTemplateWithImage.base}
-      />,
+      <RouterMock>
+        <PostTemplate
+          post={mockPostTemplateWithImage.post}
+          base={mockPostTemplateWithImage.base}
+        />
+      </RouterMock>,
     );
 
     expect(container).toMatchSnapshot();
   });
   it('should render without Image Logo', () => {
     renderTheme(
-      <PostTemplate
-        post={mockPostTemplateWithoutImage.post}
-        base={mockPostTemplateWithoutImage.base}
-      />,
+      <RouterMock>
+        <PostTemplate
+          post={mockPostTemplateWithoutImage.post}
+          base={mockPostTemplateWithoutImage.base}
+        />
+      </RouterMock>,
     );
 
     //Headings
@@ -70,10 +51,12 @@ describe('<PostTemplate />', () => {
 
     //Snapshot
     const { container } = renderTheme(
-      <PostTemplate
-        post={mockPostTemplateWithoutImage.post}
-        base={mockPostTemplateWithoutImage.base}
-      />,
+      <RouterMock>
+        <PostTemplate
+          post={mockPostTemplateWithoutImage.post}
+          base={mockPostTemplateWithoutImage.base}
+        />
+      </RouterMock>,
     );
 
     expect(container).toMatchSnapshot();

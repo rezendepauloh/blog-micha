@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react';
 import { renderTheme } from 'styles/render-theme';
 import { HeaderLinkMenu } from '.';
+import RouterMock from 'utils/mockRouter';
 
 const mock = {
   id: '1',
@@ -8,37 +9,12 @@ const mock = {
   link: 'http://localhost/',
 };
 
-//Fazendo um "mock" do useRouter()
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-export function mockNextUseRouter(pathname: string) {
-  useRouter.mockImplementation(() => ({
-    route: '',
-    basePath: '',
-    pathname,
-    query: {},
-    asPath: '',
-    push: async () => true,
-    replace: async () => true,
-    reload: () => null,
-    back: () => null,
-    prefetch: async () => undefined,
-    beforePopState: () => null,
-    isFallback: false,
-    events: {
-      on: () => null,
-      off: () => null,
-      emit: () => null,
-    },
-  }));
-}
-
 describe('<HeaderLinkMenu />', () => {
-  mockNextUseRouter('/');
-
   it('should render a link', () => {
     renderTheme(
-      <HeaderLinkMenu id={mock.id} text={mock.text} link={mock.link} />,
+      <RouterMock>
+        <HeaderLinkMenu id={mock.id} text={mock.text} link={mock.link} />
+      </RouterMock>,
     );
     expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
       'target',
@@ -48,12 +24,14 @@ describe('<HeaderLinkMenu />', () => {
 
   it('should render a internal link', () => {
     renderTheme(
-      <HeaderLinkMenu
-        id={mock.id}
-        text={mock.text}
-        link="/localhost"
-        newTab={false}
-      />,
+      <RouterMock>
+        <HeaderLinkMenu
+          id={mock.id}
+          text={mock.text}
+          link="/localhost"
+          newTab={false}
+        />
+      </RouterMock>,
     );
     expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
       'target',
@@ -63,12 +41,14 @@ describe('<HeaderLinkMenu />', () => {
 
   it('should render open in a new tab', () => {
     renderTheme(
-      <HeaderLinkMenu
-        id={mock.id}
-        text="Children"
-        link={mock.link}
-        newTab={true}
-      />,
+      <RouterMock>
+        <HeaderLinkMenu
+          id={mock.id}
+          text="Children"
+          link={mock.link}
+          newTab={true}
+        />
+      </RouterMock>,
     );
     expect(screen.getByRole('link', { name: 'Children' })).toHaveAttribute(
       'target',
@@ -78,12 +58,14 @@ describe('<HeaderLinkMenu />', () => {
 
   it('should match a snapshot', () => {
     const { container } = renderTheme(
-      <HeaderLinkMenu
-        id={mock.id}
-        text={mock.text}
-        link={mock.link}
-        newTab={false}
-      />,
+      <RouterMock>
+        <HeaderLinkMenu
+          id={mock.id}
+          text={mock.text}
+          link={mock.link}
+          newTab={false}
+        />
+      </RouterMock>,
     );
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {

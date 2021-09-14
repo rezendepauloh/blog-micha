@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { HeaderGrid } from '.';
 import { HeaderGridProps } from './type';
+import RouterMock from 'utils/mockRouter';
 
 import {
   mockHeaderWithImage as mockWithImage,
@@ -14,9 +15,9 @@ export default {
 
 export const TemplateWithImage: Story<HeaderGridProps> = (args) => {
   return (
-    <>
+    <RouterMock>
       <HeaderGrid {...args} />
-    </>
+    </RouterMock>
   );
 };
 
@@ -25,9 +26,9 @@ TemplateWithImage.args = mockWithImage;
 export const TemplateWithText: Story<HeaderGridProps> = (args) => {
   return (
     //<div style={{ height: '300vh', background: 'gray' }}>
-    <>
+    <RouterMock>
       <HeaderGrid {...args} />
-    </>
+    </RouterMock>
   );
 };
 

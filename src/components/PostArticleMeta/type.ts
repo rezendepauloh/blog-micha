@@ -4,7 +4,7 @@ type Author = {
   slug: string;
 };
 
-type Category = {
+export type Category = {
   id: string;
   displayName: string;
   slug: string;

@@ -1,42 +1,20 @@
 import { screen } from '@testing-library/react';
 import { ContactTemplate } from '.';
 import { renderTheme } from 'styles/render-theme';
+import RouterMock from 'utils/mockRouter';
 
 import {
   mockAboutTemplateWithImage,
   mockAboutTemplateWithoutImage,
 } from './mock';
 
-//Fazendo um "mock" do useRouter()
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-export function mockNextUseRouter(pathname: string) {
-  useRouter.mockImplementation(() => ({
-    route: '',
-    basePath: '',
-    pathname,
-    query: {},
-    asPath: '',
-    push: async () => true,
-    replace: async () => true,
-    reload: () => null,
-    back: () => null,
-    prefetch: async () => undefined,
-    beforePopState: () => null,
-    isFallback: false,
-    events: {
-      on: () => null,
-      off: () => null,
-      emit: () => null,
-    },
-  }));
-}
-
 describe('<ContactTemplate />', () => {
-  mockNextUseRouter('/contato');
-
   it('should render with Image Logo', () => {
-    renderTheme(<ContactTemplate base={mockAboutTemplateWithImage.base} />);
+    renderTheme(
+      <RouterMock>
+        <ContactTemplate base={mockAboutTemplateWithImage.base} />
+      </RouterMock>,
+    );
 
     //Headings
     const headings = screen.getAllByRole('heading');
@@ -44,13 +22,19 @@ describe('<ContactTemplate />', () => {
 
     //Snapshot
     const { container } = renderTheme(
-      <ContactTemplate base={mockAboutTemplateWithImage.base} />,
+      <RouterMock>
+        <ContactTemplate base={mockAboutTemplateWithImage.base} />
+      </RouterMock>,
     );
 
     expect(container).toMatchSnapshot();
   });
   it('should render without Image Logo', () => {
-    renderTheme(<ContactTemplate base={mockAboutTemplateWithoutImage.base} />);
+    renderTheme(
+      <RouterMock>
+        <ContactTemplate base={mockAboutTemplateWithoutImage.base} />
+      </RouterMock>,
+    );
 
     //Headings
     const headings = screen.getAllByRole('heading');
@@ -58,7 +42,9 @@ describe('<ContactTemplate />', () => {
 
     //Snapshot
     const { container } = renderTheme(
-      <ContactTemplate base={mockAboutTemplateWithImage.base} />,
+      <RouterMock>
+        <ContactTemplate base={mockAboutTemplateWithImage.base} />
+      </RouterMock>,
     );
 
     expect(container).toMatchSnapshot();

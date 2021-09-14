@@ -1,45 +1,22 @@
 import { screen } from '@testing-library/react';
 import { AboutTemplate } from '.';
 import { renderTheme } from 'styles/render-theme';
+import RouterMock from 'utils/mockRouter';
 
 import {
   mockAboutTemplateWithImage,
   mockAboutTemplateWithoutImage,
 } from './mock';
 
-//Fazendo um "mock" do useRouter()
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-export function mockNextUseRouter(pathname: string) {
-  useRouter.mockImplementation(() => ({
-    route: '',
-    basePath: '',
-    pathname,
-    query: {},
-    asPath: '',
-    push: async () => true,
-    replace: async () => true,
-    reload: () => null,
-    back: () => null,
-    prefetch: async () => undefined,
-    beforePopState: () => null,
-    isFallback: false,
-    events: {
-      on: () => null,
-      off: () => null,
-      emit: () => null,
-    },
-  }));
-}
-
 describe('<AboutTemplate />', () => {
-  mockNextUseRouter('/sobre');
   it('should render with Image Logo', () => {
     renderTheme(
-      <AboutTemplate
-        about={mockAboutTemplateWithImage.about}
-        base={mockAboutTemplateWithImage.base}
-      />,
+      <RouterMock>
+        <AboutTemplate
+          about={mockAboutTemplateWithImage.about}
+          base={mockAboutTemplateWithImage.base}
+        />
+      </RouterMock>,
     );
     //Headings
     const headings = screen.getAllByRole('heading');
@@ -47,10 +24,12 @@ describe('<AboutTemplate />', () => {
   });
   it('should render without Image Logo', () => {
     renderTheme(
-      <AboutTemplate
-        about={mockAboutTemplateWithoutImage.about}
-        base={mockAboutTemplateWithoutImage.base}
-      />,
+      <RouterMock>
+        <AboutTemplate
+          about={mockAboutTemplateWithoutImage.about}
+          base={mockAboutTemplateWithoutImage.base}
+        />
+      </RouterMock>,
     );
     //Headings
     const headings = screen.getAllByRole('heading');

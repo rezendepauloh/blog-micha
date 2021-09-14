@@ -1,47 +1,24 @@
 import { screen } from '@testing-library/react';
 import { HomeTemplate } from '.';
 import { renderTheme } from 'styles/render-theme';
+import RouterMock from 'utils/mockRouter';
 
 import {
   mockHomeTemplateWithImage,
   mockHomeTemplateWithoutImage,
 } from './mock';
 
-//Fazendo um "mock" do useRouter()
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-export function mockNextUseRouter(pathname: string) {
-  useRouter.mockImplementation(() => ({
-    route: '',
-    basePath: '',
-    pathname,
-    query: {},
-    asPath: '',
-    push: async () => true,
-    replace: async () => true,
-    reload: () => null,
-    back: () => null,
-    prefetch: async () => undefined,
-    beforePopState: () => null,
-    isFallback: false,
-    events: {
-      on: () => null,
-      off: () => null,
-      emit: () => null,
-    },
-  }));
-}
-
 describe('<HomeTemplate />', () => {
-  mockNextUseRouter('/');
   it('should render with Image Logo', () => {
     renderTheme(
-      <HomeTemplate
-        carousel={mockHomeTemplateWithImage.carousel}
-        specialties={mockHomeTemplateWithImage.specialties}
-        posts={mockHomeTemplateWithImage.posts}
-        base={mockHomeTemplateWithImage.base}
-      />,
+      <RouterMock>
+        <HomeTemplate
+          carousel={mockHomeTemplateWithImage.carousel}
+          specialties={mockHomeTemplateWithImage.specialties}
+          posts={mockHomeTemplateWithImage.posts}
+          base={mockHomeTemplateWithImage.base}
+        />
+      </RouterMock>,
     );
 
     //Headings
@@ -50,12 +27,14 @@ describe('<HomeTemplate />', () => {
   });
   it('should render without Image Logo', () => {
     renderTheme(
-      <HomeTemplate
-        carousel={mockHomeTemplateWithoutImage.carousel}
-        specialties={mockHomeTemplateWithoutImage.specialties}
-        posts={mockHomeTemplateWithoutImage.posts}
-        base={mockHomeTemplateWithoutImage.base}
-      />,
+      <RouterMock>
+        <HomeTemplate
+          carousel={mockHomeTemplateWithoutImage.carousel}
+          specialties={mockHomeTemplateWithoutImage.specialties}
+          posts={mockHomeTemplateWithoutImage.posts}
+          base={mockHomeTemplateWithoutImage.base}
+        />
+      </RouterMock>,
     );
 
     //Headings

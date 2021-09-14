@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { AboutTemplate } from '.';
 import { AboutTemplateProps } from './type';
+import RouterMock from 'utils/mockRouter';
 
 import {
   mockAboutTemplateWithImage as mockImage,
@@ -14,9 +15,9 @@ export default {
 
 export const TemplateWithImageLogo: Story<AboutTemplateProps> = (args) => {
   return (
-    <>
+    <RouterMock>
       <AboutTemplate {...args} />
-    </>
+    </RouterMock>
   );
 };
 
@@ -24,9 +25,9 @@ TemplateWithImageLogo.args = mockImage;
 
 export const TemplateWithoutImageLogo: Story<AboutTemplateProps> = (args) => {
   return (
-    <>
+    <RouterMock>
       <AboutTemplate {...args} />
-    </>
+    </RouterMock>
   );
 };
 

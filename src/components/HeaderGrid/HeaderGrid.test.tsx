@@ -1,6 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { renderTheme } from 'styles/render-theme';
 import { HeaderGrid } from '.';
+import RouterMock from 'utils/mockRouter';
 
 import {
   mockHeaderWithImage as mockWithImage,
@@ -9,49 +10,27 @@ import {
 
 import { theme } from 'styles/theme';
 
-//Fazendo um "mock" do useRouter()
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-export function mockNextUseRouter(pathname: string) {
-  useRouter.mockImplementation(() => ({
-    route: '',
-    basePath: '',
-    pathname,
-    query: {},
-    asPath: '',
-    push: async () => true,
-    replace: async () => true,
-    reload: () => null,
-    back: () => null,
-    prefetch: async () => undefined,
-    beforePopState: () => null,
-    isFallback: false,
-    events: {
-      on: () => null,
-      off: () => null,
-      emit: () => null,
-    },
-  }));
-}
-
 describe('<HeaderGrid />', () => {
-  mockNextUseRouter('/');
   it('renders Navbar component', () => {
     renderTheme(
-      <HeaderGrid
-        links={mockWithImage.links}
-        logoData={mockWithImage.logoData}
-      />,
+      <RouterMock>
+        <HeaderGrid
+          links={mockWithImage.links}
+          logoData={mockWithImage.logoData}
+        />
+      </RouterMock>,
     );
     expect(screen.getByText('Home')).toBeInTheDocument();
   });
 
   it('should render Logo and Main Menu Nav', () => {
     const { container } = renderTheme(
-      <HeaderGrid
-        links={mockWithoutImage.links}
-        logoData={mockWithoutImage.logoData}
-      />,
+      <RouterMock>
+        <HeaderGrid
+          links={mockWithoutImage.links}
+          logoData={mockWithoutImage.logoData}
+        />
+      </RouterMock>,
     );
     expect(
       screen.getByRole('heading', { name: 'Michely Segóvia' }),
@@ -65,10 +44,12 @@ describe('<HeaderGrid />', () => {
 
   it('should open/close menu on button click on mobile 01', () => {
     renderTheme(
-      <HeaderGrid
-        links={mockWithImage.links}
-        logoData={mockWithImage.logoData}
-      />,
+      <RouterMock>
+        <HeaderGrid
+          links={mockWithImage.links}
+          logoData={mockWithImage.logoData}
+        />
+      </RouterMock>,
     );
 
     const button = screen.getByLabelText('Open/Close menu');
@@ -99,10 +80,12 @@ describe('<HeaderGrid />', () => {
 
   it('should open/close menu on button click on mobile 02', () => {
     renderTheme(
-      <HeaderGrid
-        links={mockWithImage.links}
-        logoData={mockWithImage.logoData}
-      />,
+      <RouterMock>
+        <HeaderGrid
+          links={mockWithImage.links}
+          logoData={mockWithImage.logoData}
+        />
+      </RouterMock>,
     );
 
     const button = screen.getByLabelText('Open/Close menu');
@@ -133,7 +116,7 @@ describe('<HeaderGrid />', () => {
 
   // it('should not render links', () => {
   //   const { container } = renderTheme(
-  //     <HeaderGrid logoData={mockWithImage.logoData} />,
+  //     <RouterMock><HeaderGrid logoData={mockWithImage.logoData} /></RouterMock>,
   //   );
   //   expect(
   //     screen.queryByRole('navigation', { name: 'Main menu' }).firstChild,

@@ -1,7 +1,8 @@
 import { PostListProps } from './type';
-import { data } from '../../api/dados-posts.json';
+import { data } from 'api/dados-posts.json';
 
 export default {
-  categories: data.categories,
   posts: data.posts,
+  categories: data.categories,
+  authors: data.authors,
 } as PostListProps;

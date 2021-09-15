@@ -217,6 +217,13 @@
         "displayName": "Direito Empresarial",
         "slug": "direito-empresarial"
       }
+    ],
+    "authors": [
+      {
+        "id": "1",
+        "displayName": "Michely Segóvia",
+        "slug": "michely-segovia"
+      }
     ]
   }
 }

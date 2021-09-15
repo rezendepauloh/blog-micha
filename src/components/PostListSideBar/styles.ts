@@ -4,6 +4,10 @@ import { Title as HeadingContainer } from 'components/Heading/styles';
 export const Container = styled.div`
   ${({ theme }) => css`
     margin: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
+    z-index: 1;
+    position: sticky;
+    top: 100px;
+    height: max-content;
 
     ${HeadingContainer} {
       margin: ${theme.spacings.small} 0;

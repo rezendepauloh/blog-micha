@@ -8,7 +8,7 @@ import { Button as ButtonBootstrap } from 'react-bootstrap';
 
 export const Container = styled(ContainerBootstrap)`
   ${({ theme }) => css`
-    margin: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
+    margin: ${theme.spacings.xsmall} 0;
 
     ${HeadingContainer} {
       margin: ${theme.spacings.small} 0;
@@ -17,7 +17,7 @@ export const Container = styled(ContainerBootstrap)`
       padding-left: 5px;
     }
 
-    @media ${theme.media.lteMedium} {
+    /* @media ${theme.media.lteMedium} {
       flex-flow: column wrap;
       align-content: center;
       width: 100%;
@@ -29,13 +29,39 @@ export const Container = styled(ContainerBootstrap)`
       align-content: center;
       width: 100%;
       margin: ${theme.spacings.xsmall} 0;
-    }
+    } */
+
+    /* @media ${theme.media.large} {
+      flex-flow: column wrap;
+      align-content: center;
+      width: 100%;
+      margin: auto;
+    } */
   `}
 `;
 
 export const Row = styled(RowBootstrap)`
-  margin-right: 0;
-  margin-left: 0;
+  ${({ theme }) => css`
+    margin-right: 0;
+    margin-left: 0;
+
+    /* @media ${theme.media.medium} {
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
+      width: 100%;
+      margin: auto;
+    } */
+
+    @media ${theme.media.large} {
+      flex-flow: column-reverse wrap;
+      align-content: center;
+      width: 100%;
+      max-width: 100%;
+      margin: auto;
+    }
+  `}
 `;
 
 export const Col = styled(ColBootstrap)`
@@ -45,16 +71,25 @@ export const Col = styled(ColBootstrap)`
       width: 100%;
     }
 
-    @media ${theme.media.medium} {
+    /* @media ${theme.media.medium} {
       width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
+      width: 100%;
+      margin: auto;
     }
 
     @media ${theme.media.lteMedium} {
       width: 100%;
-    }
+    }*/
 
     @media ${theme.media.large} {
+      flex-flow: column-reverse wrap;
+      align-content: center;
       width: 100%;
+      max-width: 100%;
+      margin: auto;
     }
   `}
 `;
@@ -62,6 +97,14 @@ export const Col = styled(ColBootstrap)`
 export const List = styled.ul`
   ${({ theme }) => css`
     margin: ${theme.spacings.xsmall} 0;
+
+    /* @media ${theme.media.medium} {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: col;
+    } */
   `}
 `;
 

@@ -11,11 +11,13 @@ export default function PostsPage({
   posts,
   base,
   categories,
+  authors,
 }: PostsTemplateProps) {
   const postsArgs = {
     posts: posts,
     base: base,
     categories: categories,
+    authors: authors,
   };
 
   const { blogName, blogDescription } = base;
@@ -52,8 +54,9 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
   }
 
   const {
-    categories,
     posts,
+    categories,
+    authors,
     base: {
       id,
       blogName,
@@ -83,6 +86,7 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
     props: {
       posts: { posts: posts },
       categories: categories,
+      authors: authors,
       base: {
         id: id,
         blogName: blogName,

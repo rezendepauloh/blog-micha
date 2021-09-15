@@ -2,8 +2,9 @@ import { PostsTemplateProps } from './type';
 import { data } from 'api/dados-posts.json';
 
 export const mockPostsTemplateWithImage = {
-  categories: data.categories,
   posts: { posts: data.posts },
+  categories: data.categories,
+  authors: data.authors,
   base: {
     id: data.base.id,
     blogName: data.base.blogName,
@@ -35,8 +36,9 @@ export const mockPostsTemplateWithImage = {
 } as PostsTemplateProps;
 
 export const mockPostsTemplateWithoutImage = {
-  categories: data.categories,
   posts: { posts: data.posts },
+  categories: data.categories,
+  authors: data.authors,
   base: {
     id: data.base.id,
     blogName: data.base.blogName,

@@ -239,6 +239,9 @@ query GET_POSTS {
   categories {
     ...category
   }
+  authors {
+    ...author
+  }
 }
 
 ----------------------

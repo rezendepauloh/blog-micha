@@ -215,5 +215,8 @@ export const GRAPHQL_GET_POSTS = gql`
     categories {
       ...category
     }
+    authors {
+      ...author
+    }
   }
 `;

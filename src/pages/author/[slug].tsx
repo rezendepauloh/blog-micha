@@ -16,6 +16,7 @@ export default function AuthorPage({
   posts,
   base,
   categories = [],
+  authors = [],
 }: PostsTemplateProps) {
   const router = useRouter();
 
@@ -31,6 +32,7 @@ export default function AuthorPage({
     posts: { title: `Autor: ${authorName}`, ...posts },
     base: base,
     categories: categories,
+    authors: authors,
   };
 
   return (
@@ -79,6 +81,7 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
   const {
     posts,
     categories,
+    authors,
     base: {
       id,
       blogName,
@@ -108,6 +111,7 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
     props: {
       posts: { posts: posts },
       categories: categories,
+      authors: authors,
       base: {
         id: id,
         blogName: blogName,

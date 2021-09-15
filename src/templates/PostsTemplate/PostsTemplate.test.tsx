@@ -20,7 +20,7 @@ describe('<PostsTemplate />', () => {
     );
     //Headings
     const headings = screen.getAllByRole('heading');
-    expect(headings).toHaveLength(9);
+    expect(headings).toHaveLength(10);
 
     //Snapshot
     const { container } = renderTheme(
@@ -45,7 +45,7 @@ describe('<PostsTemplate />', () => {
     );
     //Headings
     const headings = screen.getAllByRole('heading');
-    expect(headings).toHaveLength(9);
+    expect(headings).toHaveLength(10);
 
     //Snapshot
     const { container } = renderTheme(

@@ -9,6 +9,7 @@ import { PostsTemplateProps } from './type';
 export function PostsTemplate({
   posts,
   categories = [],
+  authors = [],
   base,
 }: PostsTemplateProps) {
   return (
@@ -19,7 +20,12 @@ export function PostsTemplate({
             Publicações
           </Heading>
         </Styled.TitleContainer>
-        <PostList {...posts} categories={categories} title={posts.title} />
+        <PostList
+          {...posts}
+          categories={categories}
+          authors={authors}
+          title={posts.title}
+        />
       </Styled.Container>
     </Base>
   );

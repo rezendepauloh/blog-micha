@@ -3,13 +3,14 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { PostItem } from 'components/PostItem';
 import { Heading } from 'components/Heading';
-import { PostListCategory } from 'components/PostListCategory';
+import { PostListSideBar } from 'components/PostListSideBar';
 
 import { PostListProps } from './type';
 
 export function PostList({
   posts = [],
   categories = [],
+  authors = [],
   title = 'Artigos',
 }: PostListProps) {
   const [statePosts, setStatePosts] = useState([]);
@@ -45,8 +46,8 @@ export function PostList({
   return (
     <>
       <Styled.Container fluid>
-        <Styled.Row>
-          <Styled.Col md={10}>
+        <Styled.Row xs={1} sm={1} md={12} lg={12}>
+          <Styled.Col md={12} lg={{ span: 10, order: 'first' }}>
             <Heading uppercase as="h2" size="small" colorDark={true}>
               {title}
             </Heading>
@@ -58,11 +59,15 @@ export function PostList({
               })}
             </Styled.List>
           </Styled.Col>
-          <Styled.Col md={2}>
-            <PostListCategory
+          <Styled.Col
+            xs={{ order: 'first' }}
+            md={12}
+            lg={{ span: 2, order: 'last' }}
+          >
+            <PostListSideBar
               categories={categories}
+              authors={authors}
               posts={posts}
-              title="Categorias"
             />
           </Styled.Col>
         </Styled.Row>

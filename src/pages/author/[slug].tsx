@@ -12,7 +12,11 @@ import { StrapiPostsListAndBase } from 'api/type';
 
 import { loadPostsWithFilter } from 'api/load-data';
 
-export default function AuthorPage({ posts, base }: PostsTemplateProps) {
+export default function AuthorPage({
+  posts,
+  base,
+  categories = [],
+}: PostsTemplateProps) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -26,6 +30,7 @@ export default function AuthorPage({ posts, base }: PostsTemplateProps) {
   const authorArgs = {
     posts: { title: `Autor: ${authorName}`, ...posts },
     base: base,
+    categories: categories,
   };
 
   return (
@@ -61,8 +66,9 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
     data = null;
   }
 
-  // console.log('O author: ');
+  //console.log('O author: ');
   // console.log(data.posts[0].author);
+  //console.log(data);
 
   if (!data || !data.posts || !data.posts.length) {
     return {
@@ -72,6 +78,7 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
 
   const {
     posts,
+    categories,
     base: {
       id,
       blogName,
@@ -100,6 +107,7 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
   return {
     props: {
       posts: { posts: posts },
+      categories: categories,
       base: {
         id: id,
         blogName: blogName,

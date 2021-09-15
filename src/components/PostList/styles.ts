@@ -1,9 +1,12 @@
 import styled, { css } from 'styled-components';
-// import { CardDeck as CardDeckBootstrap } from 'react-bootstrap';
 import { Title as HeadingContainer } from 'components/Heading/styles';
+
+import { Container as ContainerBootstrap } from 'react-bootstrap';
+import { Row as RowBootstrap } from 'react-bootstrap';
+import { Col as ColBootstrap } from 'react-bootstrap';
 import { Button as ButtonBootstrap } from 'react-bootstrap';
 
-export const Container = styled.div`
+export const Container = styled(ContainerBootstrap)`
   ${({ theme }) => css`
     margin: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
 
@@ -26,6 +29,32 @@ export const Container = styled.div`
       align-content: center;
       width: 100%;
       margin: ${theme.spacings.xsmall} 0;
+    }
+  `}
+`;
+
+export const Row = styled(RowBootstrap)`
+  margin-right: 0;
+  margin-left: 0;
+`;
+
+export const Col = styled(ColBootstrap)`
+  ${({ theme }) => css`
+    > h1 > div > img {
+      height: 16rem;
+      width: 100%;
+    }
+
+    @media ${theme.media.medium} {
+      width: 100%;
+    }
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+    }
+
+    @media ${theme.media.large} {
+      width: 100%;
     }
   `}
 `;

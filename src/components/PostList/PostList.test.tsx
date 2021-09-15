@@ -10,7 +10,7 @@ describe('<PostList />', () => {
 
     //Headings
     const headings = screen.getAllByRole('heading');
-    expect(headings).toHaveLength(4);
+    expect(headings).toHaveLength(5);
   });
 
   it('should render a component <PostList /> without a post', () => {
@@ -18,7 +18,7 @@ describe('<PostList />', () => {
 
     //Headings
     const headings = screen.getAllByRole('heading');
-    expect(headings).toHaveLength(1);
+    expect(headings).toHaveLength(2);
   });
 
   it('should render more posts by click on button', () => {
@@ -26,7 +26,7 @@ describe('<PostList />', () => {
 
     //Headings
     const headings = screen.getAllByRole('heading');
-    expect(headings).toHaveLength(4);
+    expect(headings).toHaveLength(5);
 
     expect(
       screen.getByRole('button', { name: 'Ver mais' }),

@@ -3,10 +3,15 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { PostItem } from 'components/PostItem';
 import { Heading } from 'components/Heading';
+import { PostListCategory } from 'components/PostListCategory';
 
 import { PostListProps } from './type';
 
-export function PostList({ posts = [], title = 'Artigos' }: PostListProps) {
+export function PostList({
+  posts = [],
+  categories = [],
+  title = 'Artigos',
+}: PostListProps) {
   const [statePosts, setStatePosts] = useState([]);
   const [allPosts] = useState(posts);
   const [page, setPage] = useState(0);
@@ -39,22 +44,42 @@ export function PostList({ posts = [], title = 'Artigos' }: PostListProps) {
 
   return (
     <>
-      <Styled.Container>
-        <Heading uppercase as="h2" size="small" colorDark={true}>
-          {title}
-        </Heading>
+      <Styled.Container fluid>
+        <Styled.Row>
+          <Styled.Col md={10}>
+            <Heading uppercase as="h2" size="small" colorDark={true}>
+              {title}
+            </Heading>
+
+            <Styled.List className="list-unstyled">
+              {statePosts.map((post, index) => {
+                const key = `${post.title}-${index}`;
+                return <PostItem key={key} {...post} />;
+              })}
+            </Styled.List>
+          </Styled.Col>
+          <Styled.Col md={2}>
+            <PostListCategory
+              categories={categories}
+              posts={posts}
+              title="Categorias"
+            />
+          </Styled.Col>
+        </Styled.Row>
+        <Styled.Row>
+          <Styled.Col md={12}>
+            <Styled.ButtonContainer>
+              <Styled.Button
+                disabled={noMorePosts}
+                onClick={loadMorePosts}
+                size="lg"
+              >
+                {noMorePosts ? 'Sem mais posts' : 'Ver mais'}
+              </Styled.Button>
+            </Styled.ButtonContainer>
+          </Styled.Col>
+        </Styled.Row>
       </Styled.Container>
-      <Styled.List className="list-unstyled">
-        {statePosts.map((post, index) => {
-          const key = `${post.title}-${index}`;
-          return <PostItem key={key} {...post} />;
-        })}
-      </Styled.List>
-      <Styled.ButtonContainer>
-        <Styled.Button disabled={noMorePosts} onClick={loadMorePosts} size="lg">
-          {noMorePosts ? 'Sem mais posts' : 'Ver mais'}
-        </Styled.Button>
-      </Styled.ButtonContainer>
     </>
   );
 }

@@ -212,5 +212,8 @@ export const GRAPHQL_GET_POSTS = gql`
       ...categoryPost
       ...tags
     }
+    categories {
+      ...category
+    }
   }
 `;

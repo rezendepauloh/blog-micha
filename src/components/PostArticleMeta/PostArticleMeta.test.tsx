@@ -20,10 +20,9 @@ describe('<PostArticleMeta />', () => {
     expect(
       screen.getByRole('link', { name: 'Michely Segóvia' }),
     ).toHaveAttribute('href', '/author/michely-segovia');
-    expect(screen.getByRole('link', { name: 'Direito Penal' })).toHaveAttribute(
-      'href',
-      '/category/direito-penal',
-    );
+    expect(
+      screen.getByRole('link', { name: 'Direito Empresarial' }),
+    ).toHaveAttribute('href', '/category/direito-empresarial');
   });
 
   it('should format date', () => {
@@ -35,7 +34,7 @@ describe('<PostArticleMeta />', () => {
       />,
     );
 
-    expect(screen.getByText('24 de agosto de 2021')).toHaveAttribute(
+    expect(screen.getByText('9 de setembro de 2021')).toHaveAttribute(
       'datetime',
       props.created_at,
     );

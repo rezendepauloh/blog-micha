@@ -6,7 +6,11 @@ import { Heading } from 'components/Heading';
 
 import { PostsTemplateProps } from './type';
 
-export function PostsTemplate({ posts, base }: PostsTemplateProps) {
+export function PostsTemplate({
+  posts,
+  categories = [],
+  base,
+}: PostsTemplateProps) {
   return (
     <Base base={base}>
       <Styled.Container fluid>
@@ -15,7 +19,7 @@ export function PostsTemplate({ posts, base }: PostsTemplateProps) {
             Publicações
           </Heading>
         </Styled.TitleContainer>
-        <PostList {...posts} title={posts.title} />
+        <PostList {...posts} categories={categories} title={posts.title} />
       </Styled.Container>
     </Base>
   );

@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
-// import { CardDeck as CardDeckBootstrap } from 'react-bootstrap';
 import { Title as HeadingContainer } from 'components/Heading/styles';
-import { Button as ButtonBootstrap } from 'react-bootstrap';
 
 export const Container = styled.div`
   ${({ theme }) => css`
@@ -46,36 +44,42 @@ export const ButtonContainer = styled.div`
   `}
 `;
 
-export const Button = styled(ButtonBootstrap)`
+export const Item = styled.li`
   ${({ theme }) => css`
-    background-color: ${theme.colors.secondary};
-    color: ${theme.colors.white};
-    text-align: center;
-    font-size: ${theme.spacings.small};
-    padding: ${theme.spacings.small};
+    margin-bottom: ${theme.spacings.small};
+    padding-left: 11px;
+  `}
+`;
+
+export const LinkStyled = styled.a`
+  ${({ theme }) => css`
+    display: block;
+    position: relative;
     text-decoration: none;
-    font-weight: bold;
-    border: 1px solid;
-    border-radius: 5px;
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.secondary};
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0.2rem;
+      background: ${theme.colors.secondary};
+      transition: all 300ms ease-in-out;
+    }
 
     &:hover {
-      color: ${theme.colors.secondary};
-      background-color: ${theme.colors.white};
+      color: ${theme.colors.primary};
       transition: all 300ms ease-in-out;
-      border: 1px solid;
     }
 
-    &:focus {
-      color: ${theme.colors.white};
-      background-color: ${theme.colors.primary};
-      transition: all 300ms ease-in-out;
-      border: 1px solid ${theme.colors.primary};
-    }
-
-    &:disabled {
-      color: ${theme.colors.white};
-      background-color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
+    &:hover::after {
+      left: 0;
+      width: 100%;
+      top: 100%;
     }
   `}
 `;

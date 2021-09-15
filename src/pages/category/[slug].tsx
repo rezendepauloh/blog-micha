@@ -12,7 +12,11 @@ import { StrapiPostsListAndBase } from 'api/type';
 
 import { loadPostsWithFilter } from 'api/load-data';
 
-export default function CategoryPage({ posts, base }: PostsTemplateProps) {
+export default function CategoryPage({
+  posts,
+  base,
+  categories = [],
+}: PostsTemplateProps) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -26,6 +30,7 @@ export default function CategoryPage({ posts, base }: PostsTemplateProps) {
   const categoryArgs = {
     posts: { title: `Categoria: ${categoryName}`, ...posts },
     base: base,
+    categories: categories,
   };
 
   return (
@@ -72,6 +77,7 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
 
   const {
     posts,
+    categories,
     base: {
       id,
       blogName,
@@ -100,6 +106,7 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
   return {
     props: {
       posts: { posts: posts },
+      categories: categories,
       base: {
         id: id,
         blogName: blogName,

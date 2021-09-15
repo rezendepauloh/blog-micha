@@ -236,6 +236,9 @@ query GET_POSTS {
     ...categoryPost
     ...tags
   }
+  categories {
+    ...category
+  }
 }
 
 ----------------------

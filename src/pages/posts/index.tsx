@@ -7,10 +7,15 @@ import { PostsTemplate } from 'templates/PostsTemplate';
 import { PostsTemplateProps } from 'templates/PostsTemplate/type';
 import { loadPosts } from 'api/load-data';
 
-export default function PostsPage({ posts, base }: PostsTemplateProps) {
+export default function PostsPage({
+  posts,
+  base,
+  categories,
+}: PostsTemplateProps) {
   const postsArgs = {
     posts: posts,
     base: base,
+    categories: categories,
   };
 
   const { blogName, blogDescription } = base;
@@ -47,6 +52,7 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
   }
 
   const {
+    categories,
     posts,
     base: {
       id,
@@ -76,6 +82,7 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
   return {
     props: {
       posts: { posts: posts },
+      categories: categories,
       base: {
         id: id,
         blogName: blogName,

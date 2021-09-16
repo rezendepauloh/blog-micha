@@ -1,5 +1,5 @@
 ## Blog da Micha
-
+<!-- Usar isso para implementar o README: https://dev.to/saurabhnative/10-useful-sections-to-improve-your-github-readme-files-3hgj -->
 Esse é o projeto do Blog da Micha e do seu Escritório de Advocacia. Aqui vão algumas coisas adicionadas ao projeto:
 
 - **TypeScript**: O projeto foi construído em TypeScript;

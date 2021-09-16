@@ -1,140 +1,100 @@
 import styled, { css } from 'styled-components';
+
+import { Button as ButtonBootstrap } from 'react-bootstrap';
 import { Container as ContainerBootstrap } from 'react-bootstrap';
 import { Row as RowBootstrap } from 'react-bootstrap';
 import { Col as ColBootstrap } from 'react-bootstrap';
 
-import { Title as HeadingContainer } from 'components/Heading/styles';
+// import { Title as HeadingContainer } from 'components/Heading/styles';
 
-export const Container = styled(ContainerBootstrap)`
+export const Container = styled(ContainerBootstrap)``;
+
+export const Row = styled(RowBootstrap)``;
+
+export const Col = styled(ColBootstrap)``;
+
+export const FloatContainer = styled.div`
   ${({ theme }) => css`
-    padding: ${theme.spacings.medium} 0;
-    background: ${theme.colors.primary};
-  `}
-
-  &.aboutFooter {
-    padding: 0;
-  }
-`;
-
-export const Row = styled(RowBootstrap)`
-  margin-right: 0;
-  margin-left: 0;
-`;
-
-export const Col = styled(ColBootstrap)`
-  ${({ theme }) => css`
-    margin: inherit;
-    > img {
-      width: 100%;
-      border-radius: ${theme.spacings.xsmall};
-      border: 2px solid ${theme.colors.primary};
-    }
-
-    > img:hover {
-      border: 2px solid ${theme.colors.secondary};
-      background-position: center;
-      background-size: cover;
-      filter: grayscale(40%);
-      transition: all 300ms ease-in-out;
-    }
-
-    ${HeadingContainer} {
-      margin: 0;
-      justify-content: center;
+    &.float-container {
       display: flex;
+      flex-direction: column;
+      min-width: 350px;
+      position: relative;
+      margin: ${theme.spacings.xsmall};
+
+      input {
+        width: 100%;
+        height: 56px;
+        padding: 14px 16px 0 10px;
+        outline: 0;
+        border: 1px solid ${theme.colors.mediumGray};
+        border-radius: 4px;
+        background: ${theme.colors.white};
+        font-family: ${theme.font.family.default};
+        font-size: ${theme.font.sizes.small};
+      }
+
+      textarea {
+        width: 100%;
+        height: 200px;
+        padding: 20px 16px 0 10px;
+        outline: 0;
+        border: 1px solid ${theme.colors.mediumGray};
+        border-radius: 4px;
+        background: ${theme.colors.white};
+        font-family: ${theme.font.family.default};
+        font-size: ${theme.font.sizes.small};
+      }
+
+      label {
+        font-size: ${theme.font.sizes.small};
+        font-family: ${theme.font.family.default};
+        padding: 0 12px;
+        color: ${theme.colors.secondary};
+        pointer-events: none;
+        position: absolute;
+        transform: translate(0, 26px) scale(1);
+        transform-origin: top left;
+        transition: all 0.2s ease-out;
+      }
+
+      &:focus-within label {
+        transform: translate(0, 3px) scale(0.75);
+      }
+
+      & .Active {
+        transform: translate(0, 3px) scale(0.75);
+      }
     }
   `}
 `;
 
-export const Paragraph = styled.div`
+export const Button = styled(ButtonBootstrap)`
   ${({ theme }) => css`
-    max-width: 100%;
-    margin: ${theme.spacings.xsmall} ${theme.spacings.medium};
+    background-color: ${theme.colors.secondary};
     color: ${theme.colors.white};
-    text-align: justify;
-    line-height: ${theme.spacings.medium};
-
-    > p {
-      margin: ${theme.spacings.medium} 0;
-      color: ${theme.colors.white};
-    }
-
-    @media ${theme.media.lteMedium} {
-    }
-
-    @media ${theme.media.small} {
-    }
-  `}
-`;
-
-export const TitleContainer = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: row wrap;
-    margin: ${theme.spacings.xsmall} 0;
-
-    ${HeadingContainer} {
-      margin: ${theme.spacings.xsmall} 0;
-    }
-
-    ${HeadingContainer}::before {
-      content: '| ';
-      white-space: pre-wrap;
-    }
-    ${HeadingContainer}::after {
-      content: ' |';
-      white-space: pre-wrap;
-    }
-
-    @media ${theme.media.lteMedium} {
-      flex-flow: column wrap;
-      align-content: center;
-      width: 100%;
-      margin: auto;
-    }
-
-    @media ${theme.media.small} {
-      flex-flow: column wrap;
-      align-content: center;
-      width: 100%;
-      margin: ${theme.spacings.xsmall} 0;
-    }
-  `}
-`;
-
-export const LinkSocial = styled.a`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    width: 100%;
-    color: ${theme.colors.secondary};
+    text-align: center;
+    font-size: ${theme.spacings.small};
+    padding: ${theme.spacings.small};
     text-decoration: none;
-    margin: ${theme.spacings.xsmall};
     font-weight: bold;
-
-    /* &::before {
-      content: 's';
-    }
-
-    &::after {
-      content: 't';
-    } */
+    border: 1px solid ${theme.colors.mediumGray};
+    border-radius: 5px;
+    margin: 0px 7px;
+    width: 97.4%;
 
     &:hover {
-      color: ${theme.colors.white};
+      color: ${theme.colors.secondary};
+      background-color: ${theme.colors.white};
       transition: all 300ms ease-in-out;
+      border: 1px solid ${theme.colors.mediumGray};
     }
 
-    > svg {
-      width: 2.5rem;
-      height: 2.5rem;
+    &:focus {
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.primary};
+      transition: all 300ms ease-in-out;
+      border: 1px solid ${theme.colors.mediumGray};
     }
   `}
 `;

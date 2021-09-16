@@ -4,6 +4,7 @@ import { Base } from '../Base';
 
 import { ContactTemplateProps } from './type';
 import { Heading } from 'components/Heading';
+import { Contact } from 'components/Contact';
 
 export function ContactTemplate({ base }: ContactTemplateProps) {
   return (
@@ -14,7 +15,7 @@ export function ContactTemplate({ base }: ContactTemplateProps) {
             Contato
           </Heading>
         </Styled.TitleContainer>
-        <h1>Em breve</h1>
+        <Contact name="" email="" message="" />
       </Styled.Container>
     </Base>
   );

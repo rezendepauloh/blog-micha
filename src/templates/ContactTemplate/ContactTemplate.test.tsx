@@ -18,7 +18,7 @@ describe('<ContactTemplate />', () => {
 
     //Headings
     const headings = screen.getAllByRole('heading');
-    expect(headings).toHaveLength(5);
+    expect(headings).toHaveLength(4);
 
     //Snapshot
     const { container } = renderTheme(
@@ -38,7 +38,7 @@ describe('<ContactTemplate />', () => {
 
     //Headings
     const headings = screen.getAllByRole('heading');
-    expect(headings).toHaveLength(5);
+    expect(headings).toHaveLength(4);
 
     //Snapshot
     const { container } = renderTheme(

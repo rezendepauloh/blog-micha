@@ -7,11 +7,6 @@ import mock from './mock';
 export default {
   title: 'Pages/Contact',
   component: Contact,
-  parameters: {
-    backgrounds: {
-      default: 'dark',
-    },
-  },
 } as Meta;
 
 export const Template: Story<ContactProps> = (args) => {

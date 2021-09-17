@@ -1,16 +1,21 @@
-import { Request, Response } from 'express';
+//import { Request, Response } from 'express';
+import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-export default function (req: Request, res: Response) {
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+};
+
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   //require('dotenv').config()
 
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  //const nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
     port: 465,
     host: 'smtp.gmail.com',
     auth: {
-      user: 'rezendepauloh@gmail.com',
+      user: 'bancadampms@gmail.com',
       //pass: process.env.password,
       pass: 'password',
     },
@@ -18,7 +23,7 @@ export default function (req: Request, res: Response) {
   });
 
   const mailData = {
-    from: 'rezendepauloh@gmail.com',
+    from: req.body.email,
     to: 'rezendepauloh@gmail.com',
     subject: `Message From ${req.body.name}`,
     text: req.body.message + ' | Sent from: ' + req.body.email,
@@ -31,4 +36,4 @@ export default function (req: Request, res: Response) {
     else console.log(info);
   });
   res.status(200);
-}
+};

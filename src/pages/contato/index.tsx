@@ -35,11 +35,11 @@ export const getStaticProps: GetStaticProps<ContactTemplateProps> =
       data = await loadPosts();
     } catch (e) {
       data = null;
-      console.log(e.message);
+      //console.log(e.message);
     }
 
-    console.log('O data: ');
-    console.log(data);
+    // console.log('O data: ');
+    // console.log(data);
 
     if (!data) {
       return {

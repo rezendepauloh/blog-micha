@@ -1,9 +1,6 @@
 import * as Styled from './styles';
 
 import { useState } from 'react';
-// import Link from 'next/link';
-
-// import { Heading } from 'components/Heading';
 
 import { ContactProps } from './type';
 

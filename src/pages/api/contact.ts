@@ -1,10 +1,11 @@
-//import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
+import nodemailer from 'nodemailer';
 
-export default function (req, res) {
+export default function (req: Request, res: Response) {
   //require('dotenv').config()
 
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const nodemailer = require('nodemailer');
+  //const nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
     port: 465,
     host: 'smtp.gmail.com',
@@ -25,7 +26,7 @@ export default function (req, res) {
     ${req.body.email}</p>`,
   };
 
-  transporter.sendMail(mailData, function (err: Error, info: string) {
+  transporter.sendMail(mailData, function (err, info) {
     if (err) console.log(err);
     else console.log(info);
   });

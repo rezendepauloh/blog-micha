@@ -3,6 +3,7 @@ import { request } from 'graphql-request';
 import { HomeTemplateProps } from 'templates/HomeTemplate/type';
 import { PostsTemplateProps } from 'templates/PostsTemplate/type';
 import { AboutTemplateProps } from 'templates/AboutTemplate/type';
+import { ContactTemplateProps } from 'templates/ContactTemplate/type';
 import {
   StrapiPostAndBase,
   StrapiPostsAndBase,
@@ -11,10 +12,11 @@ import {
 
 import config from 'config/index';
 import {
+  GRAPHQL_GET_BASE,
   GRAPHQL_GET_HOME,
   GRAPHQL_GET_POSTS,
   GRAPHQL_GET_ABOUT,
-} from '../graphql/queries';
+} from 'graphql/queries';
 
 export const loadHome = async (): Promise<HomeTemplateProps> => {
   const data = await request(config.graphqlURL, GRAPHQL_GET_HOME);
@@ -24,6 +26,12 @@ export const loadHome = async (): Promise<HomeTemplateProps> => {
 
 export const loadAbout = async (): Promise<AboutTemplateProps> => {
   const data = await request(config.graphqlURL, GRAPHQL_GET_ABOUT);
+
+  return data;
+};
+
+export const loadContact = async (): Promise<ContactTemplateProps> => {
+  const data = await request(config.graphqlURL, GRAPHQL_GET_BASE);
 
   return data;
 };

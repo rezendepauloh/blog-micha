@@ -6,7 +6,14 @@ import { ContactTemplateProps } from './type';
 import { Heading } from 'components/Heading';
 import { Contact } from 'components/Contact';
 
-export function ContactTemplate({ base }: ContactTemplateProps) {
+export function ContactTemplate({ base, contact }: ContactTemplateProps) {
+  const contactArgs = {
+    name: contact.name,
+    email: contact.email,
+    message: contact.message,
+    phone: base.footerContact.phone,
+  };
+
   return (
     <Base base={base}>
       <Styled.Container fluid>
@@ -15,7 +22,7 @@ export function ContactTemplate({ base }: ContactTemplateProps) {
             Contato
           </Heading>
         </Styled.TitleContainer>
-        <Contact name="" email="" message="" />
+        <Contact {...contactArgs} />
       </Styled.Container>
     </Base>
   );

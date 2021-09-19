@@ -68,8 +68,8 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
     data = null;
   }
 
-  console.log('O data: ');
-  console.log(data);
+  // console.log('O data: ');
+  // console.log(data);
 
   if (!data || !data.posts || !data.posts.length) {
     return {

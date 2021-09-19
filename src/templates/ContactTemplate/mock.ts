@@ -2,6 +2,12 @@ import { ContactTemplateProps } from './type';
 import { data } from 'api/dados-about.json';
 
 export const mockAboutTemplateWithImage = {
+  contact: {
+    name: '',
+    email: '',
+    message: '',
+    phone: data.base.footer.phone,
+  },
   base: {
     id: data.base.id,
     blogName: data.base.blogName,
@@ -33,6 +39,12 @@ export const mockAboutTemplateWithImage = {
 } as ContactTemplateProps;
 
 export const mockAboutTemplateWithoutImage = {
+  contact: {
+    name: '',
+    email: '',
+    message: '',
+    phone: data.base.footer.phone,
+  },
   base: {
     id: data.base.id,
     blogName: data.base.blogName,

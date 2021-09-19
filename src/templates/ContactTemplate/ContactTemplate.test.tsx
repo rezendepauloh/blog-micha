@@ -12,7 +12,10 @@ describe('<ContactTemplate />', () => {
   it('should render with Image Logo', () => {
     renderTheme(
       <RouterMock>
-        <ContactTemplate base={mockAboutTemplateWithImage.base} />
+        <ContactTemplate
+          base={mockAboutTemplateWithImage.base}
+          contact={mockAboutTemplateWithImage.contact}
+        />
       </RouterMock>,
     );
 
@@ -23,7 +26,10 @@ describe('<ContactTemplate />', () => {
     //Snapshot
     const { container } = renderTheme(
       <RouterMock>
-        <ContactTemplate base={mockAboutTemplateWithImage.base} />
+        <ContactTemplate
+          base={mockAboutTemplateWithImage.base}
+          contact={mockAboutTemplateWithImage.contact}
+        />
       </RouterMock>,
     );
 
@@ -32,7 +38,10 @@ describe('<ContactTemplate />', () => {
   it('should render without Image Logo', () => {
     renderTheme(
       <RouterMock>
-        <ContactTemplate base={mockAboutTemplateWithoutImage.base} />
+        <ContactTemplate
+          base={mockAboutTemplateWithoutImage.base}
+          contact={mockAboutTemplateWithoutImage.contact}
+        />
       </RouterMock>,
     );
 
@@ -43,7 +52,10 @@ describe('<ContactTemplate />', () => {
     //Snapshot
     const { container } = renderTheme(
       <RouterMock>
-        <ContactTemplate base={mockAboutTemplateWithImage.base} />
+        <ContactTemplate
+          base={mockAboutTemplateWithoutImage.base}
+          contact={mockAboutTemplateWithoutImage.contact}
+        />
       </RouterMock>,
     );
 

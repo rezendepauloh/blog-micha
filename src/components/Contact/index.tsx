@@ -1,4 +1,7 @@
 import * as Styled from './styles';
+// import Link from 'next/link';
+
+import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp';
 
 import { useState } from 'react';
 
@@ -9,7 +12,7 @@ import { ContactProps } from './type';
 //Utilizar esse para o API do envio de email:
 //https://medium.com/nerd-for-tech/coding-a-contact-form-with-next-js-and-nodemailer-d3a8dc6cd645
 
-export const Contact = ({ name, email, message }: ContactProps) => {
+export const Contact = ({ name, email, message, phone }: ContactProps) => {
   const [isActiveName, setIsActiveName] = useState(false);
   const [valueName, setValueName] = useState(name);
 
@@ -20,6 +23,8 @@ export const Contact = ({ name, email, message }: ContactProps) => {
   const [valueMessage, setValueMessage] = useState(message);
 
   const [submitted, setSubmitted] = useState(false);
+
+  const target = '_blank';
 
   const handleTextChange = (text: string, name: string) => {
     if (name == 'name') {
@@ -155,7 +160,27 @@ export const Contact = ({ name, email, message }: ContactProps) => {
               </Styled.FloatContainer>
             </form>
           </Styled.Col>
-          <Styled.Col md={6}>Outro conteúdo</Styled.Col>
+          <Styled.Col md={6}>
+            {phone.map((p) => {
+              const replaceOwner = p.owner.replace(' ', '%20');
+              const replacePhone = p.phone.replace(
+                /\((\d{2})\)\s\d(\d{4})-(\d{4})/g,
+                '$1$2$3',
+              );
+              const url = `https://api.whatsapp.com/send?phone=55${replacePhone}&text=Olá,%20${replaceOwner}`;
+              return (
+                <Styled.LinkContact
+                  key={p.phone}
+                  href={url}
+                  target={target}
+                  block
+                >
+                  <Whatsapp aria-label="Whatsapp" /> Entre em contato com{' '}
+                  {p.owner}
+                </Styled.LinkContact>
+              );
+            })}
+          </Styled.Col>
         </Styled.Row>
       </Styled.Container>
     </>

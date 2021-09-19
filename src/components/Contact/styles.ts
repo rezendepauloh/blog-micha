@@ -98,3 +98,31 @@ export const Button = styled(ButtonBootstrap)`
     }
   `}
 `;
+
+export const LinkContact = styled(ButtonBootstrap)`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.small} ${theme.spacings.xsmall};
+    width: 100%;
+    background-color: ${theme.colors.secondary};
+    color: ${theme.colors.white};
+    text-align: center;
+    margin-top: ${theme.spacings.small};
+    text-decoration: none;
+    font-size: ${theme.font.sizes.small};
+    font-weight: bold;
+    border: 1px solid ${theme.colors.mediumGray};
+    border-radius: 5px;
+
+    &:hover {
+      color: ${theme.colors.secondary};
+      background-color: ${theme.colors.white};
+      transition: all 300ms ease-in-out;
+      border: 1px solid ${theme.colors.mediumGray};
+    }
+
+    > svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  `}
+`;

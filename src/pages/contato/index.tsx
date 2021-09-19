@@ -5,12 +5,17 @@ import { theme } from 'styles/theme';
 
 import { ContactTemplate } from 'templates/ContactTemplate';
 import { ContactTemplateProps } from 'templates/ContactTemplate/type';
-import { loadPosts } from 'api/load-data';
+import { loadContact } from 'api/load-data';
 
-export default function ContactPage({ base }: ContactTemplateProps) {
+export default function ContactPage({ base, contact }: ContactTemplateProps) {
   const contactArgs = {
-    // posts: posts,
     base: base,
+    contact: {
+      name: contact.name,
+      email: contact.email,
+      message: contact.message,
+      phone: base.footerContact.phone,
+    },
   };
 
   const { blogName, blogDescription } = base;
@@ -32,10 +37,10 @@ export const getStaticProps: GetStaticProps<ContactTemplateProps> =
     let data = null;
 
     try {
-      data = await loadPosts();
+      data = await loadContact();
     } catch (e) {
       data = null;
-      //console.log(e.message);
+      console.log(e.message);
     }
 
     // console.log('O data: ');
@@ -75,6 +80,12 @@ export const getStaticProps: GetStaticProps<ContactTemplateProps> =
 
     return {
       props: {
+        contact: {
+          name: '',
+          email: '',
+          message: '',
+          phone: phone,
+        },
         base: {
           id: id,
           blogName: blogName,

@@ -1,6 +1,56 @@
 import { gql } from 'graphql-request';
 import { GRAPHQL_FRAGMENTS, GRAPHQL_ABOUT_FRAGMENTS } from './fragments';
 
+export const GRAPHQL_GET_BASE = gql`
+  ${GRAPHQL_ABOUT_FRAGMENTS}
+
+  query GET_BASE {
+    base {
+      id
+      blogName
+      blogDescription
+      logoText
+      logoUrl
+      logoNewTab
+      logo {
+        ...image
+      }
+      header {
+        menuLink {
+          id
+          text
+          link
+          newTab
+        }
+      }
+      footer {
+        street
+        number
+        neighborhood
+        city
+        state
+        cep
+        location
+        instagram: footerMediaInstagram {
+          user
+          url
+        }
+        linkedin: footerMediaLinkedin {
+          user
+          url
+        }
+        phone: footerPhone {
+          phone
+          owner
+        }
+        email: footerEmail {
+          email
+        }
+      }
+    }
+  }
+`;
+
 export const GRAPHQL_GET_HOME = gql`
   ${GRAPHQL_FRAGMENTS}
 

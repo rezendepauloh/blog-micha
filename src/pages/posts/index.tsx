@@ -44,8 +44,8 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
     console.log(e.message);
   }
 
-  console.log('O data: ');
-  console.log(data);
+  // console.log('O data: ');
+  // console.log(data);
 
   if (!data || !data.posts || !data.posts.length) {
     return {

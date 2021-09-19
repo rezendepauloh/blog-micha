@@ -37,8 +37,8 @@ export const getStaticProps: GetStaticProps<TeamTemplateProps> = async () => {
     console.log(e.message);
   }
 
-  console.log('O data: ');
-  console.log(data);
+  // console.log('O data: ');
+  // console.log(data);
 
   if (!data) {
     return {

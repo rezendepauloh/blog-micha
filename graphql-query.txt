@@ -47,6 +47,52 @@ fragment categoryPost on Post {
   }
 }
 
+query GET_BASE {
+    base {
+      id
+      blogName
+      blogDescription
+      logoText
+      logoUrl
+      logoNewTab
+      logo {
+        ...image
+      }
+      header {
+        menuLink {
+          id
+          text
+          link
+          newTab
+        }
+      }
+      footer {
+        street
+        number
+        neighborhood
+        city
+        state
+        cep
+        location
+        instagram: footerMediaInstagram {
+          user
+          url
+        }
+        linkedin: footerMediaLinkedin {
+          user
+          url
+        }
+        phone: footerPhone {
+          phone
+          owner
+        }
+        email: footerEmail {
+          email
+        }
+      }
+    }
+  }
+
 query GET_HOME {
   base {
     id
@@ -238,9 +284,6 @@ query GET_POSTS {
   }
   categories {
     ...category
-  }
-  authors {
-    ...author
   }
 }
 

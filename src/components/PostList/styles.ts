@@ -128,7 +128,7 @@ export const Button = styled(ButtonBootstrap)`
     text-decoration: none;
     font-weight: bold;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: ${theme.radius.default};
 
     &:hover {
       color: ${theme.colors.secondary};

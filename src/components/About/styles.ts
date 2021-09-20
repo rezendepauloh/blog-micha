@@ -26,7 +26,7 @@ export const Col = styled(ColBootstrap)`
     margin: inherit;
     > img {
       width: 100%;
-      border-radius: ${theme.spacings.xsmall};
+      border-radius: ${theme.radius.default};
       border: 2px solid ${theme.colors.primary};
     }
 

@@ -111,7 +111,7 @@ export const LinkMaps = styled.a`
     text-decoration: none;
     font-weight: bold;
     border: 1px solid ${theme.colors.secondary};
-    border-radius: 5px;
+    border-radius: ${theme.radius.default};
 
     &:hover {
       color: ${theme.colors.secondary};

@@ -28,7 +28,7 @@ export const FloatContainer = styled.div`
         padding: 14px 16px 0 10px;
         outline: 0;
         border: 1px solid ${theme.colors.mediumGray};
-        border-radius: 4px;
+        border-radius: ${theme.radius.default};
         background: ${theme.colors.white};
         font-family: ${theme.font.family.default};
         font-size: ${theme.font.sizes.small};
@@ -40,7 +40,7 @@ export const FloatContainer = styled.div`
         padding: 20px 16px 0 10px;
         outline: 0;
         border: 1px solid ${theme.colors.mediumGray};
-        border-radius: 4px;
+        border-radius: ${theme.radius.default};
         background: ${theme.colors.white};
         font-family: ${theme.font.family.default};
         font-size: ${theme.font.sizes.small};
@@ -79,7 +79,7 @@ export const Button = styled(ButtonBootstrap)`
     text-decoration: none;
     font-weight: bold;
     border: 1px solid ${theme.colors.mediumGray};
-    border-radius: 5px;
+    border-radius: ${theme.radius.default};
     margin: 0px 7px;
     width: 97.4%;
 
@@ -111,7 +111,7 @@ export const LinkContact = styled(ButtonBootstrap)`
     font-size: ${theme.font.sizes.small};
     font-weight: bold;
     border: 1px solid ${theme.colors.mediumGray};
-    border-radius: 5px;
+    border-radius: ${theme.radius.default};
 
     &:hover {
       color: ${theme.colors.secondary};

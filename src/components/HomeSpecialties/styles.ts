@@ -45,7 +45,7 @@ export const Button = styled(ButtonBootstrap)`
     text-decoration: none;
     font-weight: bold;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: ${theme.radius.default};
     margin: 0px 9px;
 
     &:hover {
@@ -67,7 +67,7 @@ export const Button = styled(ButtonBootstrap)`
 export const Modal = styled(ModalBootstrap)`
   ${({ theme }) => css`
     .modal-content {
-      border-radius: 5px;
+      border-radius: ${theme.radius.default};
     }
 
     .modal-lg,

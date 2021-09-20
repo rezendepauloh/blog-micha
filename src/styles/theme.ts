@@ -48,4 +48,7 @@ export const theme = {
     max: '96rem',
     content: '80rem',
   },
+  radius: {
+    default: '0.3125rem', //5px
+  },
 } as const;

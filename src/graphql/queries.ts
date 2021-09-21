@@ -268,5 +268,8 @@ export const GRAPHQL_GET_POSTS = gql`
     authors {
       ...author
     }
+    tags {
+      ...tag
+    }
   }
 `;

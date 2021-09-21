@@ -10,8 +10,15 @@ export type Category = {
   slug: string;
 };
 
+export type Tag = {
+  id: string;
+  displayName: string;
+  slug: string;
+};
+
 export type PostArticleMetaProps = {
   created_at: string;
   author?: Author;
   category?: Category;
+  tags?: Tag[];
 };

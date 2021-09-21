@@ -101,12 +101,13 @@ export const Button = styled(ButtonBootstrap)`
 
 export const LinkContact = styled(ButtonBootstrap)`
   ${({ theme }) => css`
-    padding: ${theme.spacings.small} ${theme.spacings.xsmall};
+    padding: 1.4rem ${theme.spacings.xsmall};
     width: 100%;
     background-color: ${theme.colors.secondary};
     color: ${theme.colors.white};
     text-align: center;
-    margin-top: ${theme.spacings.small};
+    margin-top: 8px;
+    margin-bottom: 9px;
     text-decoration: none;
     font-size: ${theme.font.sizes.small};
     font-weight: bold;

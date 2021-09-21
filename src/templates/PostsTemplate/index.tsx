@@ -10,6 +10,7 @@ export function PostsTemplate({
   posts,
   categories = [],
   authors = [],
+  tags = [],
   base,
 }: PostsTemplateProps) {
   return (
@@ -24,6 +25,7 @@ export function PostsTemplate({
           {...posts}
           categories={categories}
           authors={authors}
+          tags={tags}
           title={posts.title}
         />
       </Styled.Container>

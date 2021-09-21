@@ -1,7 +1,9 @@
 import * as Styled from './styles';
 
-import { Post } from 'components/Post';
 import { Base } from 'templates/Base';
+
+import { Post } from 'components/Post';
+import { PostTags } from 'components/PostTags';
 import { Heading } from 'components/Heading';
 
 import { PostTemplateProps } from './type';
@@ -16,6 +18,10 @@ export function PostTemplate({ post, base }: PostTemplateProps) {
           </Heading>
         </Styled.TitleContainer>
         <Post {...post} />
+
+        <Styled.TagsContainer>
+          <PostTags tags={post.tags} />
+        </Styled.TagsContainer>
       </Styled.Container>
     </Base>
   );

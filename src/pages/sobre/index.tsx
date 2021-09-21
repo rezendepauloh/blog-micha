@@ -18,7 +18,7 @@ export default function AboutPage({ about, base }: AboutTemplateProps) {
   return (
     <>
       <Head>
-        <title>{blogName}</title>
+        <title>Sobre - {blogName}</title>
         <meta name="description" content={blogDescription} />
         <meta name="theme-color" content={theme.colors.primary} />
       </Head>

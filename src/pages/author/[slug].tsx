@@ -26,7 +26,7 @@ export default function AuthorPage({
 
   const authorName = posts.posts[0].author.displayName;
 
-  const { blogName, blogDescription } = base;
+  const { blogName } = base;
 
   const authorArgs = {
     posts: { title: `Autor: ${authorName}`, ...posts },
@@ -41,7 +41,6 @@ export default function AuthorPage({
         <title>
           Autor: {authorName} - {blogName}
         </title>
-        <meta name="description" content={blogDescription} />
         <meta name="theme-color" content={theme.colors.primary} />
       </Head>
       <PostsTemplate {...authorArgs} />

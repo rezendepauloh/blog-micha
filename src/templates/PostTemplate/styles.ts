@@ -23,3 +23,9 @@ export const TitleContainer = styled.div`
     padding: ${theme.spacings.medium};
   `}
 `;
+
+export const TagsContainer = styled.div`
+  ${({ theme }) => css`
+    padding: 0 ${theme.spacings.large};
+  `}
+`;

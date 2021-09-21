@@ -1,4 +1,4 @@
-import { Category, Author } from 'components/PostArticleMeta/type';
+import { Category, Author, Tag } from 'components/PostArticleMeta/type';
 import { PostListProps } from 'components/PostList/type';
 import { BaseStrapi } from 'templates/Base/type';
 
@@ -7,4 +7,5 @@ export type PostsTemplateProps = {
   base: BaseStrapi;
   categories?: Category[];
   authors?: Author[];
+  tags?: Tag[];
 };

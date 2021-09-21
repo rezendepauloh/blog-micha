@@ -1,4 +1,4 @@
-import { Category, Author } from 'components/PostArticleMeta/type';
+import { Category, Author, Tag } from 'components/PostArticleMeta/type';
 import { PostItemProps } from 'components/PostItem/type';
 
 export type PostListProps = {
@@ -6,4 +6,5 @@ export type PostListProps = {
   posts?: PostItemProps[];
   categories?: Category[];
   authors?: Author[];
+  tags?: Tag[];
 };

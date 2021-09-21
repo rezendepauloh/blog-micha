@@ -23,7 +23,7 @@ export default function ContactPage({ base, contact }: ContactTemplateProps) {
   return (
     <>
       <Head>
-        <title>{blogName}</title>
+        <title>Contato - {blogName}</title>
         <meta name="description" content={blogDescription} />
         <meta name="theme-color" content={theme.colors.primary} />
       </Head>

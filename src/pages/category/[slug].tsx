@@ -26,7 +26,7 @@ export default function CategoryPage({
 
   const categoryName = posts.posts[0].category.displayName;
 
-  const { blogName, blogDescription } = base;
+  const { blogName } = base;
 
   const categoryArgs = {
     posts: { title: `Categoria: ${categoryName}`, ...posts },
@@ -41,7 +41,6 @@ export default function CategoryPage({
         <title>
           Categoria: {categoryName} - {blogName}
         </title>
-        <meta name="description" content={blogDescription} />
         <meta name="theme-color" content={theme.colors.primary} />
       </Head>
       <PostsTemplate {...categoryArgs} />

@@ -31,7 +31,7 @@ describe('<FooterGrid />', () => {
       'src',
       'https://res.cloudinary.com/dgiqhufpy/image/upload/v1629810879/logo_h_be529e7a63.svg',
     );
-    expect(cover).toHaveAttribute('alt', '');
+    expect(cover).toHaveAttribute('alt', 'Michely Segóvia');
 
     //Links
     const larissa = screen.getAllByText(/Larissa Mancini/i);

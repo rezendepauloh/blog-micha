@@ -18,3 +18,8 @@ export const Template: Story<ContactProps> = (args) => {
 };
 
 Template.args = mock;
+Template.parameters = {
+  backgrounds: {
+    default: 'dark',
+  },
+};

@@ -1,5 +1,6 @@
 import * as Styled from './styles';
 import Link from 'next/link';
+//import Image from 'next/image';
 
 import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp';
 import { EmailOutline as Email } from '@styled-icons/evaicons-outline/EmailOutline';

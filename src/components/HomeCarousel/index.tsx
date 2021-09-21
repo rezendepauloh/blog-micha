@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as Styled from './styles';
 import { Heading } from 'components/Heading';
+//import Image from 'next/image';
 
 import { HomeCarouselProps } from './type';
 

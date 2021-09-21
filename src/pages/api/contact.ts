@@ -17,7 +17,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     auth: {
       user: 'bancadampms@gmail.com',
       //pass: process.env.password,
-      pass: 'password',
+      pass: 'MPMS.0000',
     },
     secure: true,
   });

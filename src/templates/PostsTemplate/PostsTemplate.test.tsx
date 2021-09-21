@@ -11,7 +11,7 @@ import {
 describe('<PostsTemplate />', () => {
   it('should render with Image Logo', () => {
     renderTheme(
-      <RouterMock>
+      <RouterMock url="/posts">
         <PostsTemplate
           posts={mockPostsTemplateWithImage.posts}
           base={mockPostsTemplateWithImage.base}
@@ -24,7 +24,7 @@ describe('<PostsTemplate />', () => {
 
     //Snapshot
     const { container } = renderTheme(
-      <RouterMock>
+      <RouterMock url="/posts">
         <PostsTemplate
           posts={mockPostsTemplateWithImage.posts}
           base={mockPostsTemplateWithImage.base}
@@ -36,7 +36,7 @@ describe('<PostsTemplate />', () => {
   });
   it('should render without Image Logo', () => {
     renderTheme(
-      <RouterMock>
+      <RouterMock url="/posts">
         <PostsTemplate
           posts={mockPostsTemplateWithoutImage.posts}
           base={mockPostsTemplateWithoutImage.base}
@@ -49,7 +49,7 @@ describe('<PostsTemplate />', () => {
 
     //Snapshot
     const { container } = renderTheme(
-      <RouterMock>
+      <RouterMock url="/posts">
         <PostsTemplate
           posts={mockPostsTemplateWithoutImage.posts}
           base={mockPostsTemplateWithoutImage.base}

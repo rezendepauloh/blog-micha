@@ -14,7 +14,7 @@ describe('<PostGrid />', () => {
   });
 
   it('should render without posts', () => {
-    renderTheme(<PostGrid posts={[]} />);
+    renderTheme(<PostGrid posts={undefined} />);
 
     //Headings
     const headings = screen.getAllByRole('heading');

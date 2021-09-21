@@ -15,7 +15,7 @@ export default {
 
 export const TemplateWithImageLogo: Story<TeamTemplateProps> = (args) => {
   return (
-    <RouterMock>
+    <RouterMock url="/equipe">
       <TeamTemplate {...args} />
     </RouterMock>
   );
@@ -25,7 +25,7 @@ TemplateWithImageLogo.args = mockImage;
 
 export const TemplateWithoutImageLogo: Story<TeamTemplateProps> = (args) => {
   return (
-    <RouterMock>
+    <RouterMock url="/equipe">
       <TeamTemplate {...args} />
     </RouterMock>
   );

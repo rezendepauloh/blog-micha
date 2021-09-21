@@ -11,7 +11,7 @@ import {
 describe('<AboutTemplate />', () => {
   it('should render with Image Logo', () => {
     renderTheme(
-      <RouterMock>
+      <RouterMock url="/sobre">
         <AboutTemplate
           about={mockAboutTemplateWithImage.about}
           base={mockAboutTemplateWithImage.base}
@@ -24,7 +24,7 @@ describe('<AboutTemplate />', () => {
   });
   it('should render without Image Logo', () => {
     renderTheme(
-      <RouterMock>
+      <RouterMock url="/sobre">
         <AboutTemplate
           about={mockAboutTemplateWithoutImage.about}
           base={mockAboutTemplateWithoutImage.base}

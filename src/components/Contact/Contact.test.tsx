@@ -2,8 +2,11 @@ import { fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderTheme } from 'styles/render-theme';
 import { Contact } from '.';
+//import { rest } from 'msw'; // msw supports graphql too!
 
 import mock from './mock';
+
+//jest.mock('pages/api/contact');
 
 describe('<Contact />', () => {
   it('should render component <Contact />', () => {
@@ -65,26 +68,32 @@ describe('<Contact />', () => {
     );
 
     //Para clicar fora dos inputs
-    const link = screen.getByText('Entre em contato com Hellen Almeida');
+    //const link = screen.getByText('Entre em contato com Hellen Almeida');
+
+    //Inputs
+    const inputNome = screen.getByRole('textbox', { name: 'Nome' });
+    const inputEmail = screen.getByRole('textbox', { name: 'Email' });
+    const inputMensagem = screen.getByRole('textbox', { name: 'Mensagem' });
 
     //Click on the first input
-    const inputNome = screen.getByRole('textbox', { name: 'Nome' });
     fireEvent.click(inputNome);
     userEvent.type(inputNome, 'Nome');
-    userEvent.type(inputNome, '');
-    fireEvent.click(link);
+    userEvent.type(inputNome, null);
+    fireEvent.click(inputEmail);
     //expect(inputNome.value).toBe('Nome');
 
     //Click on the second input
-    const inputEmail = screen.getByRole('textbox', { name: 'Email' });
     fireEvent.click(inputEmail);
     userEvent.type(inputEmail, 'Email');
+    userEvent.type(inputEmail, '');
+    fireEvent.click(inputNome);
     //expect(inputEmail.value).toBe('Email');
 
     //Click on the third input
-    const inputMensagem = screen.getByRole('textbox', { name: 'Mensagem' });
     fireEvent.click(inputMensagem);
     userEvent.type(inputMensagem, 'Mensagem');
+    userEvent.type(inputMensagem, '');
+    fireEvent.click(inputNome);
     //expect(inputMensagem.value).toBe('Mensagem');
 
     // expect(
@@ -102,4 +111,19 @@ describe('<Contact />', () => {
     // const images = screen.getAllByRole('img', { name: /title/i });
     // expect(images).toHaveLength(3);
   });
+
+  // it('should render click in button submit with text inputs is null', () => {
+  //   renderTheme(
+  //     <Contact
+  //       name={mock.name}
+  //       email={mock.email}
+  //       message={mock.message}
+  //       phone={mock.phone}
+  //     />,
+  //   );
+
+  //   //Click on button
+  //   const inputSubmit = screen.getByRole('button', { name: 'Enviar' });
+  //   fireEvent.click(inputSubmit);
+  // });
 });

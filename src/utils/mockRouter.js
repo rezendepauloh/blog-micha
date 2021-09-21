@@ -7,8 +7,8 @@ import Router from 'next/router';
 //Encontrado:
 //https://gitmemory.com/issue/zeit/next.js/7479/568546815
 
-function RouterMock({ children }) {
-  const [pathname, setPathname] = useState('/');
+function RouterMock({ children, url = '/' }) {
+  const [pathname, setPathname] = useState(url);
 
   const mockRouter = {
     pathname,
@@ -30,6 +30,7 @@ function RouterMock({ children }) {
 
 RouterMock.propTypes = {
   children: PropTypes.node.isRequired,
+  url: PropTypes.string,
 };
 
 export default RouterMock;

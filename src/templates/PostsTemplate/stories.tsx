@@ -15,7 +15,7 @@ export default {
 
 export const TemplateWithImageLogo: Story<PostsTemplateProps> = (args) => {
   return (
-    <RouterMock>
+    <RouterMock url="/posts">
       <PostsTemplate {...args} />
     </RouterMock>
   );
@@ -25,7 +25,7 @@ TemplateWithImageLogo.args = MockImage;
 
 export const TemplateWithoutImageLogo: Story<PostsTemplateProps> = (args) => {
   return (
-    <RouterMock>
+    <RouterMock url="/posts">
       <PostsTemplate {...args} />
     </RouterMock>
   );

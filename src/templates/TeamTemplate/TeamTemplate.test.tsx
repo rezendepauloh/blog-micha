@@ -11,7 +11,7 @@ import {
 describe('<ContactTemplate />', () => {
   it('should render with Image Logo', () => {
     renderTheme(
-      <RouterMock>
+      <RouterMock url="/equipe">
         <TeamTemplate base={mockAboutTemplateWithImage.base} />
       </RouterMock>,
     );
@@ -22,7 +22,7 @@ describe('<ContactTemplate />', () => {
 
     //Snapshot
     const { container } = renderTheme(
-      <RouterMock>
+      <RouterMock url="/equipe">
         <TeamTemplate base={mockAboutTemplateWithImage.base} />
       </RouterMock>,
     );
@@ -31,7 +31,7 @@ describe('<ContactTemplate />', () => {
   });
   it('should render without Image Logo', () => {
     renderTheme(
-      <RouterMock>
+      <RouterMock url="/equipe">
         <TeamTemplate base={mockAboutTemplateWithoutImage.base} />
       </RouterMock>,
     );
@@ -42,7 +42,7 @@ describe('<ContactTemplate />', () => {
 
     //Snapshot
     const { container } = renderTheme(
-      <RouterMock>
+      <RouterMock url="/equipe">
         <TeamTemplate base={mockAboutTemplateWithImage.base} />
       </RouterMock>,
     );

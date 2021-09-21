@@ -18,7 +18,7 @@ export function PostList({
   const [page, setPage] = useState(0);
   const [postsPerPage] = useState(3);
 
-  const noMorePosts = posts ? page + postsPerPage >= allPosts.length : true;
+  const noMorePosts = page + postsPerPage >= allPosts.length;
 
   const loadInitial = useCallback((allPosts, page, postsPerPage) => {
     setStatePosts(allPosts.slice(page, postsPerPage));

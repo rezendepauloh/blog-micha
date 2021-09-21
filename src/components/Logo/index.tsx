@@ -20,7 +20,12 @@ export const Logo = ({
         <Styled.Container>
           <Link href={url} passHref>
             <Styled.Link target={target}>
-              {!!srcImg && <img src={srcImg} alt={alternativeText} />}
+              {!!srcImg && (
+                <img
+                  src={srcImg}
+                  alt={alternativeText ? alternativeText : text}
+                />
+              )}
               {!srcImg && text}
             </Styled.Link>
           </Link>
@@ -33,7 +38,9 @@ export const Logo = ({
     <Heading size="small" uppercase>
       <Styled.Container>
         <Styled.Link href={url}>
-          {!!srcImg && <img src={srcImg} alt={alternativeText} />}
+          {!!srcImg && (
+            <img src={srcImg} alt={alternativeText ? alternativeText : text} />
+          )}
           {!srcImg && text}
         </Styled.Link>
       </Styled.Container>

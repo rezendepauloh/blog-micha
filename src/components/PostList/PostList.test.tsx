@@ -14,7 +14,7 @@ describe('<PostList />', () => {
   });
 
   it('should render a component <PostList /> without a post', () => {
-    renderTheme(<PostList posts={[]} title={mock.title} />);
+    renderTheme(<PostList posts={undefined} title={mock.title} />);
 
     //Headings
     const headings = screen.getAllByRole('heading');

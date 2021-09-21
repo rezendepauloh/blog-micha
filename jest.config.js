@@ -6,8 +6,6 @@ module.exports = {
     '!<rootDir>/src/**/type.ts',
     '!<rootDir>/src/**/styles.{js,ts, jsx, tsx}',
     '!<rootDir>/src/**/*mock*.{js,jsx,ts,tsx}',
-    '!<rootDir>/src/graphql/**/*.{js,jsx,ts,tsx}',
-    '!<rootDir>/src/api/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/styles/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/config/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/pages/**/*.{js,jsx,ts,tsx}',

@@ -15,7 +15,7 @@ export default {
 
 export const TemplateWithImageLogo: Story<ContactTemplateProps> = (args) => {
   return (
-    <RouterMock>
+    <RouterMock url="/contato">
       <ContactTemplate {...args} />
     </RouterMock>
   );
@@ -25,7 +25,7 @@ TemplateWithImageLogo.args = mockImage;
 
 export const TemplateWithoutImageLogo: Story<ContactTemplateProps> = (args) => {
   return (
-    <RouterMock>
+    <RouterMock url="/contato">
       <ContactTemplate {...args} />
     </RouterMock>
   );

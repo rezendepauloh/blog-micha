@@ -12,7 +12,7 @@ const mock = {
 describe('<HeaderLinkMenu />', () => {
   it('should render a link', () => {
     renderTheme(
-      <RouterMock>
+      <RouterMock url={mock.link}>
         <HeaderLinkMenu id={mock.id} text={mock.text} link={mock.link} />
       </RouterMock>,
     );
@@ -31,6 +31,103 @@ describe('<HeaderLinkMenu />', () => {
           link="/localhost"
           newTab={false}
         />
+      </RouterMock>,
+    );
+    expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
+      'target',
+      '_self',
+    );
+  });
+
+  it('should render a external link', () => {
+    renderTheme(
+      <RouterMock url="http://www.google.com.br/">
+        <HeaderLinkMenu
+          id={mock.id}
+          text={mock.text}
+          link="http://www.google.com.br/"
+          newTab={false}
+        />
+      </RouterMock>,
+    );
+    expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
+      'target',
+      '_self',
+    );
+  });
+
+  it('should render a category page', () => {
+    renderTheme(
+      <RouterMock url="/category/direito-empresarial">
+        <HeaderLinkMenu
+          id={mock.id}
+          text={mock.text}
+          link="/category/direito-empresarial"
+          newTab={false}
+        />
+      </RouterMock>,
+    );
+    expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
+      'target',
+      '_self',
+    );
+  });
+
+  it('should render a author page', () => {
+    renderTheme(
+      <RouterMock url="/author/michely-segovia">
+        <HeaderLinkMenu
+          id={mock.id}
+          text={mock.text}
+          link="/author/michely-segovia"
+          newTab={false}
+        />
+      </RouterMock>,
+    );
+    expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
+      'target',
+      '_self',
+    );
+  });
+
+  it('should render a post page', () => {
+    renderTheme(
+      <RouterMock url="/post/por-que-voce-deve-registrar-sua-marca/">
+        <HeaderLinkMenu
+          id={mock.id}
+          text={mock.text}
+          link="/post/por-que-voce-deve-registrar-sua-marca/"
+          newTab={false}
+        />
+      </RouterMock>,
+    );
+    expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
+      'target',
+      '_self',
+    );
+  });
+
+  it('should render a posts page', () => {
+    renderTheme(
+      <RouterMock url="/posts">
+        <HeaderLinkMenu
+          id={mock.id}
+          text={mock.text}
+          link="/posts"
+          newTab={false}
+        />
+      </RouterMock>,
+    );
+    expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
+      'target',
+      '_self',
+    );
+  });
+
+  it('should render a index page', () => {
+    renderTheme(
+      <RouterMock url="/">
+        <HeaderLinkMenu id={mock.id} text={mock.text} link="/" newTab={false} />
       </RouterMock>,
     );
     expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(

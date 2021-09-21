@@ -26,6 +26,7 @@
       "utils/*": ["src/utils/*"],
       "templates/*": ["src/templates/*"],
       "api/*": ["src/api/*"],
+      "pages/*": ["src/pages/*"],
       "graphql/*": ["src/graphql/*"]
     }
   },

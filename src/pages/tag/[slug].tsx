@@ -55,7 +55,7 @@ export default function TagPage({
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
-    fallback: true,
+    fallback: false,
   };
 };
 

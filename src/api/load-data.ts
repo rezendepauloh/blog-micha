@@ -4,6 +4,8 @@ import { HomeTemplateProps } from 'templates/HomeTemplate/type';
 import { PostsTemplateProps } from 'templates/PostsTemplate/type';
 import { AboutTemplateProps } from 'templates/AboutTemplate/type';
 import { ContactTemplateProps } from 'templates/ContactTemplate/type';
+import { PageNotFoundTemplateProps } from 'templates/PageNotFoundTemplate/type';
+
 import {
   StrapiPostAndBase,
   StrapiPostsAndBase,
@@ -31,6 +33,12 @@ export const loadAbout = async (): Promise<AboutTemplateProps> => {
 };
 
 export const loadContact = async (): Promise<ContactTemplateProps> => {
+  const data = await request(config.graphqlURL, GRAPHQL_GET_BASE);
+
+  return data;
+};
+
+export const loadNotFound = async (): Promise<PageNotFoundTemplateProps> => {
   const data = await request(config.graphqlURL, GRAPHQL_GET_BASE);
 
   return data;

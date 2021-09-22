@@ -282,8 +282,20 @@ query GET_POSTS {
     ...categoryPost
     ...tags
   }
+  postsTotal: posts {
+    id
+    ...authorPost
+    ...categoryPost
+    ...tags
+  }
   categories {
     ...category
+  }
+  authors {
+    ...author
+  }
+  tags {
+    ...tag
   }
 }
 

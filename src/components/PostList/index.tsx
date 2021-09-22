@@ -9,6 +9,7 @@ import { PostListProps } from './type';
 
 export function PostList({
   posts = [],
+  //postsTotal = [],
   categories = [],
   authors = [],
   title = 'Artigos',

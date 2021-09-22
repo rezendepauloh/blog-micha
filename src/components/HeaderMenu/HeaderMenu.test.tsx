@@ -31,7 +31,7 @@ describe('<HeaderMenu />', () => {
         <HeaderMenu links={mock.links} />
       </RouterMock>,
     );
-    expect(screen.getByText('Escritório').parentElement).toHaveStyleRule(
+    expect(screen.getByText('Sobre mim').parentElement).toHaveStyleRule(
       'flex-flow',
       'column wrap',
       {

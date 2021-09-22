@@ -262,6 +262,12 @@ export const GRAPHQL_GET_POSTS = gql`
       ...categoryPost
       ...tags
     }
+    postsTotal: posts {
+      id
+      ...authorPost
+      ...categoryPost
+      ...tags
+    }
     categories {
       ...category
     }

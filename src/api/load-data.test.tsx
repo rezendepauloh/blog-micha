@@ -1,6 +1,7 @@
 import {
   loadAbout,
   loadContact,
+  loadNotFound,
   loadHome,
   loadPost,
   loadPosts,
@@ -16,6 +17,10 @@ describe('load-data', () => {
 
   it('should call request loadAbout', async () => {
     await loadAbout();
+  });
+
+  it('should call request loadNotFound', async () => {
+    await loadNotFound();
   });
 
   it('should call request loadContact', async () => {

@@ -51,7 +51,7 @@ export default function CategoryPage({
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
-    fallback: true,
+    fallback: false,
   };
 };
 
@@ -67,8 +67,8 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
     data = null;
   }
 
-  // console.log('O data: ');
-  // console.log(data);
+  console.log('O data: ');
+  console.log(data);
 
   if (!data || !data.posts || !data.posts.length) {
     return {

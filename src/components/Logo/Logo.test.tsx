@@ -44,7 +44,7 @@ describe('<Logo />', () => {
     );
     expect(screen.getByAltText('Michely Segóvia')).toHaveAttribute(
       'src',
-      'https://res.cloudinary.com/dgiqhufpy/image/upload/v1629810879/logo_h_be529e7a63.svg',
+      'https://res.cloudinary.com/dgiqhufpy/image/upload/v1631193887/logo_h_c1f7d190c2.svg',
     );
   });
 

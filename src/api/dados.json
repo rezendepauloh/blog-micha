@@ -10,7 +10,7 @@
       "logo": {
         "id": "6124f0c6b7d4394a74786965",
         "alternativeText": "",
-        "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1629810879/logo_h_be529e7a63.svg"
+        "srcImg": "https://res.cloudinary.com/dgiqhufpy/image/upload/v1631193887/logo_h_c1f7d190c2.svg"
       },
       "header": {
         "menuLink": [
@@ -22,8 +22,8 @@
           },
           {
             "id": "6124f1b3b7d4394a7478696c",
-            "text": "Escritório",
-            "link": "/escritorio",
+            "text": "Sobre mim",
+            "link": "/sobre",
             "newTab": false
           },
           {

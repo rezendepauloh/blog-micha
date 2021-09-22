@@ -1,14 +1,41 @@
 import { fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import { renderTheme } from 'styles/render-theme';
+
 import { Contact } from '.';
-//import { rest } from 'msw'; // msw supports graphql too!
+
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
+// import fetch from 'node-fetch';
 
 import mock from './mock';
 
-//jest.mock('pages/api/contact');
+const handlers = [
+  rest.post('/api/contact', async (req, res, ctx) => {
+    const request = {
+      name: 'Fulano',
+      email: 'fulano@fulano.com',
+      message: 'Loren ipsum dolor seat',
+    };
+
+    return res(ctx.delay(500), ctx.status(201), ctx.json(request));
+  }),
+];
+
+const server = setupServer(...handlers);
 
 describe('<Contact />', () => {
+  beforeAll(() => {
+    server.listen();
+  });
+
+  afterEach(() => server.resetHandlers());
+
+  afterAll(() => {
+    server.close();
+  });
+
   it('should render component <Contact />', () => {
     renderTheme(
       <Contact
@@ -67,9 +94,6 @@ describe('<Contact />', () => {
       />,
     );
 
-    //Para clicar fora dos inputs
-    //const link = screen.getByText('Entre em contato com Hellen Almeida');
-
     //Inputs
     const inputNome = screen.getByRole('textbox', { name: 'Nome' });
     const inputEmail = screen.getByRole('textbox', { name: 'Email' });
@@ -78,41 +102,26 @@ describe('<Contact />', () => {
     //Click on the first input
     fireEvent.click(inputNome);
     userEvent.type(inputNome, 'Nome');
-    userEvent.type(inputNome, null);
+    userEvent.clear(inputNome);
     fireEvent.click(inputEmail);
     //expect(inputNome.value).toBe('Nome');
 
     //Click on the second input
     fireEvent.click(inputEmail);
     userEvent.type(inputEmail, 'Email');
-    userEvent.type(inputEmail, '');
+    userEvent.clear(inputEmail);
     fireEvent.click(inputNome);
     //expect(inputEmail.value).toBe('Email');
 
     //Click on the third input
     fireEvent.click(inputMensagem);
     userEvent.type(inputMensagem, 'Mensagem');
-    userEvent.type(inputMensagem, '');
+    userEvent.clear(inputMensagem);
     fireEvent.click(inputNome);
     //expect(inputMensagem.value).toBe('Mensagem');
-
-    // expect(
-    //   screen.getByRole('dialog', { name: /Direito Tributário/i }),
-    // ).toBeInTheDocument();
-
-    // expect(
-    //   screen.getByRole('heading', { name: /Direito Tributário/i }),
-    // ).toBeInTheDocument();
-
-    // expect(screen.getByRole('button', { name: /Close/i })).toBeInTheDocument();
-
-    // fireEvent.click(screen.getByRole('button', { name: /Close/i }));
-
-    // const images = screen.getAllByRole('img', { name: /title/i });
-    // expect(images).toHaveLength(3);
   });
 
-  // it('should render click in button submit with text inputs is null', () => {
+  // it('should render click in button submit with text inputs is null', async () => {
   //   renderTheme(
   //     <Contact
   //       name={mock.name}
@@ -122,8 +131,23 @@ describe('<Contact />', () => {
   //     />,
   //   );
 
+  //   // const noMorePosts = screen.getByText('Não existem posts =(');
+
+  //   // await waitForElementToBeRemoved(noMorePosts);
+  //   // screen.debug();
+
   //   //Click on button
   //   const inputSubmit = screen.getByRole('button', { name: 'Enviar' });
   //   fireEvent.click(inputSubmit);
+  // });
+
+  // it('fetch correctly', async () => {
+  //   const response = await fetch('/api/contact');
+
+  //   console.log(response);
+
+  //   const data = await response.text();
+
+  //   expect(data).not.toBe(null);
   // });
 });

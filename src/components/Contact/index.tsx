@@ -62,10 +62,13 @@ export const Contact = ({ name, email, message, phone }: ContactProps) => {
     console.log('Sending');
 
     const data = {
-      name,
-      email,
-      message,
+      name: valueName,
+      email: valueEmail,
+      message: valueMessage,
     };
+
+    console.log('O data:');
+    console.log(data);
 
     fetch('/api/contact', {
       method: 'POST',
@@ -85,6 +88,12 @@ export const Contact = ({ name, email, message, phone }: ContactProps) => {
         setValueMessage('');
       }
     });
+
+    console.log('Response succeeded!');
+    setSubmitted(true);
+    setValueName('');
+    setValueEmail('');
+    setValueMessage('');
   };
 
   return (

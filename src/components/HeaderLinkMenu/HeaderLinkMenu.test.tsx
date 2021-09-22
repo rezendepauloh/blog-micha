@@ -73,6 +73,23 @@ describe('<HeaderLinkMenu />', () => {
     );
   });
 
+  it('should render a category page with slug', () => {
+    renderTheme(
+      <RouterMock url="/category/[slug]">
+        <HeaderLinkMenu
+          id={mock.id}
+          text={mock.text}
+          link="/category/[slug]"
+          newTab={false}
+        />
+      </RouterMock>,
+    );
+    expect(screen.getByRole('link', { name: 'MenuLink' })).toHaveAttribute(
+      'target',
+      '_self',
+    );
+  });
+
   it('should render a author page', () => {
     renderTheme(
       <RouterMock url="/author/michely-segovia">

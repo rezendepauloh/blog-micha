@@ -9,7 +9,9 @@ export const config = {
 };
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  //require('dotenv').config()
+  //require('dotenv').config();
+  // console.log('O body:');
+  // console.log(req.body);
 
   const transporter = nodemailer.createTransport({
     port: 465,
@@ -17,10 +19,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     auth: {
       user: 'bancadampms@gmail.com',
       //pass: process.env.password,
-      pass: 'MPMS.0000',
+      pass: 'password',
     },
     secure: true,
   });
+
+  // console.log('O transporter:');
+  // console.log(transporter);
 
   const mailData = {
     from: req.body.email,
@@ -30,6 +35,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     html: `<div>${req.body.message}</div><p>Sent from:
     ${req.body.email}</p>`,
   };
+
+  // console.log('O mailData:');
+  // console.log(mailData);
 
   transporter.sendMail(mailData, function (err, info) {
     if (err) console.log(err);

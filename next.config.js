@@ -4,24 +4,22 @@
 
 module.exports = {
   trailingSlash: true,
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId },
-  ) {
-    return {
-      '/': { page: '/' },
-      '/sobre': { page: '/sobre' },
-      '/equipe': { page: '/equipe' },
-      '/contato': { page: '/contato' },
-      '/posts': { page: '/posts' },
-      '/post/o-que-e-o-contrato-social/': {
-        page: '/post',
-        query: { title: 'o-que-e-o-contrato-social' },
-      },
-      // '/p/learn-nextjs': { page: '/post', query: { title: 'learn-nextjs' } },
-      // '/p/deploy-nextjs': { page: '/post', query: { title: 'deploy-nextjs' } },
-    };
-  },
+  // exportPathMap: async function (
+  //   defaultPathMap,
+  //   { dev, dir, outDir, distDir, buildId },
+  // ) {
+  //   return {
+  //     '/': { page: '/' },
+  //     '/sobre': { page: '/sobre' },
+  //     '/equipe': { page: '/equipe' },
+  //     '/contato': { page: '/contato' },
+  //     '/posts': { page: '/posts' },
+  //     '/post/o-que-e-o-contrato-social/': {
+  //       page: '/post',
+  //       query: { title: 'o-que-e-o-contrato-social' },
+  //     },
+  //   };
+  // },
   images: {
     domains: ['res.cloudinary.com'],
   },

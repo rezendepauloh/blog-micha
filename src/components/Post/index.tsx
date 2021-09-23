@@ -1,7 +1,9 @@
+import * as Styled from './styles';
+
 import { PostArticleHeader } from 'components/PostArticleHeader';
 import { PostContent } from 'components/PostContent';
 import { PostContainer } from 'components/PostContainer';
-import * as Styled from './styles';
+import { TableOfContents } from 'components/TableOfContents';
 
 import { PostProps } from './type';
 
@@ -16,6 +18,7 @@ export const Post = ({
 }: PostProps) => {
   return (
     <Styled.Wrapper>
+      <TableOfContents />
       <PostContainer size="max">
         <PostArticleHeader
           author={author}

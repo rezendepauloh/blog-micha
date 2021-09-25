@@ -5,6 +5,27 @@ export const Container = styled.div`
     font-size: calc(${theme.font.sizes.small} + 0.2rem);
     line-height: 1.5;
 
+    h2 {
+      font-size: calc(${theme.font.sizes.large} - 0.4rem);
+      margin: 0.5rem 0;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: calc(${theme.font.sizes.medium} + 0.15rem);
+      margin: 0.5rem 0;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    h4 {
+      font-size: calc(${theme.font.sizes.small} + 0.4rem);
+      margin: 0.5rem 0;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
     p {
       margin: ${theme.spacings.medium} 0;
     }

@@ -16,6 +16,27 @@ describe('<PostContent />', () => {
         line-height: 1.5;
       }
 
+      .c0 h2 {
+        font-size: calc(3.2rem - 0.4rem);
+        margin: 0.5rem 0;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .c0 h3 {
+        font-size: calc(2.4rem + 0.15rem);
+        margin: 0.5rem 0;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .c0 h4 {
+        font-size: calc(1.6rem + 0.4rem);
+        margin: 0.5rem 0;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
       .c0 p {
         margin: 2.4rem 0;
       }

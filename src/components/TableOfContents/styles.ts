@@ -8,4 +8,18 @@ export const Navigation = styled.nav`
   /* Give table of contents a scrollbar */
   max-height: calc(100vh - 41px);
   overflow: auto;
+
+  h2,
+  h3 {
+    scroll-margin-top: 16px;
+  }
+
+  /* Safari-only */
+  @supports (-webkit-hyphens: none) {
+    h2,
+    h3 {
+      padding-top: 16px;
+      margin-top: -16px;
+    }
+  }
 `;

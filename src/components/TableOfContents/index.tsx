@@ -102,5 +102,7 @@ export const TableOfContents = () => {
       </Styled.List>
     </Styled.Navigation>
   );
+  // } else {
+  //   return null;
   // }
 };

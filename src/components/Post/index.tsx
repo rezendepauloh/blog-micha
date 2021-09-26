@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { PostArticleHeader } from 'components/PostArticleHeader';
 import { PostContent } from 'components/PostContent';
 import { PostContainer } from 'components/PostContainer';
-import { TableOfContents } from 'components/TableOfContents';
 
 import { PostProps } from './type';
 
@@ -24,23 +23,12 @@ export const Post = ({
   //https://dev.to/typicoul/fixing-next-js-referenceerror-document-is-not-defined-2jgi
   //https://stackoverflow.com/questions/52344726/how-to-dynamicly-add-class-and-id-to-specific-tag-using-javascript-jquery
   useEffect(() => {
-    //alert('Finished loading');
-    // document.querySelectorAll('h2').forEach(function (el) {
-    //   //el.id = `h2-${i}`;
-    //   el.classList.add('titleClass');
-    // });
-    // document.querySelectorAll('h3').forEach(function (el) {
-    //   //el.id = `h3-${i}`;
-    //   el.classList.add('titleClass');
-    // });
-
     const anchors = new AnchorJS();
     anchors.add('.contentClass h2, .contentClass h3, .contentClass h4');
   }, []);
 
   return (
     <Styled.Wrapper>
-      <TableOfContents />
       <PostContainer size="max">
         <PostArticleHeader
           author={author}

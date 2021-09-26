@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Navigation = styled.nav`
   position: sticky;
@@ -22,4 +22,24 @@ export const Navigation = styled.nav`
       margin-top: -16px;
     }
   }
+`;
+
+export const List = styled.ul`
+  ${({ theme }) => css`
+    margin: ${theme.spacings.xsmall} ${theme.spacings.small};
+    padding: ${theme.spacings.xsmall} ${theme.spacings.small};
+
+    > a {
+      color: grey;
+      text-decoration: none;
+    }
+
+    > li.active > a {
+      color: white;
+    }
+
+    > li > a:hover {
+      color: white;
+    }
+  `}
 `;

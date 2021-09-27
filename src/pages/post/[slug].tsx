@@ -2,12 +2,12 @@ import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
 
-import { loadPosts, loadPost } from 'api/load-data';
+import { loadPostsWithFilter } from 'api/load-data';
 
 import { PostTemplate } from 'templates/PostTemplate';
 import { Loading } from 'templates/Loading';
 
-import { StrapiPostAndBase } from 'api/type';
+import { StrapiPostAndBase, StrapiPostsAndBase } from 'api/type';
 
 import { createExcerpt } from 'utils/create-excerpt';
 
@@ -40,15 +40,16 @@ export default function PostPage({ posts, base }: StrapiPostAndBase) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  let data = null;
+  let data: StrapiPostsAndBase | null = null;
   let paths = [];
 
   try {
-    data = await loadPosts();
-    paths = data.posts.map((post: StrapiPostAndBase) => ({
-      params: { slug: post.posts.slug },
+    data = await loadPostsWithFilter();
+    paths = data.posts.map((post) => ({
+      params: { slug: post.slug },
     }));
   } catch (e) {
+    console.log('Erro do getStaticPaths do data: ');
     console.log(e.message);
     data = null;
   }
@@ -57,20 +58,25 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths = [];
   }
 
+  console.log('Path: ');
+  console.log(paths);
+  console.log('Data: ');
+  console.log(data);
+
   return {
     paths,
     fallback: true,
   };
 };
 
-export const getStaticProps: GetStaticProps<StrapiPostAndBase> = async (
+export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
   ctx,
 ) => {
   let data = null;
   const variables = { postSlug: ctx.params.slug as string };
 
   try {
-    data = await loadPost(variables);
+    data = await loadPostsWithFilter(variables);
   } catch (e) {
     data = null;
   }

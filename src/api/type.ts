@@ -25,7 +25,7 @@ export type StrapiPostAndBase = {
 
 export type StrapiPostsAndBase = {
   base: BaseStrapi;
-  posts: PostCardProps;
+  posts: PostCardProps[];
   variables?: LoadPostsVariables;
 };
 

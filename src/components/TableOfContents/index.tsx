@@ -2,9 +2,11 @@ import * as Styled from './styles';
 import { useEffect, useRef, useState } from 'react';
 import { nestedHeadingsInPage } from 'utils/get-nested-headings';
 
+import { TableOfContentsProps } from './type';
+
 //Criacao em: https://www.emgoto.com/react-table-of-contents/
-export const TableOfContents = () => {
-  const [nestedHeadings, setNestedHeadings] = useState([]);
+export const TableOfContents = ({ headings = [] }: TableOfContentsProps) => {
+  const [nestedHeadings, setNestedHeadings] = useState(headings);
   const [activeId, setActiveId] = useState();
   const headingElementsRef = useRef({});
 
@@ -76,7 +78,7 @@ export const TableOfContents = () => {
             {heading.items.length > 0 && (
               <Styled.List>
                 {' '}
-                {heading.items.map((child: { id: string; title: string }) => (
+                {heading.items.map((child) => (
                   <li
                     key={child.id}
                     className={child.id === activeId ? 'active' : ''}

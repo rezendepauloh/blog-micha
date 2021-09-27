@@ -1,3 +1,5 @@
+//import { TableOfContentsProps } from 'components/TableOfContents/type';
+
 const getNestedHeadings = (headingElements: Element[]) => {
   const nestedHeadings = [];
 

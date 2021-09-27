@@ -1,5 +1,7 @@
 import * as Styled from './styles';
 
+import { useEffect } from 'react';
+
 import { Base } from 'templates/Base';
 
 import { Post } from 'components/Post';
@@ -7,9 +9,19 @@ import { PostTags } from 'components/PostTags';
 import { Heading } from 'components/Heading';
 import { TableOfContents } from 'components/TableOfContents';
 
+import AnchorJS from 'anchor-js';
+
 import { PostTemplateProps } from './type';
 
 export function PostTemplate({ post, base }: PostTemplateProps) {
+  //Para resolver a adição do id no h2 e h3 depois da página estar carregada
+  //https://dev.to/typicoul/fixing-next-js-referenceerror-document-is-not-defined-2jgi
+  //https://stackoverflow.com/questions/52344726/how-to-dynamicly-add-class-and-id-to-specific-tag-using-javascript-jquery
+  useEffect(() => {
+    const anchors = new AnchorJS();
+    anchors.add('.contentClass h2, .contentClass h3, .contentClass h4');
+  }, []);
+
   return (
     <Base base={base}>
       <Styled.Container fluid>

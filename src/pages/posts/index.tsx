@@ -5,7 +5,8 @@ import { theme } from 'styles/theme';
 
 import { PostsTemplate } from 'templates/PostsTemplate';
 import { PostsTemplateProps } from 'templates/PostsTemplate/type';
-import { loadPosts } from 'api/load-data';
+
+import { loadPostsWithFilter } from 'api/load-data';
 
 export default function PostsPage({
   posts,
@@ -14,6 +15,7 @@ export default function PostsPage({
   authors,
 }: PostsTemplateProps) {
   const postsArgs = {
+    title: 'Artigos',
     posts: posts,
     base: base,
     categories: categories,
@@ -38,10 +40,10 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
   let data = null;
 
   try {
-    data = await loadPosts();
+    data = await loadPostsWithFilter();
   } catch (e) {
     data = null;
-    console.log(e.message);
+    //console.log(e.message);
   }
 
   // console.log('O data: ');
@@ -84,7 +86,7 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
 
   return {
     props: {
-      posts: { posts: posts },
+      posts: posts,
       categories: categories,
       authors: authors,
       base: {

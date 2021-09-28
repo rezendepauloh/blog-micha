@@ -3,6 +3,7 @@ import { BaseStrapi } from 'templates/Base/type';
 import { PostStrapi } from 'components/Post/type';
 import { PostListProps } from 'components/PostList/type';
 import { PostCardProps } from 'components/PostCard/type';
+import { Author, Category, Tag } from 'components/PostArticleMeta/type';
 
 export type LoadPostsVariables = {
   categorySlug?: string;
@@ -26,11 +27,17 @@ export type StrapiPostAndBase = {
 export type StrapiPostsAndBase = {
   base: BaseStrapi;
   posts: PostCardProps[];
+  categories?: Category[];
+  authors?: Author[];
+  tags?: Tag[];
   variables?: LoadPostsVariables;
 };
 
 export type StrapiPostsListAndBase = {
   base: BaseStrapi;
   posts: PostListProps;
+  categories?: Category[];
+  authors?: Author[];
+  tags?: Tag[];
   variables?: LoadPostsVariables;
 };

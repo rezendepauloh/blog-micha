@@ -17,6 +17,7 @@ export const HeaderLinkMenu = ({
   if (
     routerPath == '/category/[slug]' ||
     routerPath == '/author/[slug]' ||
+    routerPath == '/tag/[slug]' ||
     routerPath == '/post/[slug]'
   ) {
     routerPath = '/posts';

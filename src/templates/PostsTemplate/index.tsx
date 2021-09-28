@@ -7,6 +7,7 @@ import { Heading } from 'components/Heading';
 import { PostsTemplateProps } from './type';
 
 export function PostsTemplate({
+  title = '',
   posts,
   //postsTotal,
   categories = [],
@@ -23,12 +24,12 @@ export function PostsTemplate({
           </Heading>
         </Styled.TitleContainer>
         <PostList
-          {...posts}
+          posts={posts}
           //postsTotal={{ authors: postsTotal.authors }}
           categories={categories}
           authors={authors}
           tags={tags}
-          title={posts.title}
+          title={title}
         />
       </Styled.Container>
     </Base>

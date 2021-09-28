@@ -9,6 +9,19 @@ import {
 } from './mock';
 
 describe('<PostTemplate />', () => {
+  //IntersectionObserver Mock
+  //https://stackoverflow.com/questions/44249985/js-testing-code-that-uses-an-intersectionobserver
+  beforeEach(() => {
+    // IntersectionObserver isn't available in test environment
+    const mockIntersectionObserver = jest.fn();
+    mockIntersectionObserver.mockReturnValue({
+      observe: () => null,
+      unobserve: () => null,
+      disconnect: () => null,
+    });
+    window.IntersectionObserver = mockIntersectionObserver;
+  });
+
   it('should render with Image Logo', () => {
     renderTheme(
       <RouterMock url="/post">

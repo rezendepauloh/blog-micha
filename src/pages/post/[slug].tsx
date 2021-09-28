@@ -49,8 +49,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
       params: { slug: post.slug },
     }));
   } catch (e) {
-    console.log('Erro do getStaticPaths do data: ');
-    console.log(e.message);
+    // console.log('Erro do getStaticPaths do data: ');
+    // console.log(e.message);
     data = null;
   }
 
@@ -58,14 +58,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths = [];
   }
 
-  console.log('Path: ');
-  console.log(paths);
-  console.log('Data: ');
-  console.log(data);
+  // console.log('Path: ');
+  // console.log(paths);
+  // console.log('Data: ');
+  // console.log(data);
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
@@ -81,8 +81,8 @@ export const getStaticProps: GetStaticProps<StrapiPostsAndBase> = async (
     data = null;
   }
 
-  // console.log('O data: ');
-  // console.log(data);
+  console.log('O data: ');
+  console.log(data);
 
   if (!data || !data.posts || !data.posts.length) {
     return {

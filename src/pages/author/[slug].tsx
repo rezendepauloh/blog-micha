@@ -8,7 +8,7 @@ import { PostsTemplate } from 'templates/PostsTemplate';
 import { Loading } from 'templates/Loading';
 
 import { PostsTemplateProps } from 'templates/PostsTemplate/type';
-import { StrapiPostsListAndBase } from 'api/type';
+// import { StrapiPostsListAndBase } from 'api/type';
 
 import { loadPostsWithFilter } from 'api/load-data';
 
@@ -24,12 +24,13 @@ export default function AuthorPage({
     return <Loading />;
   }
 
-  const authorName = posts.posts[0].author.displayName;
+  const authorName = posts[0].author.displayName;
 
   const { blogName } = base;
 
   const authorArgs = {
-    posts: { title: `Autor: ${authorName}`, ...posts },
+    title: `Autor: ${authorName}`,
+    posts: posts,
     base: base,
     categories: categories,
     authors: authors,
@@ -49,13 +50,41 @@ export default function AuthorPage({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  let data: PostsTemplateProps | null = null;
+  let paths = [];
+
+  try {
+    data = await loadPostsWithFilter();
+    paths = data.posts.map((post) => ({
+      params: { slug: post.author.slug },
+    }));
+  } catch (e) {
+    // console.log('Erro do getStaticPaths do data: ');
+    // console.log(e.message);
+    data = null;
+  }
+
+  if (!data || !data.posts || !data.posts.length) {
+    paths = [];
+  }
+
+  // console.log('Path: ');
+  // console.log(paths);
+  // console.log('Data: ');
+  // console.log(data);
+
   return {
-    paths: [],
-    fallback: true,
+    paths,
+    fallback: false,
   };
+
+  // return {
+  //   paths: [],
+  //   fallback: false,
+  // };
 };
 
-export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
+export const getStaticProps: GetStaticProps<PostsTemplateProps> = async (
   ctx,
 ) => {
   let data = null;
@@ -108,7 +137,7 @@ export const getStaticProps: GetStaticProps<StrapiPostsListAndBase> = async (
 
   return {
     props: {
-      posts: { posts: posts },
+      posts: posts,
       categories: categories,
       authors: authors,
       base: {

@@ -5,18 +5,22 @@ export const Container = styled.div`
     font-size: calc(${theme.font.sizes.small} + 0.2rem);
     line-height: 1.5;
 
+    //https://www.bryanbraun.com/anchorjs/#pages-with-a-sticky-navbar
     h2 {
       font-size: calc(${theme.font.sizes.large} - 0.4rem);
       margin: 0.5rem 0;
       font-weight: 500;
       line-height: 1.2;
+      scroll-margin-top: 5.5rem; /* whatever is a nice number that gets you past the header */
     }
 
+    //https://www.bryanbraun.com/anchorjs/#pages-with-a-sticky-navbar
     h3 {
       font-size: calc(${theme.font.sizes.medium} + 0.15rem);
       margin: 0.5rem 0;
       font-weight: 500;
       line-height: 1.2;
+      scroll-margin-top: 5.5rem; /* whatever is a nice number that gets you past the header */
     }
 
     h4 {

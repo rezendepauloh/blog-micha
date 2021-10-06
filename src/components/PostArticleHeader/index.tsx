@@ -10,7 +10,7 @@ import { PostArticleHeaderProps } from './type';
 export const PostArticleHeader = ({
   title,
   content,
-  cover,
+  cover = null,
   author,
   category,
   created_at,
@@ -19,10 +19,12 @@ export const PostArticleHeader = ({
     <Styled.Wrapper>
       <Heading size="huge">{title}</Heading>
       <Styled.Excerpt>{createExcerpt(content)}</Styled.Excerpt>
-      <Styled.Cover
-        src={cover.srcImg}
-        alt={cover.alternativeText ? cover.alternativeText : title}
-      />
+      {cover != null && (
+        <Styled.Cover
+          src={cover.srcImg}
+          alt={cover.alternativeText ? cover.alternativeText : title}
+        />
+      )}
       <PostArticleMeta
         category={category}
         author={author}

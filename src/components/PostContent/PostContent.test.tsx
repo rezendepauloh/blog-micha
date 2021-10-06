@@ -21,6 +21,10 @@ describe('<PostContent />', () => {
         margin: 0.5rem 0;
         font-weight: 500;
         line-height: 1.2;
+        -webkit-scroll-margin-top: 5.5rem;
+        -moz-scroll-margin-top: 5.5rem;
+        -ms-scroll-margin-top: 5.5rem;
+        scroll-margin-top: 5.5rem;
       }
 
       .c0 h3 {
@@ -28,6 +32,10 @@ describe('<PostContent />', () => {
         margin: 0.5rem 0;
         font-weight: 500;
         line-height: 1.2;
+        -webkit-scroll-margin-top: 5.5rem;
+        -moz-scroll-margin-top: 5.5rem;
+        -ms-scroll-margin-top: 5.5rem;
+        scroll-margin-top: 5.5rem;
       }
 
       .c0 h4 {

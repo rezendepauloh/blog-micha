@@ -11,5 +11,5 @@ export type PostCardProps = {
   title: string;
   slug: string;
   content: string;
-  cover: CoverProps;
+  cover?: CoverProps;
 } & PostArticleMetaProps;

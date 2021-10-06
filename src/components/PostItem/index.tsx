@@ -2,6 +2,7 @@ import * as Styled from './styles';
 
 import { Heading } from 'components/Heading';
 import { PostArticleMeta } from 'components/PostArticleMeta';
+import { PostTags } from 'components/PostTags';
 
 import Link from 'next/link';
 
@@ -12,11 +13,12 @@ import { PostItemProps } from './type';
 export function PostItem({
   title,
   slug,
-  cover,
+  cover = null,
   content,
   created_at,
   author,
   category,
+  tags,
 }: PostItemProps) {
   return (
     <Styled.Item as="li" className="border">
@@ -24,14 +26,15 @@ export function PostItem({
         width={240}
         height={240}
         className="mr-3 mt-3 rounded-circle"
-        src={cover.srcImg}
-        alt={cover.alternativeText ? cover.alternativeText : title}
+        src={cover != null ? cover.srcImg : '/assets/images/ThumbCover.png'}
+        alt={
+          cover != null
+            ? cover.alternativeText
+              ? cover.alternativeText
+              : title
+            : title
+        }
       />
-
-      {/* <Link href={`/post/${slug}`} passHref>
-       <a> */}
-      {/*</a>
-    </Link>*/}
 
       <Styled.BodyItem>
         <Heading as="h5" size="small" colorDark={true}>
@@ -43,6 +46,9 @@ export function PostItem({
           created_at={created_at}
         />
         <p>{createExcerptInPostItem(content)}</p>
+        <p style={{ maxWidth: '100%' }}>
+          <PostTags tags={tags} />
+        </p>
         <p>
           <Link href={`/post/${slug}`} passHref>
             <a>Ler</a>

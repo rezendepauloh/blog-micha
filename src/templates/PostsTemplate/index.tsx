@@ -9,7 +9,7 @@ import { PostsTemplateProps } from './type';
 export function PostsTemplate({
   title = '',
   posts,
-  //postsTotal,
+  postsTotal = [],
   categories = [],
   authors = [],
   tags = [],
@@ -25,7 +25,7 @@ export function PostsTemplate({
         </Styled.TitleContainer>
         <PostList
           posts={posts}
-          //postsTotal={{ authors: postsTotal.authors }}
+          postsTotal={postsTotal}
           categories={categories}
           authors={authors}
           tags={tags}

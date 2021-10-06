@@ -9,13 +9,13 @@ import { PostListProps } from './type';
 
 export function PostList({
   posts = [],
-  //postsTotal = [],
+  postsTotal = [],
   categories = [],
   authors = [],
   title = 'Artigos',
 }: PostListProps) {
   const [statePosts, setStatePosts] = useState([]);
-  const [allPosts] = useState(posts);
+  const [allPosts, setAllPosts] = useState(posts);
   const [page, setPage] = useState(0);
   const [postsPerPage] = useState(3);
 
@@ -28,6 +28,11 @@ export function PostList({
   useEffect(() => {
     loadInitial(allPosts, 0, postsPerPage);
   }, [loadInitial, postsPerPage, allPosts]);
+
+  //Refresh nos posts quando clicado em categoria ou tag
+  useEffect(() => {
+    setAllPosts(posts);
+  }, [setAllPosts, posts]);
 
   const loadMorePosts = () => {
     const nextPage = page + postsPerPage;
@@ -68,7 +73,7 @@ export function PostList({
             <PostListSideBar
               categories={categories}
               authors={authors}
-              posts={posts}
+              postsTotal={postsTotal}
             />
           </Styled.Col>
         </Styled.Row>

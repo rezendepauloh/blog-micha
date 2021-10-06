@@ -12,7 +12,7 @@ import { PostCardProps } from './type';
 export function PostCard({
   title,
   slug,
-  cover,
+  cover = null,
   content,
   created_at,
 }: PostCardProps) {
@@ -20,11 +20,13 @@ export function PostCard({
     <Styled.Card>
       <Link href={`/post/${slug}`} passHref>
         <a>
-          <Styled.ImgCard
-            variant="top"
-            src={cover.srcImg}
-            alt={cover.alternativeText ? cover.alternativeText : title}
-          />
+          {cover != null && (
+            <Styled.ImgCard
+              variant="top"
+              src={cover.srcImg}
+              alt={cover.alternativeText ? cover.alternativeText : title}
+            />
+          )}
           <Styled.BodyCard>
             <Styled.TitleCard>
               <Heading as="h5" size="small" colorDark={true}>

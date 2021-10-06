@@ -5,15 +5,15 @@ import { BaseStrapi } from 'templates/Base/type';
 
 export type PostTotalProps = {
   id?: string;
-  categories?: Category[];
-  authors?: Author[];
+  category?: Category;
+  author?: Author;
   tags?: Tag[];
 };
 
 export type PostsTemplateProps = {
   title?: string;
   posts?: PostCardProps[];
-  //postsTotal?: PostTotalProps;
+  postsTotal?: PostTotalProps[];
   base: BaseStrapi;
   categories?: Category[];
   authors?: Author[];

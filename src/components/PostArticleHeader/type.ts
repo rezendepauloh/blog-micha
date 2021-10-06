@@ -10,5 +10,5 @@ export type PostArticleHeaderProps = {
   id: string;
   title: string;
   content: string;
-  cover: StrapiImage;
+  cover?: StrapiImage;
 } & PostArticleMetaProps;

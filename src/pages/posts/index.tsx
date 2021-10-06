@@ -10,6 +10,7 @@ import { loadPostsWithFilter } from 'api/load-data';
 
 export default function PostsPage({
   posts,
+  postsTotal = [],
   base,
   categories,
   authors,
@@ -20,6 +21,7 @@ export default function PostsPage({
     base: base,
     categories: categories,
     authors: authors,
+    postsTotal: postsTotal,
   };
 
   const { blogName, blogDescription } = base;
@@ -59,6 +61,7 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
     posts,
     categories,
     authors,
+    postsTotal,
     base: {
       id,
       blogName,
@@ -89,6 +92,7 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
       posts: posts,
       categories: categories,
       authors: authors,
+      postsTotal: postsTotal,
       base: {
         id: id,
         blogName: blogName,

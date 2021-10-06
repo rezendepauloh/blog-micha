@@ -9,12 +9,12 @@ import { PostListSideBarProps } from './type';
 export function PostListSideBar({
   categories = [],
   authors = [],
-  posts = [],
+  postsTotal = [],
 }: PostListSideBarProps) {
-  const categoriesOnPosts = posts.map((p) => {
+  const categoriesOnPosts = postsTotal.map((p) => {
     return p.category;
   });
-  const authorsOnPosts = posts.map((p) => {
+  const authorsOnPosts = postsTotal.map((p) => {
     return p.author;
   });
 

@@ -32,7 +32,9 @@ export function PostList({
   //Refresh nos posts quando clicado em categoria ou tag
   useEffect(() => {
     setAllPosts(posts);
-  }, [setAllPosts, posts]);
+    //setSearchValue('');
+    setPage(0);
+  }, [setAllPosts, setPage, posts]);
 
   const loadMorePosts = () => {
     const nextPage = page + postsPerPage;
